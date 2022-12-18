@@ -15,7 +15,7 @@
           <div class="header-right">
             <RouterLink  to="/" class="header-right-text">首頁</RouterLink>
             <RouterLink  to="/Map" class="header-right-text">地圖</RouterLink>
-            <a class="header-right-text">關於</a>
+            <RouterLink  to="/zzz" class="header-right-text">關於</RouterLink>
           </div>
         </div>
       </nav>

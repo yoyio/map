@@ -114,13 +114,14 @@ onMounted(() => {
 
 <style scoped>
 .container {
-  max-width: 1500px;
+  width: 100%;
   margin: 0px auto;
-  padding: 10px;
+  padding: 0px;
   display: flex;
   flex-direction: row;
 }
 .Information {
+  background-color: #fff;
   width: 20%;
   height: 700px;
 }
@@ -134,12 +135,8 @@ onMounted(() => {
   font-size: 20px;
   padding: 3px 30px;
 }
-.google-map {
-  width: 80%;
-  height: 700px;
-}
 .mapContainer {
-  width: 1200px;
+  width: 80%;
   height: 700px;
 }
 </style>
