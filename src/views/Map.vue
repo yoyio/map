@@ -124,6 +124,6 @@ onMounted(() => {
 }
 .mapContainer {
   width: 1200px;
-  height: 1000px;
+  height: 700px;
 }
 </style>
