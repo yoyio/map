@@ -7,7 +7,7 @@
           <div class="header-left">
             <!-- title -->
             <div class="header-title-text">
-              <RouterLink to="/" class="navbar-brand" style="font-size: 40px; color: #3f3f3f">數位地圖</RouterLink>
+              <RouterLink to="/" class="navbar-brand" style="font-size: 40px; color: #3f3f3f ;text-decoration: none;">數位地圖</RouterLink>
             </div>
           </div>
 
@@ -37,6 +37,7 @@ header {
   width: 100%;
   top: 0px;
   display: flex;
+  justify-content:space-between;
   align-items: center;
   z-index: 1;
 }
