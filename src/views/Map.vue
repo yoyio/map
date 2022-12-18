@@ -74,12 +74,10 @@ onMounted(() => {
     markers.addLayer(
       L.marker([allData.restaurants[i].lat, allData.restaurants[i].lng])
         .bindPopup(
-          `<img src="` +
-            allData.restaurants[i].img +
-            `" style="width: 300px; height: 150px;padding-bottom: 10px;"><div class="InfoWindowOpened-text ">
+          `<div class="InfoWindowOpened-text " style="font-size: 20px;">
         <h1>` +
             allData.restaurants[i].name +
-            `</h1><p style="font-size: 18px;">地址:` +
+            `</h1><p style="font-size: 15px;">地址:` +
             allData.restaurants[i].address +
             `<br>電話` +
             allData.restaurants[i].iphon +
