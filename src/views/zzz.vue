@@ -1,5 +1,44 @@
 <template>
-  <div class="mapContainer" ref="mapContent"></div>
+  <div class="container">
+    <div class="Information">
+      <div class="toolbox col-sm-3 p-2 bg-white">
+        <div class="form-group d-flex">
+          <label for="cityName" class="col-form-label mr-2 text-right"
+            >縣市</label
+          >
+          <div class="flex-fill">
+            <select id="cityName" class="form-control">
+              <option value="">-- 請選擇縣市 --</option>
+              <option
+                :value="c.CityName"
+                v-for="c in cityName"
+                :key="c.CityName"
+              >
+                {{ c.CityName }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group d-flex">
+          <label for="area" class="col-form-label mr-2 text-right">地區</label>
+          <div class="flex-fill">
+            <select id="area" class="form-control">
+              <option value="">-- 請選擇地區 --</option>
+              <option
+                :value="a.AreaName"
+                v-for="a in cityName"
+                :key="a.AreaName"
+              >
+                {{ a.AreaName }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mapContainer" ref="mapContent"></div>
+  </div>
 </template>
 
 <script setup>
@@ -10,6 +49,7 @@ import "leaflet.markercluster/dist/leaflet.markercluster";
 import "leaflet.markercluster/dist/markercluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import allData from "../data/xinyi.json";
+import cityName from "../data/cityName.json";
 
 let map = {};
 const mapContent = ref(null);
@@ -19,16 +59,9 @@ const attribution =
   '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 const markers = L.markerClusterGroup();
 
-const addressPoints = [
-  [24.046435, 120.687053, "2"],
-  [24.046435, 120.687053, "3"],
-  [24.046435, 120.687053, "3A"],
-  [24.046435, 120.687053, "178"],
-  [24.046435, 120.687053, "190"],
-  [24.046435, 120.687053, "156"],
-];
-
-console.log(addressPoints);
+const AreaList=cityName.AreaList
+console.log(cityName);
+console.log(AreaList);
 console.log(allData.restaurants);
 
 onMounted(() => {
@@ -58,15 +91,37 @@ onMounted(() => {
     shadowSize: [41, 41],
   });
 
-
   map.addLayer(markers);
-})
+});
 </script>
 
-<style>
+
+<style scoped>
+.container {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+}
+.Information {
+  background-color: #fff;
+  width: 20%;
+  height: 700px;
+}
+.Information-title {
+  color: #3f3f3f;
+  font-size: 40px;
+  padding: 20px 20px;
+}
+.Information-text {
+  color: #3f3f3f;
+  font-size: 20px;
+  padding: 3px 30px;
+}
 .mapContainer {
-  width: 100%px;
-  height: 1000px;
+  width: 80%;
+  height: 700px;
 }
 </style>
 

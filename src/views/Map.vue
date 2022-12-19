@@ -1,6 +1,40 @@
 <template>
   <div class="container">
-    <div class="Information">
+    <div class="Information scrollbar">
+      <div class="toolbox col-sm-3 p-2 bg-white">
+        <div class="form-group d-flex">
+          <label for="cityName" class="cityName col-form-label mr-2 text-right"
+            >縣市</label
+          >
+          <div class="flex-fill">
+            <select id="cityName" class="form-control">
+              <option value="">-- 請選擇縣市 --</option>
+              <option
+                :value="c.CityName"
+                v-for="c in cityName"
+                :key="c.CityName"
+              >
+                {{ c.CityName }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group d-flex">
+          <label for="area" class="area col-form-label mr-2 text-right">地區</label>
+          <div class="flex-fill">
+            <select id="area" class="form-control">
+              <option value="">-- 請選擇地區 --</option>
+              <option
+                :value="a.AreaName"
+                v-for="a in cityName"
+                :key="a.AreaName"
+              >
+                {{ a.AreaName }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
       <img :src="img" style="width: 100%; height: 30%" />
       <p class="Information-title">{{ name }}</p>
       <p class="Information-text">{{ area }}</p>
@@ -28,6 +62,7 @@ import "leaflet.markercluster/dist/leaflet.markercluster";
 import "leaflet.markercluster/dist/markercluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import allData from "../data/xinyi.json";
+import cityName from "../data/cityName.json";
 import { onMounted, ref } from "vue";
 
 const mapContainer = ref(null);
@@ -44,11 +79,12 @@ const markers = L.markerClusterGroup();
 
 onMounted(() => {
   console.log(allData.restaurants);
+  console.log(cityName);
 
   //建立地圖物件
   const map = L.map(mapContainer.value, {
     center: [24.046435, 120.687053],
-    zoom: 17,
+    zoom: 8,
   });
 
   //L.tileLayer建立圖資
@@ -56,9 +92,6 @@ onMounted(() => {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
-
-  //標記
-  const marker = L.marker([24.046435, 120.687053], {}).addTo(map);
 
   //circle for 迴圈地圖新增圓形
   for (var i = 0; allData.restaurants.length > i; i++) {
@@ -69,7 +102,7 @@ onMounted(() => {
     }).addTo(map);
   }
 
-  //Marker for 迴圈 ,圖標上顯示訊息
+  //Marker for迴圈標記 ,圖標上顯示訊息
   for (let i = 0; allData.restaurants.length > i; i++) {
     markers.addLayer(
       L.marker([allData.restaurants[i].lat, allData.restaurants[i].lng])
@@ -105,7 +138,8 @@ onMounted(() => {
           co2.value = "碳排量: " + allData.restaurants[i].co2 + "公斤";
           reduceCo2.value =
             "減少碳排量: " + allData.restaurants[i].reduceCo2 + "公斤";
-        })
+        }
+      )
     );
   }
   map.addLayer(markers);
@@ -113,10 +147,23 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.mapContainer {
+  width: 80%;
+  height: 700px;
+}
+.scrollbar {
+  overflow-y: scroll;
+  padding-left: 6px;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #dcdcdc;
+}
 .container {
   width: 100%;
-  margin: 0px auto;
-  padding: 0px;
   display: flex;
   flex-direction: row;
 }
@@ -133,10 +180,20 @@ onMounted(() => {
 .Information-text {
   color: #3f3f3f;
   font-size: 20px;
-  padding: 3px 30px;
+  padding: 3px 20px;
 }
-.mapContainer {
-  width: 80%;
-  height: 700px;
+.form-group{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  margin: 10px auto;
+}
+.cityName{
+  margin: 5px;
+}
+.area{
+  margin: 5px;
 }
 </style>
