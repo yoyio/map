@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <input type="checkbox" id="map-card-swit" />
     <div class="Information">
       <div class="toolbox col-sm-3 p-2 bg-white">
         <div class="form-group d-flex">
@@ -35,9 +36,14 @@
           </div>
         </div>
       </div>
+      <div class="cl-arrow">
+        <label class="cl-arrow-button" for="map-card-swit">
+          55
+        </label>
+      </div>
+      <div class="mapContainer" ref="mapContent"></div>
     </div>
 
-    <div class="mapContainer" ref="mapContent"></div>
   </div>
 </template>
 
@@ -59,7 +65,7 @@ const attribution =
   '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 const markers = L.markerClusterGroup();
 
-const AreaList=cityName.AreaList
+const AreaList = cityName.AreaList;
 console.log(cityName);
 console.log(AreaList);
 console.log(allData.restaurants);
@@ -97,6 +103,35 @@ onMounted(() => {
 
 
 <style scoped>
+#map-card-swit {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+#map-card-swit:checked + .Information {
+  z-index: 1;
+  transform: translateX(-5%);
+}
+#map-card-swit:checked + .Information label .fa-solid {
+  transform: scaleX(-1);
+}
+.cl-arrow {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+.cl-arrow-button {
+  text-align: right;
+  border-radius: 10%;
+  border: 0;
+  width: 30px;
+  height: 50px;
+  background-color: #ff1313;
+  padding-right: 0px;
+  line-height: 50px;
+  
+}
+
 .container {
   width: 100%;
   margin: 0px auto;
@@ -106,9 +141,11 @@ onMounted(() => {
   top: 90px;
 }
 .Information {
-  background-color: #fff;
-  width: 20%;
+  background-color: rgb(135, 135, 135);
+  width: 100%;
   height: 700px;
+  display: flex;
+  flex-direction: row;
 }
 .Information-title {
   color: #3f3f3f;
@@ -121,7 +158,7 @@ onMounted(() => {
   padding: 3px 30px;
 }
 .mapContainer {
-  width: 80%;
+  width: 100%;
   height: 700px;
 }
 </style>

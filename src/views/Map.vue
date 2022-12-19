@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="Information scrollbar">
-      <div class="toolbox col-sm-3 p-2 bg-white">
-        <div class="form-group d-flex">
+      <div class="toolbox ">
+        <div class="form-group ">
           <label for="cityName" class="cityName col-form-label mr-2 text-right"
             >縣市</label
           >
@@ -151,6 +151,7 @@ onMounted(() => {
   width: 80%;
   height: 700px;
 }
+
 .scrollbar {
   overflow-y: scroll;
   padding-left: 6px;
@@ -169,7 +170,7 @@ onMounted(() => {
   top: 90px;
 }
 .Information {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 20%;
   height: 700px;
 }
