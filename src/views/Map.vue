@@ -38,6 +38,7 @@
         </div>
       </div>
       <img :src="img" style="width: 100%; height: 30%" />
+      <RouterLink to="/Information" class="about-button">{{ name }}</RouterLink>
       <p class="Information-title">{{ name }}</p>
       <p class="Information-text">{{ area }}</p>
       <p class="Information-text">{{ c }}</p>
