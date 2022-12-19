@@ -86,7 +86,7 @@ onMounted(() => {
 
   //建立地圖物件
   const map = L.map(mapContainer.value, {
-    center: [24.046435, 120.687053],
+    center: [23.546435, 120.687053],
     zoom: 8,
   });
 
@@ -174,7 +174,7 @@ onMounted(() => {
 <style scoped>
 .mapContainer {
   width: 80%;
-  height: 700px;
+  height: 870px;
 }
 
 .scrollbar {
@@ -190,6 +190,7 @@ onMounted(() => {
 }
 .container {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   top: 90px;
@@ -197,7 +198,7 @@ onMounted(() => {
 .Information {
   background-color: #ffffff;
   width: 20%;
-  height: 700px;
+  height: 100%;
 }
 .Information-title {
   color: #3f3f3f;

@@ -65,10 +65,10 @@
   width: 100%;
   margin: 0 auto;
   height: 800px;
-  background-image: url(".././assets/2.png");
+  background-image: url(".././assets/1.png");
   background-position: center;
   background-size: cover;
-  filter: blur(5px);
+  filter: blur(10px);
 }
 .about-t {
   width: 75%;
@@ -79,7 +79,7 @@
 }
 .about-title {
   color: #1e1c1b;
-  font-size: 6rem;
+  font-size: 100px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -88,7 +88,7 @@
 }
 .about-text {
   color: #1e1c1b;
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: bold;
   padding: 0px 50px 30px 50px;
   display: flex;
@@ -103,16 +103,16 @@
 .about-button {
   color: #1e1c1b;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 20px;
   background-color: #f7f5ed;
   border-style: solid;
   border-color: #1e1c1b;
   border-width: 3px;
-  width: 300px;
-  height: 60px;
+  width: 200px;
+  height: 40px;
   border-radius: 20px 30px;
   text-decoration: none;
-  padding: 0px 80px;
+  padding: 0px 55px;
 }
 .introduce {
   width: 100%;
@@ -122,7 +122,9 @@
   flex-direction: row;
 }
 .introduce-img {
-  background-color: #f7f5ed;
+  background-image: url(".././assets/3.png");
+  background-position: center;
+  background-size: cover;
   width: 50%;
 }
 .introduce-text {
