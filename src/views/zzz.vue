@@ -103,6 +103,7 @@ onMounted(() => {
   padding: 0px;
   display: flex;
   flex-direction: row;
+  top: 90px;
 }
 .Information {
   background-color: #fff;

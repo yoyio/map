@@ -166,6 +166,7 @@ onMounted(() => {
   width: 100%;
   display: flex;
   flex-direction: row;
+  top: 90px;
 }
 .Information {
   background-color: #fff;
@@ -175,7 +176,7 @@ onMounted(() => {
 .Information-title {
   color: #3f3f3f;
   font-size: 40px;
-  padding: 20px 20px;
+  padding: 0px 20px;
 }
 .Information-text {
   color: #3f3f3f;
