@@ -37,13 +37,10 @@
         </div>
       </div>
       <div class="cl-arrow">
-        <label class="cl-arrow-button" for="map-card-swit">
-          55
-        </label>
+        <label class="cl-arrow-button" for="map-card-swit"> 55 </label>
       </div>
       <div class="mapContainer" ref="mapContent"></div>
     </div>
-
   </div>
 </template>
 
@@ -54,6 +51,8 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/leaflet.markercluster";
 import "leaflet.markercluster/dist/markercluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+import "leaflet-draw/dist/leaflet.draw";
+import "leaflet-draw/dist/leaflet.draw.css";
 import allData from "../data/xinyi.json";
 import cityName from "../data/cityName.json";
 
@@ -81,22 +80,35 @@ onMounted(() => {
     attribution: attribution,
   }).addTo(map);
 
+  //
+
+  var drawItem = new L.FeatureGroup();
+  map.addLayer(drawItem);
+  var option = {
+    position: "topleft",
+    collapsed: true,
+    draw: {
+      rectangle: false,
+      marker: false,
+      circlemarker: false,
+    },
+    edit: {
+      featureGroup: drawItem,
+    },
+  };
+  var drawControl = new L.Control.Draw(option);
+  map.addControl(drawControl);
+  map.on(L.Draw.Event.CREATED, function (e) {
+    var layer = e.layer;
+    drawItem.addLayer(layer); // 必須將畫完的圖層加入
+    console.log(arguments);
+  });
+  //
   for (let i = 0; allData.restaurants.length > i; i++) {
     markers.addLayer(
       L.marker([allData.restaurants[i].lat, allData.restaurants[i].lng])
     ); //將 L.mark(地標) 的圖層放到 makers 上面
   }
-  var greenIcon = new L.Icon({
-    iconUrl:
-      "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
-    shadowUrl:
-      "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41],
-  });
-
   map.addLayer(markers);
 });
 </script>
@@ -129,7 +141,6 @@ onMounted(() => {
   background-color: #ff1313;
   padding-right: 0px;
   line-height: 50px;
-  
 }
 
 .container {

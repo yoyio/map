@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="Information scrollbar">
-      <div class="toolbox ">
-        <div class="form-group ">
+      <div class="toolbox">
+        <div class="form-group">
           <label for="cityName" class="cityName col-form-label mr-2 text-right"
             >縣市</label
           >
@@ -20,7 +20,9 @@
           </div>
         </div>
         <div class="form-group d-flex">
-          <label for="area" class="area col-form-label mr-2 text-right">地區</label>
+          <label for="area" class="area col-form-label mr-2 text-right"
+            >地區</label
+          >
           <div class="flex-fill">
             <select id="area" class="form-control">
               <option value="">-- 請選擇地區 --</option>
@@ -61,6 +63,8 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/leaflet.markercluster";
 import "leaflet.markercluster/dist/markercluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+import "leaflet-draw/dist/leaflet.draw";
+import "leaflet-draw/dist/leaflet.draw.css";
 import allData from "../data/xinyi.json";
 import cityName from "../data/cityName.json";
 import { onMounted, ref } from "vue";
@@ -74,7 +78,6 @@ const amount = ref(null);
 const proele = ref(null);
 const co2 = ref(null);
 const reduceCo2 = ref(null);
-
 const markers = L.markerClusterGroup();
 
 onMounted(() => {
@@ -92,6 +95,29 @@ onMounted(() => {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
+
+  //繪圖工具&繪圖
+  var drawItem = new L.FeatureGroup();
+  map.addLayer(drawItem);
+  var option = {
+    position: "topleft",
+    collapsed: true,
+    draw: {
+      rectangle: false,
+      marker: false,
+      circlemarker: false,
+    },
+    edit: {
+      featureGroup: drawItem,
+    },
+  };
+  var drawControl = new L.Control.Draw(option);
+  map.addControl(drawControl);
+  map.on(L.Draw.Event.CREATED, function (e) {
+    var layer = e.layer;
+    drawItem.addLayer(layer); // 必須將畫完的圖層加入
+    console.log(arguments);
+  });
 
   //circle for 迴圈地圖新增圓形
   for (var i = 0; allData.restaurants.length > i; i++) {
@@ -138,8 +164,7 @@ onMounted(() => {
           co2.value = "碳排量: " + allData.restaurants[i].co2 + "公斤";
           reduceCo2.value =
             "減少碳排量: " + allData.restaurants[i].reduceCo2 + "公斤";
-        }
-      )
+        })
     );
   }
   map.addLayer(markers);
@@ -184,7 +209,7 @@ onMounted(() => {
   font-size: 20px;
   padding: 3px 20px;
 }
-.form-group{
+.form-group {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -192,10 +217,10 @@ onMounted(() => {
   font-size: 30px;
   margin: 10px auto;
 }
-.cityName{
+.cityName {
   margin: 5px;
 }
-.area{
+.area {
   margin: 5px;
 }
 </style>
