@@ -1,57 +1,14 @@
 <template>
   <div class="container">
     <div class="Information scrollbar">
-      <div class="toolbox">
-        <div class="form-group">
-          <label for="cityName" class="cityName col-form-label mr-2 text-right"
-            >縣市</label
-          >
-          <div class="flex-fill">
-            <select id="cityName" class="form-control">
-              <option value="">-- 請選擇縣市 --</option>
-              <option
-                :value="c.CityName"
-                v-for="c in cityName"
-                :key="c.CityName"
-              >
-                {{ c.CityName }}
-              </option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group d-flex">
-          <label for="area" class="area col-form-label mr-2 text-right"
-            >地區</label
-          >
-          <div class="flex-fill">
-            <select id="area" class="form-control">
-              <option value="">-- 請選擇地區 --</option>
-              <option
-                :value="a.AreaName"
-                v-for="a in cityName"
-                :key="a.AreaName"
-              >
-                {{ a.AreaName }}
-              </option>
-            </select>
-          </div>
-        </div>
-      </div>
       <img :src="img" style="width: 100%; height: 30%" />
-      <RouterLink to="/Information" class="about-button">{{ name }}</RouterLink>
-      <p class="Information-title">{{ name }}</p>
+      <RouterLink to="/Information" class="Information-title">{{name}}</RouterLink>
       <p class="Information-text">{{ area }}</p>
       <p class="Information-text">{{ c }}</p>
       <P class="Information-text">{{ amount }}</P>
       <P class="Information-text">{{ proele }}</P>
       <P class="Information-text">{{ co2 }}</P>
       <P class="Information-text">{{ reduceCo2 }}</P>
-      <!-- <RouterLink
-        to="/Information"
-        class=""
-        style="font-size: 15px; color: #3f3f3f"
-        >更多資訊</RouterLink
-      > -->
     </div>
     <!--地圖呈現在此-->
     <div class="mapContainer" ref="mapContainer"></div>
@@ -173,9 +130,15 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
 .mapContainer {
-  width: 80%;
-  height: 870px;
+  width: 80vw;
+  height: 91vh;
 }
 
 .scrollbar {
@@ -183,46 +146,26 @@ onMounted(() => {
   padding-left: 6px;
 }
 .scrollbar::-webkit-scrollbar {
-  width: 6px;
+  width: 3px;
 }
 .scrollbar::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background-color: #dcdcdc;
-}
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  top: 90px;
+  background-color: #ffffff;
 }
 .Information {
   background-color: #ffffff;
-  width: 20%;
-  height: 100%;
+  width: 20vw;
+  height: 91vh;
 }
 .Information-title {
   color: #3f3f3f;
   font-size: 40px;
   padding: 0px 20px;
+  text-decoration: none;
 }
 .Information-text {
   color: #3f3f3f;
   font-size: 20px;
-  padding: 3px 20px;
-}
-.form-group {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 30px;
-  margin: 10px auto;
-}
-.cityName {
-  margin: 5px;
-}
-.area {
-  margin: 5px;
+  padding: 0px 20px;
 }
 </style>

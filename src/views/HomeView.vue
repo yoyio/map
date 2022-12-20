@@ -29,7 +29,12 @@
     <img class="introduce-img" />
   </div>
   <div class="top">
-    <a href="#top">上</a>
+    <a href="#top">
+      <font-awesome-icon icon="bars" />
+      <font-awesome-icon icon="arrow-up" />
+      <font-awesome-icon :icon="['fas', 'bars']" />
+      <font-awesome-icon :icon="['fab', 'vuejs']" />
+    </a>
   </div>
   <div class="footer" id="footer">
     <div class="footer_logo">
@@ -58,8 +63,6 @@
 .about {
   width: 100%;
   margin: 0 auto;
-  height: 870px;
-  top: 80px;
 }
 .about-img {
   width: 100%;
@@ -147,7 +150,7 @@
   color: #000;
   background-color: #fdf7df;
 }
-a{
+a {
   text-decoration: none;
   color: #000;
 }

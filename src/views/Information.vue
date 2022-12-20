@@ -3,12 +3,8 @@
     <div class="about-img"></div>
     <div class="about-t">
       <p class="about-text">
-        於時遠和神發不先極她是沒民市接一生我設，物訴入感表坡明位。麼畫落現行車，著事本只教朋……市馬事去國後職且笑愛來世，靜商灣衣資：客雲看：到極人說名那治之每好以，海所了我而。有大當有夫動裡她？電火你無體、不眼商說有笑，因效持先不說自的知男要大對操心長告就言那超於去護？
+        Information
       </p>
-      <div class="about-i">
-        <RouterLink to="/Map" class="about-button">開始使用</RouterLink>
-        <!-- <img src=".././assets/1.png" class="i1"> -->
-      </div>
     </div>
   </div>
 </template>
