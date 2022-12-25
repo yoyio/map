@@ -1,14 +1,38 @@
 <template>
   <div class="container">
-    <div class="Information scrollbar">
-      <img :src="img" style="width: 100%; height: 30%" />
-      <RouterLink to="/Information" class="Information-title">{{name}}</RouterLink>
-      <p class="Information-text">{{ area }}</p>
-      <p class="Information-text">{{ c }}</p>
-      <P class="Information-text">{{ amount }}</P>
-      <P class="Information-text">{{ proele }}</P>
-      <P class="Information-text">{{ co2 }}</P>
-      <P class="Information-text">{{ reduceCo2 }}</P>
+    <div class="card">
+      <input
+        class="c-shrinkIcon__input"
+        id="searchText"
+        type="text"
+        name="search"
+        placeholder="搜尋..."
+      />
+      <div class="Information scrollbar" v-if="area">
+        <img class="Information-img" :src="img" style="" />
+        <RouterLink to="/Information" class="Information-title">{{
+          name
+        }}</RouterLink>
+        <p class="Information-text">{{ area }}</p>
+        <p class="Information-text">{{ c }}</p>
+        <P class="Information-text">{{ amount }}</P>
+        <P class="Information-text">{{ proele }}</P>
+        <P class="Information-text">{{ co2 }}</P>
+        <P class="Information-text">{{ reduceCo2 }}</P>
+      </div>
+      <div class="p-sideContent scrollbar" v-else>
+        <div class="p-card" v-for="(item, key) in data" :key="key">
+          <div class="h-d-flex h-mb-3 h-align-items-center">
+            <h2 class="h-flex-1">
+              <RouterLink to="/Information" style="text-decoration:none; color:#3f3f3f">{{ item.name }}</RouterLink>
+            </h2>
+          </div>
+          <span class="h5 h-text-dark">{{ item.address }}</span>
+          <br />
+          <span class="h5 h-text-dark">{{ item.iphon }}</span>
+          <br />
+        </div>
+      </div>
     </div>
     <!--地圖呈現在此-->
     <div class="mapContainer" ref="mapContainer"></div>
@@ -37,15 +61,18 @@ const proele = ref(null);
 const co2 = ref(null);
 const reduceCo2 = ref(null);
 const markers = L.markerClusterGroup();
+const data = allData.restaurants;
 
 onMounted(() => {
   console.log(allData.restaurants);
   console.log(cityName);
+  const data = allData.restaurants;
+  console.log(data);
 
   //建立地圖物件
   const map = L.map(mapContainer.value, {
-    center: [23.546435, 120.687053],
-    zoom: 8,
+    center: [23.710100, 120.602125],
+    zoom: 10,
   });
 
   //L.tileLayer建立圖資
@@ -76,15 +103,6 @@ onMounted(() => {
     drawItem.addLayer(layer); // 必須將畫完的圖層加入
     console.log(arguments);
   });
-
-  //circle for 迴圈地圖新增圓形
-  for (var i = 0; allData.restaurants.length > i; i++) {
-    L.circle([allData.restaurants[i].lat, allData.restaurants[i].lng], {
-      color: allData.restaurants[i].color,
-      fillOpacity: 0.3,
-      radius: 120,
-    }).addTo(map);
-  }
 
   //Marker for迴圈標記 ,圖標上顯示訊息
   for (let i = 0; allData.restaurants.length > i; i++) {
@@ -134,7 +152,7 @@ onMounted(() => {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 .mapContainer {
   width: 80vw;
@@ -152,20 +170,52 @@ onMounted(() => {
   border-radius: 3px;
   background-color: #ffffff;
 }
+.card {
+  background-color: #ffffff;
+  width: 20vw;
+  height: 91vh;
+  margin: 10px;
+}
 .Information {
   background-color: #ffffff;
   width: 20vw;
   height: 91vh;
 }
+.Information-img {
+  width: 98%;
+  height: 25%;
+  margin-top: 10px;
+}
 .Information-title {
   color: #3f3f3f;
   font-size: 40px;
-  padding: 0px 20px;
   text-decoration: none;
 }
 .Information-text {
   color: #3f3f3f;
   font-size: 20px;
-  padding: 0px 20px;
+}
+
+/*搜尋*/
+.c-shrinkIcon__input {
+  font-size: 1rem;
+  height: 31px;
+  width: 100%;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #1e1c1b;
+  border-width: 3px;
+  padding-left: 10px;
+  padding-right: 35px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.p-sideContent {
+  overflow-y: auto;
+  background-color: #fff;
+}
+.p-card {
+  padding: 0.9375rem 0.75rem;
+  border-bottom: 1px solid #d9d9d9;
 }
 </style>
