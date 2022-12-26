@@ -150,17 +150,16 @@ onMounted(() => {
     );
   }
   map.addLayer(markers);
-
-  const focusLocation = (item) => {
-    userData.name = "mike";
-    console.log(userData.name);
-  };
-
-  function changeText() {
-    userData.name = "mike";
-    console.log(userData.name);
-  }
 });
+
+function changeText() {
+  console.log('userData.name');
+  map = L.map(mapContainer.value, {
+    center: [23.7101, 120.552125],
+    zoom: 10,
+  });
+  console.log('123456');
+}
 </script>
 
 <style scoped>
