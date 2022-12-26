@@ -30,28 +30,14 @@
   </div>
   <div class="top">
     <a href="#top">
-      <font-awesome-icon icon="bars" />
       <font-awesome-icon icon="arrow-up" />
-      <font-awesome-icon :icon="['fas', 'bars']" />
-      <font-awesome-icon :icon="['fab', 'vuejs']" />
     </a>
   </div>
   <div class="footer" id="footer">
     <div class="footer_logo">
-      <span style="margin-right: 1rem; font-size: 30px">
-        <font face="DFKai-sb"><b>亞洲大學</b></font>
+      <span style="margin-right: 1rem; font-size: 18px">
+        <font face="DFKai-sb"><b>亞洲大學-精準健康研究中心</b></font>
       </span>
-      <span style="margin-right: 1rem">
-        <font face="DFKai-sb">精準健康研究中心</font>
-      </span>
-    </div>
-    <div class="footer_text">
-      <font face="DFKai-sb"
-        ><span>校址: 413305 台中市霧峰區柳豐路500號</span></font
-      >
-      <font face="DFKai-sb"
-        ><span>TEL: +886-4-2332-3456 | +886-4-3706-1889</span></font
-      >
     </div>
   </div>
 </template>
@@ -67,18 +53,18 @@
 .about-img {
   width: 100%;
   margin: 0 auto;
-  height: 800px;
+  height: 93vh;
   background-image: url(".././assets/1.png");
   background-position: center;
   background-size: cover;
   filter: blur(10px);
 }
 .about-t {
-  width: 75%;
+  width: 60%;
   margin: 0px auto;
   position: absolute;
   top: 100px;
-  left: 12.5%;
+  left: 20%;
 }
 .about-title {
   color: #1e1c1b;
@@ -86,14 +72,14 @@
   font-weight: bold;
   display: flex;
   justify-content: center;
-  padding: 30px 0px 0px 0px;
+  padding: 30px 0px 30px 0px;
   z-index: 1;
 }
 .about-text {
   color: #1e1c1b;
   font-size: 20px;
   font-weight: bold;
-  padding: 0px 50px 30px 50px;
+  padding: 0px 50px 80px 50px;
   display: flex;
   justify-content: center;
 }
@@ -131,8 +117,8 @@
   width: 50%;
 }
 .introduce-text {
-  background-color: #1e1c1b;
-  color: #f7f5ed;
+  background-color: #f7f5ed;
+  color: #1e1c1b;
   width: 50%;
   padding: 0px 50px;
   display: flex;
@@ -146,9 +132,8 @@
   line-height: 200px;
   height: 200px;
   padding: 10px;
-  font-size: 40px;
-  color: #000;
-  background-color: #fdf7df;
+  font-size: 60px;
+  background-color: #f7f5ed;
 }
 a {
   text-decoration: none;
@@ -157,7 +142,7 @@ a {
 /*footer*/
 .footer {
   width: 100%;
-  height: 150px;
+  height: 60px;
   /* footer的高度一定要是固定值*/
   position: absolute;
   font-size: 20px;
@@ -165,8 +150,8 @@ a {
   justify-content: center;
   align-items: center;
   padding: 0px 10px;
-  background-color: #fdf7df;
-  color: #1e1c1b;
+  background-color: #1e1c1b;
+  color: #f7f5ed;
 }
 .footer_logo {
   display: flex;
@@ -174,13 +159,5 @@ a {
   justify-content: flex-start;
   align-items: center;
   margin: 30px;
-}
-.footer_text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-  font-size: 16px;
 }
 </style>

@@ -173,13 +173,13 @@ onMounted(() => {
 .card {
   background-color: #ffffff;
   width: 20vw;
-  height: 91vh;
-  margin: 10px;
+  height: 89vh;
+  margin: 0px 10px;
 }
 .Information {
   background-color: #ffffff;
   width: 20vw;
-  height: 91vh;
+  height: 87vh;
 }
 .Information-img {
   width: 98%;
