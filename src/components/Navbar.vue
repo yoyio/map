@@ -1,13 +1,11 @@
 <template>
-  <header>
     <div class="header-navbar">
-      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <!-- header-left -->
           <div class="header-left">
             <!-- title -->
             <div class="header-title-text">
-              <RouterLink to="/" class="navbar-brand" style="font-size: 30px; color: #F7F5ED ;text-decoration: none;">數位地圖</RouterLink>
+              <RouterLink to="/" class="navbar-brand" style="font-size: 20px; color: #F7F5ED ;text-decoration: none;">數位地圖</RouterLink>
             </div>
           </div>
 
@@ -19,43 +17,59 @@
             <RouterLink  to="/zzz" class="header-right-text" >ZZZ</RouterLink>
           </div>
         </div>
-      </nav>
     </div>
-  </header>
 </template>
 
 
 <style scoped>
-header {
-  background-color: #1e1c1b;
-  height:80px;
-  z-index: 1;
-}
 .container-fluid {
-  background-color: #1e1c1b;
-  height: 80px;
+  background-color: #ab9782;
+  height: 60px;
   width: 100%;
   top: 0px;
   display: flex;
-  justify-content:space-between;
-  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
 }
 .header-left {
-  margin-left: 180px;
-  line-height: 80px;
+  margin-left: 5%;
+  line-height: 60px;
   text-align: center;
 }
+
 .header-right {
-  margin-right: 150px;
-  font-size: 14px;
+  margin-right: 5%;
+  margin-left: 20%;
+  font-size: 12px;
 }
-.header-right-text{
-  margin: 0 25px;
-  line-height: 80px;
+
+.header-right-text {
+  margin: 0 5px;
+  line-height: 60px;
   text-align: center;
   text-decoration: none;
 }
 a{
   color:#F7F5ED;
+}
+
+
+/*響應式*/
+@media (min-width: 389px) {
+  .header-left {
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 559px) {
+    .header-left {
+      margin-left: 10%;
+    }
+    .header-right {
+      margin-left: 25%;
+    }
+    .header-right-text {
+      margin: 0 10px;
+    }
 }
 </style>

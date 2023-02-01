@@ -9,9 +9,9 @@
         name="search"
         placeholder="搜尋..."
       />
-      <div class="Information scrollbar" v-if="area">
+      <div class="Information scrollbar" v-if="area" >
         <img class="Information-img" :src="img" style="" />
-        <RouterLink to="/Information" class="Information-title">{{
+        <RouterLink :to="url" class="Information-title">{{
           name
         }}</RouterLink>
         <p class="Information-text">{{ area }}</p>
@@ -43,9 +43,13 @@
     <!--地圖呈現在此-->
     <div class="mapContainer" ref="mapContainer"></div>
   </div>
+  <zzz :name="name" :area="area" :c="c" :amount="amount" :proele="proele" :co2="co2" :reduceCo2="reduceCo2" :img="img"  @up="b"/>
+  <inf :name="name" :area="area" :c="c" :amount="amount" :proele="proele" :co2="co2" :reduceCo2="reduceCo2" :img="img" />
 </template>
 
 <script setup>
+import zzz from "../components/zzz.vue";
+import inf from "../components/inf.vue";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/leaflet.markercluster";
@@ -55,7 +59,7 @@ import "leaflet-draw/dist/leaflet.draw";
 import "leaflet-draw/dist/leaflet.draw.css";
 import allData from "../data/xinyi.json";
 import cityName from "../data/cityName.json";
-import { onMounted, ref } from "vue";
+import { onMounted, ref  } from "vue";
 
 const mapContainer = ref(null);
 const img = ref(null);
@@ -66,8 +70,14 @@ const amount = ref(null);
 const proele = ref(null);
 const co2 = ref(null);
 const reduceCo2 = ref(null);
+const url=ref(null)
 const markers = L.markerClusterGroup();
 const data = allData.restaurants;
+
+const b = (name) => {
+  console.log("name")
+  console.log(name.name)
+}
 
 onMounted(() => {
   console.log(allData.restaurants);
@@ -146,20 +156,12 @@ onMounted(() => {
           co2.value = "碳排量: " + allData.restaurants[i].co2 + "公斤";
           reduceCo2.value =
             "減少碳排量: " + allData.restaurants[i].reduceCo2 + "公斤";
+          url.value ="/Information" 
         })
     );
   }
   map.addLayer(markers);
 });
-
-function changeText() {
-  console.log('userData.name');
-  map = L.map(mapContainer.value, {
-    center: [23.7101, 120.552125],
-    zoom: 10,
-  });
-  console.log('123456');
-}
 </script>
 
 <style scoped>
