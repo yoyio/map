@@ -1,15 +1,8 @@
 <template>
   <div class="container">
-    <div class="card">
-      <input
-        class="c-shrinkIcon__input"
-        id="searchText"
-        type="text"
-        name="search"
-        placeholder="搜尋..."
-      />
-      <div class="Information scrollbar" v-if="area">
-        <img class="Information-img" :src="img" style="" />
+    <div class="card scrollbar">
+      <input class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
+      <div class="Information " v-if="area">
         <RouterLink to="/Information" class="Information-title">{{
           name
         }}</RouterLink>
@@ -36,6 +29,13 @@
     </div>
     <!--地圖呈現在此-->
     <div class="mapContainer" ref="mapContainer"></div>
+  </div>
+  <div class="footer" id="footer">
+    <div class="footer_logo">
+      <span style="margin-right: 1rem; font-size: 18px">
+        <font face="DFKai-sb"><b>亞洲大學-精準健康研究中心</b></font>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -111,24 +111,24 @@ onMounted(() => {
         .bindPopup(
           `<div class="InfoWindowOpened-text " style="font-size: 20px;">
         <h1>` +
-            allData.restaurants[i].name +
-            `</h1><p style="font-size: 15px;">地址:` +
-            allData.restaurants[i].address +
-            `<br>電話` +
-            allData.restaurants[i].iphon +
-            `<br>申請人類別:` +
-            allData.restaurants[i].whoCategory +
-            `<br>申請人或機構:` +
-            allData.restaurants[i].who +
-            `<br>設置型別:` +
-            allData.restaurants[i].category +
-            `<br>發電設備種類:` +
-            allData.restaurants[i].electricity +
-            `(PV)<br>設置位置:` +
-            allData.restaurants[i].location +
-            `<br>總裝置容量:` +
-            allData.restaurants[i].capacity +
-            `kW</p> `
+          allData.restaurants[i].name +
+          `</h1><p style="font-size: 15px;">地址:` +
+          allData.restaurants[i].address +
+          `<br>電話` +
+          allData.restaurants[i].iphon +
+          `<br>申請人類別:` +
+          allData.restaurants[i].whoCategory +
+          `<br>申請人或機構:` +
+          allData.restaurants[i].who +
+          `<br>設置型別:` +
+          allData.restaurants[i].category +
+          `<br>發電設備種類:` +
+          allData.restaurants[i].electricity +
+          `(PV)<br>設置位置:` +
+          allData.restaurants[i].location +
+          `<br>總裝置容量:` +
+          allData.restaurants[i].capacity +
+          `kW</p> `
         )
         .on("click", () => {
           img.value = allData.restaurants[i].img;
@@ -150,57 +150,56 @@ onMounted(() => {
 <style scoped>
 .container {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
+
 .mapContainer {
-  width: 80vw;
-  height: 91vh;
+  width: 100%;
+  height: 80vh;
 }
 
 .scrollbar {
   overflow-y: scroll;
   padding-left: 6px;
 }
+
 .scrollbar::-webkit-scrollbar {
   width: 3px;
 }
+
 .scrollbar::-webkit-scrollbar-thumb {
   border-radius: 3px;
   background-color: #ffffff;
 }
+
 .card {
   background-color: #ffffff;
-  width: 20vw;
-  height: 89vh;
-  margin: 0px 10px;
+  width: 100%;
+  height: 35vh;
+  margin: 10px;
 }
+
 .Information {
   background-color: #ffffff;
-  width: 20vw;
-  height: 87vh;
+  width: 95%;
+  height: 30vh;
 }
-.Information-img {
-  width: 98%;
-  height: 25%;
-  margin-top: 10px;
-}
+
 .Information-title {
   color: #3f3f3f;
-  font-size: 40px;
+  font-size: 25px;
   text-decoration: none;
 }
+
 .Information-text {
   color: #3f3f3f;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 /*搜尋*/
 .c-shrinkIcon__input {
   font-size: 1rem;
   height: 31px;
-  width: 100%;
+  width: 90%;
   background-color: #fff;
   border-style: solid;
   border-color: #1e1c1b;
@@ -210,12 +209,202 @@ onMounted(() => {
   border-radius: 20px;
   margin-top: 10px;
 }
+
 .p-sideContent {
   overflow-y: auto;
   background-color: #fff;
+  height: 50vh;
 }
+
 .p-card {
-  padding: 0.9375rem 0.75rem;
+  padding: 0.3rem 1rem;
   border-bottom: 1px solid #d9d9d9;
+}
+
+.h-flex-1 {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.h5 {
+  font-size: 12px;
+}
+
+/*footer*/
+.footer {
+  width: 100%;
+  height: 60px;
+  /* footer的高度一定要是固定值*/
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  background-color: #ab9782;
+  color: #f7f5ed;
+}
+
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30px;
+}
+
+/*響應式*/
+@media (min-width: 389px) {
+  .card {
+    height: 30vh;
+  }
+
+  .Information {
+    width: 100%;
+  }
+
+  .Information-img {
+    height: 50%;
+    margin-top: 10px;
+  }
+
+  .Information-title {
+    font-size: 30px;
+  }
+
+  .Information-text {
+    font-size: 20px;
+  }
+
+  /*搜尋*/
+  .p-sideContent {
+    height: 60vh;
+  }
+
+  .p-card {
+    padding: 0.9375rem 0.75rem;
+  }
+
+  .h-flex-1 {
+    font-size: 25px;
+  }
+
+  .h5 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 539px) {
+  .card {
+    height: 30vh;
+  }
+
+  .Information-img {
+    width: 95%;
+    height: 60%;
+    margin: 10px auto;
+  }
+
+  .Information-title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 699px) {
+  .card {
+    height: 30vh;
+  }
+
+  .Information {
+    width: 100%;
+  }
+
+  .Information-title {
+    font-size: 40px;
+  }
+
+  .Information-text {
+    font-size: 20px;
+  }
+
+  /*搜尋*/
+
+  .p-card {
+    padding: 0.9375rem 0.75rem;
+  }
+}
+
+@media (min-width: 819px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mapContainer {
+    width: 80vw;
+    height: 91vh;
+  }
+
+  .card {
+    width: 20vw;
+    height: 90vh;
+    margin: 0px 10px;
+  }
+
+  .Information {
+    width: 20vw;
+    height: 100vh;
+  }
+
+  .Information-img {
+    width: 98%;
+    height: 25%;
+    margin-top: 10px;
+  }
+
+  .Information-title {
+    font-size: 30px;
+  }
+
+  .Information-text {
+    font-size: 18px;
+  }
+
+  /*搜尋*/
+  .c-shrinkIcon__input {
+    width: 100%;
+  }
+
+  .p-sideContent {
+    height: 90vh;
+  }
+
+  .p-card {
+    padding: 0.9375rem 0.75rem;
+  }
+
+  .h-flex-1 {
+    font-size: 20px;
+  }
+
+  .h5 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .Information-title {
+    font-size: 40px;
+  }
+
+  .Information-text {
+    font-size: 23px;
+  }
+
+  .h-flex-1 {
+    font-size: 25px;
+  }
 }
 </style>
