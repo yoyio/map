@@ -68,7 +68,6 @@ a {
 
 /*Main Header*/
 header {
-  position: fixed;
   width: 100%;
   height: 60px;
   z-index: 999;
@@ -87,6 +86,7 @@ header {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 0.3s ease-out;
+  z-index: 1;
 }
 
 .navbar-toggle {
