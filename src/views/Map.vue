@@ -241,7 +241,7 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   padding: 0px 10px;
-  background-color: #ab9782;
+  background-color: #038686;
   color: #f7f5ed;
 }
 

@@ -72,7 +72,7 @@ header {
   height: 60px;
   z-index: 999;
   text-align: center;
-  background-color: #ab9782;
+  background-color: #038686;
   -webkit-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
@@ -156,7 +156,7 @@ header {
 }
 
 .nav-link {
-  color: #ab9782;
+  color: #038686;
 }
 
 
