@@ -3,9 +3,13 @@
     <div class="card scrollbar">
       <input class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
       <div class="Information " v-if="area">
-        <RouterLink to="/Information" class="Information-title">{{
+        <br/>
+        <img :src="img"  class="Information-img"/>
+        <br/>
+        {{
           name
-        }}</RouterLink>
+        }}>
+        <br/>
         <p class="Information-text">{{ area }}</p>
         <p class="Information-text">{{ c }}</p>
         <P class="Information-text">{{ amount }}</P>
@@ -17,7 +21,7 @@
         <div class="p-card" v-for="(item, key) in data" :key="key">
           <div class="h-d-flex h-mb-3 h-align-items-center">
             <h2 class="h-flex-1">
-              <RouterLink to="/Information" style="text-decoration:none; color:#3f3f3f">{{ item.name }}</RouterLink>
+              {{ item.name }}
             </h2>
           </div>
           <span class="h5 h-text-dark">{{ item.address }}</span>
@@ -183,7 +187,10 @@ onMounted(() => {
   width: 95%;
   height: 30vh;
 }
-
+.Information-img{
+  max-width: 400px;
+  height: 300px;
+}
 .Information-title {
   color: #3f3f3f;
   font-size: 25px;
@@ -262,12 +269,6 @@ onMounted(() => {
   .Information {
     width: 100%;
   }
-
-  .Information-img {
-    height: 50%;
-    margin-top: 10px;
-  }
-
   .Information-title {
     font-size: 30px;
   }
@@ -298,13 +299,6 @@ onMounted(() => {
   .card {
     height: 30vh;
   }
-
-  .Information-img {
-    width: 95%;
-    height: 60%;
-    margin: 10px auto;
-  }
-
   .Information-title {
     font-size: 40px;
   }
@@ -357,13 +351,6 @@ onMounted(() => {
     width: 20vw;
     height: 100vh;
   }
-
-  .Information-img {
-    width: 98%;
-    height: 25%;
-    margin-top: 10px;
-  }
-
   .Information-title {
     font-size: 30px;
   }
