@@ -4,10 +4,9 @@
       <h3>ZZZ</h3>
       <input class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
       <div class="Information " v-if="area">
-        <!-- <img class="Information-img" :src="img" style="" /> -->
-        <RouterLink :to="url" class="Information-title">{{
-          name
-        }}</RouterLink>
+        <RouterLink :to="`/Information/${id}`" class="Information-title">{{
+        name
+        }}</RouterLink>{{ id }}
         <p class="Information-text">{{ area }}</p>
         <p class="Information-text">{{ c }}</p>
         <P class="Information-text">{{ amount }}</P>
@@ -19,7 +18,6 @@
         <div class="p-card " v-for="(item, key) in data" :key="key">
           <div class="h-d-flex h-mb-3 h-align-items-center">
             <p class="h-flex-1">
-              <RouterLink to="/Information" style="text-decoration: none; color: #3f3f3f">{{ item.name }}</RouterLink>
             </p>
             <button class="checkBtn" @click="changeText()">點我查看</button>
           </div>
@@ -56,6 +54,7 @@ import { onMounted, ref } from "vue";
 
 const mapContainer = ref(null);
 const img = ref(null);
+const id = ref(null);
 const name = ref(null);
 const area = ref(null);
 const c = ref(null);
@@ -73,7 +72,7 @@ const b = (name) => {
 }
 
 onMounted(() => {
-  console.log(allData.restaurants);
+  console.log('allDat',allData.restaurants);
   console.log(cityName);
   const data = allData.restaurants;
   console.log(data);
@@ -141,6 +140,7 @@ onMounted(() => {
         )
         .on("click", () => {
           img.value = allData.restaurants[i].img;
+          id.value = allData.restaurants[i].id;
           name.value = allData.restaurants[i].name;
           area.value = "占地面積: " + allData.restaurants[i].area + "公頃";
           c.value = "漁獲: " + allData.restaurants[i].c;

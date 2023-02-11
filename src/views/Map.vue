@@ -3,13 +3,11 @@
     <div class="card scrollbar">
       <input class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
       <div class="Information " v-if="area">
-        <br/>
-        <img :src="img"  class="Information-img"/>
-        <br/>
-        {{
-          name
-        }}>
-        <br/>
+        <br />
+        <img :src="img" class="Information-img" />
+        <br />
+        <RouterLink :to="`/Information/${id}`" class="Information-title">{{  name  }}</RouterLink>
+        <br />
         <p class="Information-text">{{ area }}</p>
         <p class="Information-text">{{ c }}</p>
         <P class="Information-text">{{ amount }}</P>
@@ -21,7 +19,7 @@
         <div class="p-card" v-for="(item, key) in data" :key="key">
           <div class="h-d-flex h-mb-3 h-align-items-center">
             <h2 class="h-flex-1">
-              {{ item.name }}
+              <RouterLink to="/" style="text-decoration: none;color: #3f3f3f">{{ item.name }}</RouterLink>
             </h2>
           </div>
           <span class="h5 h-text-dark">{{ item.address }}</span>
@@ -57,6 +55,7 @@ import { onMounted, ref } from "vue";
 
 const mapContainer = ref(null);
 const img = ref(null);
+const id = ref(null);
 const name = ref(null);
 const area = ref(null);
 const c = ref(null);
@@ -136,6 +135,7 @@ onMounted(() => {
         )
         .on("click", () => {
           img.value = allData.restaurants[i].img;
+          id.value = allData.restaurants[i].id;
           name.value = allData.restaurants[i].name;
           area.value = "占地面積: " + allData.restaurants[i].area + "公頃";
           c.value = "漁獲: " + allData.restaurants[i].c;
@@ -187,10 +187,12 @@ onMounted(() => {
   width: 95%;
   height: 30vh;
 }
-.Information-img{
+
+.Information-img {
   max-width: 400px;
   height: 300px;
 }
+
 .Information-title {
   color: #3f3f3f;
   font-size: 25px;
@@ -231,6 +233,7 @@ onMounted(() => {
 .h-flex-1 {
   font-size: 18px;
   font-weight: 900;
+  text-decoration: none;
 }
 
 .h5 {
@@ -269,6 +272,7 @@ onMounted(() => {
   .Information {
     width: 100%;
   }
+
   .Information-title {
     font-size: 30px;
   }
@@ -299,6 +303,7 @@ onMounted(() => {
   .card {
     height: 30vh;
   }
+
   .Information-title {
     font-size: 40px;
   }
@@ -351,6 +356,7 @@ onMounted(() => {
     width: 20vw;
     height: 100vh;
   }
+
   .Information-title {
     font-size: 30px;
   }
