@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="card scrollbar">
-      <input class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
+      <input v-if="!area" class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
       <div class="Information " v-if="area">
         <br />
         <img :src="img" class="Information-img" />
