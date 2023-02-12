@@ -289,6 +289,14 @@
       </div>
     </div>
   </div>
+  <!-- footer -->
+  <div class="footer" id="footer">
+    <div class="footer_logo">
+      <span style="margin-right: 1rem; font-size: 18px">
+        <font face="DFKai-sb"><b>亞洲大學-精準健康研究中心</b></font>
+      </span>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -436,6 +444,29 @@ export default {
 }
 .inbox-item-date{
   top: 40px;
+}
+
+/*footer*/
+.footer {
+  width: 100%;
+  height: 60px;
+  /* footer的高度一定要是固定值*/
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  background-color: #038686;
+  color: #f7f5ed;
+}
+
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 30px;
 }
 
 

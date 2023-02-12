@@ -84,6 +84,30 @@
       </div>
     </div>
   </div>
+  <!-- footer -->
+  <div class="footer" id="footer">
+    <div class="fo">
+      <div class="footer_logo">
+        <span style="font-size: 23px">
+          <div class="footer-icon">
+            <font-awesome-icon icon="fa-brands fa-facebook" />
+            <font-awesome-icon icon="fa-brands fa-instagram" />
+            <font-awesome-icon icon="fa-brands fa-youtube" />
+            <font-awesome-icon icon="fa-brands fa-twitter" />
+          </div>
+          <font face="DFKai-sb"><b>亞洲大學-精準健康研究中心</b></font>
+        </span>
+
+      </div>
+      <div class="footer-text">
+        <p class="footer-text-i">聯絡我們</p>
+        <hr />
+        <p class="footer-text-i">地址:41354台中市霧峰區柳豐路500號</p>
+        <p class="footer-text-i">電話: 04-23323456#6502</p>
+        <p class="footer-text-i">信箱:taylor@asia.edu.tw</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -189,6 +213,46 @@ hr {
 }
 
 
+/*footer*/
+.footer {
+  width: 100%;
+  background-color: #038686;
+}
+
+.fo {
+  max-width: 80%;
+  margin: 0px auto;
+  font-size: 20px;
+  padding: 30px 0px;
+  color: #f7f5ed;
+}
+
+.footer_logo {
+  margin: 30px auto;
+  text-align: center;
+  width: 50%;
+}
+
+.footer-icon {
+  width: 250px;
+  margin: 10px auto;
+  padding: 10px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  margin: 10px auto;
+  width: 50%;
+}
+
+.footer-text-i {
+  font-family: DFKai-sb;
+  padding: 10px 0px;
+}
+
 
 /*響應式*/
 @media (min-width: 919px) {
@@ -200,6 +264,19 @@ hr {
   .aboutBB {
     display: inline-flex;
     justify-content: space-around;
+  }
+
+  .fo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-text-i {
+    margin: 10px auto;
+  }
+
+  .footer-text {
+    width: 40%;
   }
 }
 </style>

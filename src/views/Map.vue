@@ -67,11 +67,6 @@ const markers = L.markerClusterGroup();
 const data = allData.restaurants;
 
 onMounted(() => {
-  console.log(allData.restaurants);
-  console.log(cityName);
-  const data = allData.restaurants;
-  console.log(data);
-
   //建立地圖物件
   const map = L.map(mapContainer.value, {
     center: [23.710100, 120.602125],
@@ -108,42 +103,42 @@ onMounted(() => {
   });
 
   //Marker for迴圈標記 ,圖標上顯示訊息
-  for (let i = 0; allData.restaurants.length > i; i++) {
+  for (let i = 0; data.length > i; i++) {
     markers.addLayer(
-      L.marker([allData.restaurants[i].lat, allData.restaurants[i].lng])
+      L.marker([data[i].lat, data[i].lng])
         .bindPopup(
           `<div class="InfoWindowOpened-text " style="font-size: 20px;">
         <h1>` +
-          allData.restaurants[i].name +
+          data[i].name +
           `</h1><p style="font-size: 15px;">地址:` +
-          allData.restaurants[i].address +
+          data[i].address +
           `<br>電話` +
-          allData.restaurants[i].iphon +
+          data[i].iphon +
           `<br>申請人類別:` +
-          allData.restaurants[i].whoCategory +
+          data[i].whoCategory +
           `<br>申請人或機構:` +
-          allData.restaurants[i].who +
+          data[i].who +
           `<br>設置型別:` +
-          allData.restaurants[i].category +
+          data[i].category +
           `<br>發電設備種類:` +
-          allData.restaurants[i].electricity +
+          data[i].electricity +
           `(PV)<br>設置位置:` +
-          allData.restaurants[i].location +
+          data[i].location +
           `<br>總裝置容量:` +
-          allData.restaurants[i].capacity +
+          data[i].capacity +
           `kW</p> `
         )
         .on("click", () => {
-          img.value = allData.restaurants[i].img;
-          id.value = allData.restaurants[i].id;
-          name.value = allData.restaurants[i].name;
-          area.value = "占地面積: " + allData.restaurants[i].area + "公頃";
-          c.value = "漁獲: " + allData.restaurants[i].c;
-          amount.value = "產量: " + allData.restaurants[i].amount + "公斤";
-          proele.value = "發電量: " + allData.restaurants[i].proele + "KW";
-          co2.value = "碳排量: " + allData.restaurants[i].co2 + "公斤";
+          img.value = data[i].img;
+          id.value = data[i].id;
+          name.value = data[i].name;
+          area.value = "占地面積: " + data[i].area + "公頃";
+          c.value = "漁獲: " + data[i].c;
+          amount.value = "產量: " + data[i].amount + "公斤";
+          proele.value = "發電量: " + data[i].proele + "KW";
+          co2.value = "碳排量: " + data[i].co2 + "公斤";
           reduceCo2.value =
-            "減少碳排量: " + allData.restaurants[i].reduceCo2 + "公斤";
+            "減少碳排量: " + data[i].reduceCo2 + "公斤";
         })
     );
   }
