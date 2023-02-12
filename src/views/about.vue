@@ -90,10 +90,12 @@
       <div class="footer_logo">
         <span style="font-size: 23px">
           <div class="footer-icon">
-            <font-awesome-icon icon="fa-brands fa-facebook" />
-            <font-awesome-icon icon="fa-brands fa-instagram" />
-            <font-awesome-icon icon="fa-brands fa-youtube" />
-            <font-awesome-icon icon="fa-brands fa-twitter" />
+            <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
+            <a href="https://www.facebook.com/people/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E7%B2%BE%E6%BA%96%E9%86%AB%E7%99%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83/100070729758861/?paipv=0&eav=AfZutOJ0ngB1hbn4LdnZm_O-qmEaeKTv-OYW3tWXudfjGEGgpNvmoMCr3RxLxL_42Ug"><font-awesome-icon icon="fa-brands fa-facebook" /></a>
+            <a href="https://www.youtube.com/channel/UCHXJMNkulLQ4Bud3OxebbJQ"><font-awesome-icon icon="fa-brands fa-youtube" /></a>
+            <a :href= "`mailto:taylor@asia.edu.tw`">
+              <font-awesome-icon icon="fa-solid fa-envelope" />
+            </a>
           </div>
           <font face="DFKai-sb"><b>亞洲大學-精準健康研究中心</b></font>
         </span>
@@ -241,6 +243,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
 }
 
 .footer-text {
@@ -251,6 +254,10 @@ hr {
 .footer-text-i {
   font-family: DFKai-sb;
   padding: 10px 0px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
 }
 
 

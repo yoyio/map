@@ -15,7 +15,7 @@
       <!-- 第1個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">Total Revenue</h4>
+          <h4 class="header-title mt-0 mb-4">發電量</h4>
           <div class="widget-chart-1">
             <div class="circle">
               <div class="circle-inside">
@@ -24,7 +24,7 @@
             </div>
             <div class="widget-detail-1 text-right">
               <h2 class="font-weight-normal pt-2 mb-1"> 256 </h2>
-              <p class="text-muted mb-1">Revenue today</p>
+              <p class="text-muted mb-1">KW</p>
             </div>
           </div>
         </div>
@@ -33,19 +33,16 @@
       <!-- 第2個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-3">Sales Analytics</h4>
-          <div class="widget-box-2">
-            <div class="widget-detail-2 text-right">
-              <span class="badge-1 badge-success badge-pill float-left mt-3">32% <i class="mdi mdi-trending-up"></i>
-              </span>
-              <h2 class="font-weight-normal mb-1"> 8451 </h2>
-              <p class="text-muted mb-3">Revenue today</p>
-            </div>
-            <div class="progress progress-bar-alt-success progress-sm">
-              <div class="progress-bar bg-success" role="progressbar" aria-valuenow="77" aria-valuemin="0"
-                aria-valuemax="100" style="width: 77%;">
-                <span class="sr-only">55% Complete</span>
+          <h4 class="header-title mt-0 mb-4">碳排量</h4>
+          <div class="widget-chart-1">
+            <div class="circle-3">
+              <div class="circle-inside-3">
+                30%
               </div>
+            </div>
+            <div class="widget-detail-1 text-right">
+              <h2 class="font-weight-normal pt-2 mb-1"> 1000 </h2>
+              <p class="text-muted mb-1">KG</p>
             </div>
           </div>
         </div>
@@ -54,7 +51,7 @@
       <!-- 第3個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">Statistics</h4>
+          <h4 class="header-title mt-0 mb-4">減少碳排量</h4>
           <div class="widget-chart-1">
             <div class="circle-2">
               <div class="circle-inside-2">
@@ -62,8 +59,8 @@
               </div>
             </div>
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1"> 4569 </h2>
-              <p class="text-muted mb-1">Revenue today</p>
+              <h2 class="font-weight-normal pt-2 mb-1"> 569 </h2>
+              <p class="text-muted mb-1">KG</p>
             </div>
           </div>
         </div>
@@ -72,19 +69,16 @@
       <!-- 第4個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-3">Daily Sales</h4>
-          <div class="widget-box-2">
-            <div class="widget-detail-2 text-right">
-              <span class="badge-1 badge-pink badge-pill float-left mt-3">32% <i class="mdi mdi-trending-up"></i>
-              </span>
-              <h2 class="font-weight-normal mb-1"> 158 </h2>
-              <p class="text-muted mb-3">Revenue today</p>
-            </div>
-            <div class="progress progress-bar-alt-pink progress-sm">
-              <div class="progress-bar bg-pink" role="progressbar" aria-valuenow="77" aria-valuemin="0"
-                aria-valuemax="100" style="width: 77%;">
-                <span class="sr-only">77% Complete</span>
+          <h4 class="header-title mt-0 mb-4">產量</h4>
+          <div class="widget-chart-1">
+            <div class="circle-4">
+              <div class="circle-inside-4">
+                5%
               </div>
+            </div>
+            <div class="widget-detail-1 text-right">
+              <h2 class="font-weight-normal pt-2 mb-1"> 256 </h2>
+              <p class="text-muted mb-1">KG</p>
             </div>
           </div>
         </div>
@@ -136,8 +130,8 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">Chadengle</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">52</p>
+              <h5 class="mt-0">占地面積: </h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">2.55</p>
               <small class="text-warning"><b>單位</b></small>
             </div>
           </div>
@@ -149,9 +143,9 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0"> Michael Zenaty</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">22</p>
-              <small class="text-warning"><b>單位</b></small>
+              <h5 class="mt-0"> 總裝置容量:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">7.92</p>
+              <small class="text-warning"><b>KW</b></small>
             </div>
           </div>
         </div>
@@ -162,9 +156,9 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">Stillnotdavid</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">88</p>
-              <small class="text-warning"><b>單位</b></small>
+              <h5 class="mt-0">發電設備種類:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate" style="width: 60%;">太陽光電</p>
+              <small class="text-warning"><b>PV</b></small>
             </div>
           </div>
         </div>
@@ -175,9 +169,9 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">Tomaslau</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">156</p>
-              <small class="text-warning"><b>單位</b></small>
+              <h5 class="mt-0">漁獲: </h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">吳郭魚</p>
+              <small class="text-warning"><b></b></small>
             </div>
           </div>
         </div>
@@ -219,19 +213,9 @@
       <!-- 第2個 -->
       <div class="col-xl-8">
         <div class="card-box-4">
-          <h4 class="header-title mt-0 mb-3">Latest Projects</h4>
+          <h4 class="header-title mt-0 mb-3">其他資訊</h4>
           <div class="table-responsive">
             <table class="table table-hover mb-0">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Project Name</th>
-                  <th>Start Date</th>
-                  <th>Due Date</th>
-                  <th>Status</th>
-                  <th>Assign</th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
                   <td>1</td>
@@ -398,7 +382,61 @@ export default {
   justify-content: center;
   font-size: 22px;
 }
+.circle-3 {
+  --width: 100px;
+  --percent: 30;
+  --deg: calc(360deg * calc(var(--percent) / 100));
+  width: var(--width);
+  height: var(--width);
+  border-radius: 50%;
+  margin: 0px auto;
+  background-image: conic-gradient(rgb(1, 138, 15) var(--deg), #ccc var(--deg));
+  position: relative;
+}
 
+.circle-inside-3 {
+  --bar-width: 15px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #eee;
+  width: calc(var(--width) - var(--bar-width));
+  height: calc(var(--width) - var(--bar-width));
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.circle-4 {
+  --width: 100px;
+  --percent: 6;
+  --deg: calc(360deg * calc(var(--percent) / 100));
+  width: var(--width);
+  height: var(--width);
+  border-radius: 50%;
+  margin: 0px auto;
+  background-image: conic-gradient(rgb(3, 14, 142) var(--deg), #ccc var(--deg));
+  position: relative;
+}
+
+.circle-inside-4 {
+  --bar-width: 15px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #eee;
+  width: calc(var(--width) - var(--bar-width));
+  height: calc(var(--width) - var(--bar-width));
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
 .widget-box-2 {
   width: 100%;
   margin: 20px auto;
@@ -425,7 +463,7 @@ export default {
 }
 
 .text-muted-3 {
-  width: 30%;
+  width: 40%;
   margin: 0px auto;
   margin-top: 10px;
   font-size: 30px;
