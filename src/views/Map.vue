@@ -14,18 +14,26 @@
         <P class="Information-text">{{ proele }}</P>
         <P class="Information-text">{{ co2 }}</P>
         <P class="Information-text">{{ reduceCo2 }}</P>
+        <br/>
+        <RouterLink :to="`/Information/${id}`" style="text-decoration: none;left: 80%;color: #3f3f3f;font-size: 20px;">
+          <font-awesome-icon icon="fa-solid fa-arrow-right" />
+        </RouterLink>
       </div>
       <div class="p-sideContent scrollbar" v-else>
         <div class="p-card" v-for="(item, key) in data" :key="key">
           <div class="h-d-flex h-mb-3 h-align-items-center">
             <h2 class="h-flex-1">
-              <RouterLink to="/" style="text-decoration: none;color: #3f3f3f">{{ item.name }}</RouterLink>
+              <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;color: #3f3f3f">{{ item.name }}</RouterLink>
             </h2>
           </div>
           <span class="h5 h-text-dark">{{ item.address }}</span>
           <br />
           <span class="h5 h-text-dark">{{ item.iphon }}</span>
           <br />
+          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 90%;color: #3f3f3f" > 
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </RouterLink>
+          
         </div>
       </div>
     </div>

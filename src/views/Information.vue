@@ -5,7 +5,7 @@
         <p class="name-title">場域名稱</p>
       </div>
       <div class="nametext">
-        <p class="name-a" style="margin-right: 25px;">電話:0987564258</p>
+        <p class="name-a" >電話:0987564258</p>
         <p class="name-p">地址:413台中市霧峰區8股路100號</p>
       </div>
 
@@ -319,21 +319,19 @@ export default {
 
 .name {
   width: 100%;
-  display: inline-flex;
-  justify-content: space-around;
   margin: 10px 0px;
+  text-align: center;
 }
 
 .name-title {
-  font-size: 35px;
+  font-size: 40px;
   margin-top: 10px;
 }
 
 .nametext {
-  display: inline-flex;
-  justify-content: space-around;
-  align-self: flex-end;
   font-size: 20px;
+  width:80% ;
+  margin: 0px auto;
 }
 
 /*1排*/
@@ -442,7 +440,8 @@ export default {
   width: 100%;
   margin: 10px auto;
 }
-.inbox-item-date{
+
+.inbox-item-date {
   top: 40px;
 }
 
@@ -467,6 +466,16 @@ export default {
   justify-content: flex-start;
   align-items: center;
   margin: 30px;
+}
+
+/*響應式*/
+@media (min-width: 779px) {
+  .nametext {
+    display: inline-flex;
+    justify-content: space-around;
+    align-self: flex-end;
+    font-size: 18px;
+  }
 }
 
 
