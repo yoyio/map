@@ -144,12 +144,6 @@ onMounted(() => {
           data[i].address +
           `<br>電話` +
           data[i].iphon +
-          `<br>申請人類別:` +
-          data[i].whoCategory +
-          `<br>申請人或機構:` +
-          data[i].who +
-          `<br>設置型別:` +
-          data[i].category +
           `<br>發電設備種類:` +
           data[i].electricity +
           `(PV)<br>設置位置:` +
@@ -163,7 +157,7 @@ onMounted(() => {
           id.value = data[i].id;
           name.value = data[i].name;
           area.value = "占地面積: " + data[i].area + "公頃";
-          c.value = "漁獲: " + data[i].c;
+          c.value = "農穫: " + data[i].c;
           amount.value = "產量: " + data[i].amount + "公斤";
           proele.value = "發電量: " + data[i].proele + "KW";
           co2.value = "碳排量: " + data[i].co2 + "公斤";
