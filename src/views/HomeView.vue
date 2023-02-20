@@ -39,13 +39,43 @@
       </p>
     </div>
   </div>
+
+  <!-- footer -->
   <div class="footer" id="footer">
-    <div class="footer_logo">
-      <span style="margin-right: 1rem; font-size: 18px">
-        <font face="DFKai-sb"><b>亞洲大學-精準健康研究中心</b></font>
-      </span>
+    <div class="fo">
+      <div class="footer_logo">
+        <span style="font-size: 23px">
+          <div class="footer-icon">
+            <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
+            <a
+              href="https://www.facebook.com/people/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E7%B2%BE%E6%BA%96%E9%86%AB%E7%99%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83/100070729758861/?paipv=0&eav=AfZutOJ0ngB1hbn4LdnZm_O-qmEaeKTv-OYW3tWXudfjGEGgpNvmoMCr3RxLxL_42Ug"><font-awesome-icon
+                icon="fa-brands fa-facebook" /></a>
+            <a href="https://www.youtube.com/channel/UCHXJMNkulLQ4Bud3OxebbJQ"><font-awesome-icon
+                icon="fa-brands fa-youtube" /></a>
+            <a :href="`mailto:taylor@asia.edu.tw`">
+              <font-awesome-icon icon="fa-solid fa-envelope" />
+            </a>
+          </div>
+            <b>亞洲大學-精準健康研究中心</b>
+        </span>
+  
+      </div>
+      <div class="footer-text">
+        <p class="footer-text-i">聯絡我們</p>
+        <hr />
+        <p class="footer-text-i">地址:41354台中市霧峰區柳豐路500號</p>
+        <p class="footer-text-i">電話: 04-23323456#6502</p>
+        <p class="footer-text-i">信箱:taylor@asia.edu.tw</p>
+      </div>
     </div>
   </div>
+  <!-- <div class="footer" id="footer">
+    <div class="footer_logo">
+      <span style="margin-right: 1rem; font-size: 18px">
+        <b>亞洲大學-精準健康研究中心</b>
+      </span>
+    </div>
+  </div> -->
 </template>
 
 <script>
@@ -60,26 +90,28 @@
 .about-img {
   width: 100%;
   margin: 0 auto;
-  height: 80vh;
+  height: 85vh;
   padding: 100% 0px 0px 0px;
-  background-color: #cccccc;
+  background-image: url('../assets/4.jpg');
+  /*3 9*/
+  background-position: center;
+  background-size: cover;
 }
 
 .about-t {
-  max-width: 80%;
-  margin: 0px auto;
+  max-width: 70%;
+  margin: -100px auto;
+  color: #fff;
 }
 
 .about-title {
-  color: #000;
-  font-size: 25px;
+  font-size: 30px;
   padding: 1rem 0rem;
   font-weight: bold;
 }
 
 .about-text {
-  color: #000;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .about-i {
@@ -106,13 +138,16 @@
 /*a*/
 .introduce-a {
   max-width: 90%;
-  margin: 50px auto;
+  margin: 100px auto;
 }
 
 .introduce-img-a {
   width: 100%;
   height: 400px;
   background-color: #cccccc;
+  background-image: url('../assets/10.jpg');/*17*/
+  background-position: center;
+  background-size: cover;
 }
 
 .introduce-text-a {
@@ -135,51 +170,79 @@
 /*b*/
 .introduce-b {
   width: 100%;
-  margin: 0px auto;
+  margin: 100px auto 100px auto;
   padding: 2rem;
   background-color: #cccccc;
+  background-color: #cccccc;
+  background-image: url('../assets/6.jpg');
+  background-position: center;
+  background-size: cover;
 }
+
 .introduce-text-b {
-  color: #000000;
+  color: #fff;
   width: 80%;
   margin: 0px auto;
 }
 
 .introduce-ti-b {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   padding: 2rem 0rem;
 }
 
 .introduce-te-b {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 a {
   text-decoration: none;
   color: #000;
 }
+
 /*footer*/
 .footer {
   width: 100%;
-  height: 60px;
-  /* footer的高度一定要是固定值*/
-  position: absolute;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 10px;
   background-color: #038686;
+}
+
+.fo {
+  max-width: 95%;
+  margin: 0px auto;
+  font-size: 20px;
+  padding: 30px 0px;
   color: #f7f5ed;
 }
 
 .footer_logo {
+  margin: 30px auto;
+  text-align: center;
+  width: 50%;
+}
+
+.footer-icon {
+  width: 250px;
+  margin: 10px auto;
+  padding: 10px 0px;
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  margin: 30px;
+  color: #fff;
+}
+
+.footer-text {
+  margin: 10px auto;
+  width: 50%;
+}
+
+.footer-text-i {
+  padding: 10px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /*響應式*/
@@ -200,24 +263,45 @@ a {
     padding: 50% 0px 0px 0px;
   }
 
+  .about-t {
+    margin: 0px auto;
+  }
+
   .introduce-a {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-    .introduce-img-a {
-      width: 40%;
-      height: 500px;
-    }
-  
-    .introduce-text-a {
-      width: 60%;
-    }
+
+  .introduce-img-a {
+    width: 40%;
+    height: 500px;
+  }
+
+  .introduce-text-a {
+    width: 60%;
+  }
+}
+
+@media (min-width: 809px) {
+  .about-img {
+    padding: 40% 0px 0px 0px;
+  }
 }
 
 @media (min-width: 919px) {
-  .about-img {
-    padding: 40% 0px 0px 0px;
+  .fo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-text-i {
+    margin: 10px auto;
+  }
+
+  .footer-text {
+    width: 40%;
   }
 }
 

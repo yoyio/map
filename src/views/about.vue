@@ -91,9 +91,12 @@
         <span style="font-size: 23px">
           <div class="footer-icon">
             <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
-            <a href="https://www.facebook.com/people/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E7%B2%BE%E6%BA%96%E9%86%AB%E7%99%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83/100070729758861/?paipv=0&eav=AfZutOJ0ngB1hbn4LdnZm_O-qmEaeKTv-OYW3tWXudfjGEGgpNvmoMCr3RxLxL_42Ug"><font-awesome-icon icon="fa-brands fa-facebook" /></a>
-            <a href="https://www.youtube.com/channel/UCHXJMNkulLQ4Bud3OxebbJQ"><font-awesome-icon icon="fa-brands fa-youtube" /></a>
-            <a :href= "`mailto:taylor@asia.edu.tw`">
+            <a
+              href="https://www.facebook.com/people/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E7%B2%BE%E6%BA%96%E9%86%AB%E7%99%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83/100070729758861/?paipv=0&eav=AfZutOJ0ngB1hbn4LdnZm_O-qmEaeKTv-OYW3tWXudfjGEGgpNvmoMCr3RxLxL_42Ug"><font-awesome-icon
+                icon="fa-brands fa-facebook" /></a>
+            <a href="https://www.youtube.com/channel/UCHXJMNkulLQ4Bud3OxebbJQ"><font-awesome-icon
+                icon="fa-brands fa-youtube" /></a>
+            <a :href="`mailto:taylor@asia.edu.tw`">
               <font-awesome-icon icon="fa-solid fa-envelope" />
             </a>
           </div>
@@ -119,10 +122,12 @@
 }
 
 .img {
-  background-color: rgb(116, 114, 114);
+  background-image: url('../assets/5.jpg');
+  background-position: center;
+  background-size: cover;
   width: 100%;
   height: 60vh;
-  margin: 20px 0px;
+  margin: 20px auto;
 }
 
 /*O*/
@@ -197,21 +202,21 @@ hr {
   width: 130px;
   height: 130px;
   margin: 0px auto;
-  background-image: url("../assets/5.png");
+  background-image: url("../assets/11.png");
 }
 
 .aboutBB-img2 {
   width: 130px;
   height: 130px;
   margin: 0px auto;
-  background-image: url("../assets/6.png");
+  background-image: url("../assets/12.png");
 }
 
 .aboutBB-img3 {
   width: 130px;
   height: 130px;
   margin: 0px auto;
-  background-image: url("../assets/7.png");
+  background-image: url("../assets/13.png");
 }
 
 
@@ -255,7 +260,8 @@ hr {
   font-family: DFKai-sb;
   padding: 10px 0px;
 }
-a{
+
+a {
   text-decoration: none;
   color: #fff;
 }
@@ -278,6 +284,7 @@ a{
     justify-content: space-around;
     align-items: center;
   }
+
   .footer-text-i {
     margin: 10px auto;
   }

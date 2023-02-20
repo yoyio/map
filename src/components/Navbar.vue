@@ -1,12 +1,18 @@
 <template>
-    <header>
+  <header>
       <a href="#" class="navbar-brand">數位地圖</a>
       <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item"><RouterLink to="/" class="nav-link">首頁</RouterLink></li>
-          <li class="nav-item"><RouterLink to="/Map" class="nav-link">地圖</RouterLink></li>
-          <li class="nav-item"><RouterLink to="/about" class="nav-link">關於</RouterLink></li>
+          <li class="nav-item">
+            <RouterLink to="/" class="nav-link">首頁</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/Map" class="nav-link">地圖</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/about" class="nav-link">關於</RouterLink>
+          </li>
           <li class="nav-item">
             <RouterLink to="/zzz" class="nav-link">ZZZ</RouterLink>
           </li>
@@ -15,7 +21,7 @@
       <label class="navbar-toggle-label" for="navbar-toggle">
         <span class="hamburger"></span>
       </label>
-    </header>
+  </header>
 </template>
 
 
@@ -36,7 +42,6 @@ body {
 
 body {
   background-color: #f6f7f8;
-  font-family: "Noto Sans TC", sans-serif;
   font-size: 1rem;
   line-height: 1.4;
   margin: 0;
@@ -198,8 +203,9 @@ header {
     margin: 0;
     opacity: 1;
   }
-    .nav-link {
-      color: #F7F5ED;
-    }
+
+  .nav-link {
+    color: #F7F5ED;
+  }
 }
 </style>
