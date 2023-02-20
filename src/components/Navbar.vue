@@ -13,9 +13,6 @@
           <li class="nav-item">
             <RouterLink to="/about" class="nav-link">關於</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink to="/zzz" class="nav-link">ZZZ</RouterLink>
-          </li>
         </ul>
       </nav>
       <label class="navbar-toggle-label" for="navbar-toggle">
