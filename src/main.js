@@ -11,6 +11,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import './assets/main.css'
+import './assets/all.scss'
 
 const app = createApp(App)
 

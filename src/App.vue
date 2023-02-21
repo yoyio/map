@@ -13,6 +13,7 @@ import Home from "./views/HomeView.vue";
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+TC:wght@100&display=swap');
+
 html,
 body {
   font-family: 'Lato', sans-serif;
@@ -24,7 +25,8 @@ html {
 #app {
   font-family: 'Lato', sans-serif;
   font-family: 'Noto Sans TC', sans-serif;
-  line-height: 35px;
+  line-height: 32px;
   letter-spacing: 2.5px;
+  font-size:16px;
 }
 </style>

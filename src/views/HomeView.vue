@@ -4,17 +4,20 @@
       <div class="about-t">
         <p class="about-title">數位地圖</p>
         <p class="about-text">
-          於時遠和神發不先極她是沒民市接一生我設，物訴入感表坡明位。麼畫落現行車，著事本只教朋……市馬事去國後職且笑愛來世，靜商灣衣資：客雲看：到極人說名那治之每好以，海所了我而。有大當有夫動裡她？電火你無體、不眼商說有笑，因效持先不說自的知男要大對操心長告就言那超於去護？
+          歡迎來體驗農電共生數位地圖，這是一款智慧化的應用，結合了農業與能源產業，透過資訊科技，提供全面性、即時性、準確性的數據分析，協助農業、能源業及政府相關單位制定最佳的農電共生模式，以達到節能減碳，提高農業效益等多重效益。
         </p>
       </div>
     </div>
     <div class="about-i">
       <p class="about-text-r">
-        於時遠和神發不先極她是沒民市接一生我設，物訴入感表坡明位。麼畫落現行車，著事本只教朋……市馬事去國後職且笑愛來世，靜商灣衣資：客雲看：到極人說名那治之每好以，海所了我而。有大當有夫動裡她？電火你無體、不眼商說有笑，因效持先不說自的知男要大對操心長告就言那超於去護？
+        透過數位地圖，瞭解農地的能源潛力、太陽能、風能、水力等能源的利用現況及未來潛力，依據數據分析，推算出最佳的農電共生模式及配電規劃，以達到區域性的能源整合與協調，促進區域經濟發展及社會永續。
       </p>
       <br />
-      <RouterLink to="/Map" class="about-button">開始使用
-        <font-awesome-icon icon="arrow-right" />
+      <RouterLink to="/Map" class="about-button">
+        <button type="button" class="btn btn-outline-success">
+          開始使用<font-awesome-icon icon="arrow-right" />
+        </button>
+
       </RouterLink>
     </div>
   </div>
@@ -22,20 +25,23 @@
     <div class="introduce-img-a"></div>
     <div class="introduce-text-a">
       <p class="introduce-ti-a">
-        於時遠和神發不先極她是沒民市接一生我設？
+        農業為本 綠能加值
       </p>
       <p class="introduce-te-a">
-        於時遠和神發不先極她是沒民市接一生我設，物訴入感表坡明位。麼畫落現行車，著事本只教朋……市馬事去國後職且笑愛來世，靜商灣衣資：客雲看：到極人說名那治之每好以，海所了我而。有大當有夫動裡她？電火你無體、不眼商說有笑，因效持先不說自的知男要大對操心長告就言那超於去護？於時遠和神發不先極她是沒民市接一生我設，物訴入感表坡明位。麼畫落現行車，著事本只教朋……市馬事去國後職且笑愛來世，靜商灣衣資：客雲看：到極人說名那治之每好以，海所了我而。有大當有夫動裡她？電火你無體、不眼商說有笑，因效持先不說自的知男要大對操心長告就言那超於去護？
+        農電共生數位地圖能夠協助您實現能源與農業的共生，實現環境保護、節能減碳、提高農業效益的目標。此外，它還可以幫助您進一步降低能源成本，提高能源利用效率，並且為您提供更多的商業價值。
+      </p>
+      <p class="introduce-te-a">
+        如果您是農民，您可以透過農電共生數位地圖，了解農地的能源潛力，制定最佳的農業種植及能源利用策略，提高農產品的品質和產量；如果您是能源業者，您可以透過農電共生數位地圖，了解能源資源的利用現況及未來潛力，制定最佳的能源利用策略，實現能源的最大化效益；如果您是政府相關部門，您可以透過農電共生數位地圖，了解區域性的能源整合及協調，實現經濟發展與社會永續。
       </p>
     </div>
   </div>
   <div class="introduce-b">
     <div class="introduce-text-b">
       <p class="introduce-ti-b">
-        於時遠和神發不先極她是沒民市接一生我設？
+        農業綠能
       </p>
       <p class="introduce-te-b">
-        於時遠和神發不先極她是沒民市接一生我設，物訴入感表坡明位。麼畫落現行車，著事本只教朋……市馬事去國後職且笑愛來世，靜商灣衣資：客雲看：到極人說名那治之每好以，海所了我而。有大當有夫動裡她？電火你無體、不眼商說有笑，因效持先不說自的知男要大對操心長告就言那超於去護？於時遠和神發不先極她是沒民市接一生我設，物訴入感表坡明位。麼畫落現行車，著事本只教朋……市馬事去國後職且笑愛來世，靜商灣衣資：客雲看：到極人說名那治之每好以，海所了我而。有大當有夫動裡她？電火你無體、不眼商說有笑，因效持先不說自的知男要大對操心長告就言那超於去護？
+        農電共生數位地圖具有即時性、全面性及準確性，能夠協助各界了解農業、能源資源的利用現況及未來潛力，協助決策者進行區域性的能源整合與協調，促進區域經濟發展及社會永續。
       </p>
     </div>
   </div>
@@ -44,7 +50,7 @@
   <div class="footer" id="footer">
     <div class="fo">
       <div class="footer_logo">
-        <span style="font-size: 23px">
+        <span style="font-size: 20px">
           <div class="footer-icon">
             <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
             <a
@@ -56,9 +62,9 @@
               <font-awesome-icon icon="fa-solid fa-envelope" />
             </a>
           </div>
-            <b>亞洲大學-精準健康研究中心</b>
+          <b>亞洲大學-精準健康研究中心</b>
         </span>
-  
+
       </div>
       <div class="footer-text">
         <p class="footer-text-i">聯絡我們</p>
@@ -69,14 +75,13 @@
       </div>
     </div>
   </div>
-  <!-- <div class="footer" id="footer">
+<!-- <div class="footer" id="footer">
     <div class="footer_logo">
       <span style="margin-right: 1rem; font-size: 18px">
         <b>亞洲大學-精準健康研究中心</b>
       </span>
     </div>
-  </div> -->
-</template>
+  </div> --></template>
 
 <script>
 </script>
@@ -110,9 +115,6 @@
   font-weight: bold;
 }
 
-.about-text {
-  font-size: 16px;
-}
 
 .about-i {
   max-width: 80%;
@@ -122,7 +124,6 @@
 
 .about-text-r {
   color: #141b18;
-  font-size: 15px;
   width: 100%;
 }
 
@@ -132,6 +133,7 @@
   font-size: 20px;
   width: 200px;
   height: 40px;
+  left:90%;
   text-decoration: none;
 }
 
@@ -145,7 +147,8 @@
   width: 100%;
   height: 400px;
   background-color: #cccccc;
-  background-image: url('../assets/10.jpg');/*17*/
+  background-image: url('../assets/10.jpg');
+  /*17*/
   background-position: center;
   background-size: cover;
 }
@@ -158,12 +161,13 @@
 }
 
 .introduce-ti-a {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
+  font-weight: bold;
 }
 
 .introduce-te-a {
-  font-size: 15px;
+  margin: 15px 0px;
   padding: 1rem 2rem;
 }
 
@@ -174,7 +178,7 @@
   padding: 2rem;
   background-color: #cccccc;
   background-color: #cccccc;
-  background-image: url('../assets/6.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../assets/6.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -186,14 +190,18 @@
 }
 
 .introduce-ti-b {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
+  font-weight: bold;
   padding: 2rem 0rem;
 }
 
 .introduce-te-b {
-  font-size: 18px;
+  max-width: 50%;
+  margin: 0px auto;
+  padding: 2rem;
 }
+
 
 a {
   text-decoration: none;
@@ -209,7 +217,6 @@ a {
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  font-size: 20px;
   padding: 30px 0px;
   color: #f7f5ed;
 }
@@ -224,7 +231,6 @@ a {
   width: 250px;
   margin: 10px auto;
   padding: 10px 0px;
-  font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
