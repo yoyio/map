@@ -12,7 +12,7 @@ import Home from "./views/HomeView.vue";
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+TC:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Noto+Sans+TC:wght@400&display=swap');
 
 html,
 body {

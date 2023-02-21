@@ -62,7 +62,7 @@
               <font-awesome-icon icon="fa-solid fa-envelope" />
             </a>
           </div>
-          <b>亞洲大學-精準健康研究中心</b>
+          <p>亞洲大學-精準健康研究中心</p>
         </span>
 
       </div>
@@ -105,7 +105,7 @@
 
 .about-t {
   max-width: 70%;
-  margin: -100px auto;
+  margin: -70px auto;
   color: #fff;
 }
 
@@ -117,9 +117,8 @@
 
 
 .about-i {
-  max-width: 80%;
-  margin: 20px auto;
-  padding: 3rem;
+  max-width: 70%;
+  margin: 60px auto;
 }
 
 .about-text-r {
@@ -133,14 +132,14 @@
   font-size: 20px;
   width: 200px;
   height: 40px;
-  left:90%;
+  left: 35%;
   text-decoration: none;
 }
 
 /*a*/
 .introduce-a {
-  max-width: 90%;
-  margin: 100px auto;
+  max-width: 70%;
+  margin: 150px auto;
 }
 
 .introduce-img-a {
@@ -155,9 +154,8 @@
 
 .introduce-text-a {
   color: #141b18;
-  max-width: 80%;
-  margin: 0px auto;
-  padding: 2rem;
+  max-width: 100%;
+  margin: 50px auto;
 }
 
 .introduce-ti-a {
@@ -167,8 +165,7 @@
 }
 
 .introduce-te-a {
-  margin: 15px 0px;
-  padding: 1rem 2rem;
+  margin: 30px 0px;
 }
 
 /*b*/
@@ -256,11 +253,25 @@ a {
   .about-img {
     padding: 70% 0px 0px 0px;
   }
+
+  .about-t {
+    margin: 0px auto;
+  }
+
+  .about-button {
+    left: 55%;
+  }
 }
 
 @media (min-width: 524px) {
   .about-img {
     padding: 60% 0px 0px 0px;
+  }
+  .about-t {
+    margin: -10px auto;
+  }
+  .about-button {
+    left: 65%;
   }
 }
 
@@ -270,22 +281,26 @@ a {
   }
 
   .about-t {
-    margin: 0px auto;
+    margin: 10px auto;
+  }
+
+  .about-button {
+    left: 75%;
   }
 
   .introduce-a {
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
   }
 
   .introduce-img-a {
-    width: 40%;
-    height: 500px;
+    width: 45%;
+    height: 600px;
   }
 
   .introduce-text-a {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -293,9 +308,19 @@ a {
   .about-img {
     padding: 40% 0px 0px 0px;
   }
+  .about-t {
+    margin: 80px auto;
+  }
 }
 
 @media (min-width: 919px) {
+  .about-button {
+    left: 80%;
+  }
+  .about-t {
+    margin: 40px auto;
+  }
+
   .fo {
     display: flex;
     justify-content: space-around;
@@ -315,5 +340,8 @@ a {
   .about-img {
     padding: 30% 0px 0px 0px;
   }
-}
-</style>
+
+  .about-button {
+    left: 90%;
+  }
+}</style>

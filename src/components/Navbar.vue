@@ -1,21 +1,21 @@
 <template>
   <header>
-      <a href="#" class="navbar-brand">數位地圖</a>
-      <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
+      <a href="#" class="navbarBrand">數位地圖</a>
+      <input type="checkbox" class="navbarToggle" id="navbarToggle" />
+      <nav class="nav navbar-light" >
+        <ul class="navList">
+          <li class="navItem">
             <RouterLink to="/" class="nav-link">首頁</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink to="/Map" class="nav-link">地圖</RouterLink>
+          <li class="navItem">
+            <RouterLink to="/Map" class="nav-link active" aria-current="page">地圖</RouterLink>
           </li>
-          <li class="nav-item">
+          <li class="navItem">
             <RouterLink to="/about" class="nav-link">關於</RouterLink>
           </li>
         </ul>
       </nav>
-      <label class="navbar-toggle-label" for="navbar-toggle">
+      <label class="navbarToggle-label" for="navbarToggle">
         <span class="hamburger"></span>
       </label>
   </header>
@@ -23,8 +23,6 @@
 
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
-
 *,
 *::before,
 *::after {
@@ -38,7 +36,6 @@ body {
 }
 
 body {
-  background-color: #f6f7f8;
   font-size: 1rem;
   line-height: 1.4;
   margin: 0;
@@ -79,7 +76,9 @@ header {
   -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
 }
-
+.navbarBrand:hover{
+  color: #F7F5ED;
+}
 .nav {
   position: absolute;
   top: 100%;
@@ -89,25 +88,29 @@ header {
   transform-origin: top;
   transition: transform 0.3s ease-out;
   z-index: 1;
+  text-align: center;
+}
+.navList{
+  width: 100%;
 }
 
-.navbar-toggle {
+.navbarToggle {
   position: absolute;
   visibility: hidden;
 }
 
-.navbar-toggle:checked~.nav {
+.navbarToggle:checked~.nav {
   transform: scale(1, 1);
 }
 
-.navbar-toggle:checked~.nav .nav-item {
+.navbarToggle:checked~.nav .navItem {
   /*只有開啟時 delay .15s */
   transition: opacity 0.2s ease-out 0.15s;
   /*開啟時透明度為1*/
   opacity: 1;
 }
 
-.navbar-toggle-label {
+.navbarToggle-label {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -144,21 +147,32 @@ header {
   bottom: 8px;
 }
 
-.navbar-brand {
+.navbarBrand {
   color: #F7F5ED;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 60px;
 }
 
-.nav-item {
+.navItem {
   margin: 1.4rem 0;
   /*預設透明度 0*/
   opacity: 0;
+  text-align: center;
 }
 
 .nav-link {
   color: #038686;
+}
+.nav-link:hover{
+  color: #000;
+}
+
+.navbar-light .navItem.active .nav-link,
+.navbar-light .navItem .nav-link:active,
+.navbar-light .navItem .nav-link:focus,
+.navbar-light .navItem:hover .nav-link {
+    color: #000;
 }
 
 
@@ -174,11 +188,11 @@ header {
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
 
-  .navbar-toggle-label {
+  .navbarToggle-label {
     display: none;
   }
 
-  .navbar-brand {
+  .navbarBrand {
     grid-column: 2 / 3;
   }
 
@@ -187,7 +201,7 @@ header {
     grid-column: 3 / 4;
   }
 
-  .nav-list {
+  .navList {
     height: 100%;
     display: grid;
     grid-auto-flow: column;
@@ -196,7 +210,7 @@ header {
     grid-gap: 2rem;
   }
 
-  .nav-item {
+  .navItem {
     margin: 0;
     opacity: 1;
   }
