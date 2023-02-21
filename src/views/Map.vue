@@ -1,39 +1,38 @@
 <template>
-  <div class="container">
-    <div class="card scrollbar">
+  <div class="a">
+    <div class="cardc scrollbar">
       <input v-if="!area" class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
       <div class="Information " v-if="area">
-        <br />
         <img :src="img" class="Information-img" />
-        <br />
-        <RouterLink :to="`/Information/${id}`" class="Information-title">{{  name  }}</RouterLink>
-        <br />
-        <p class="Information-text">{{ area }}</p>
-        <p class="Information-text">{{ c }}</p>
-        <P class="Information-text">{{ amount }}</P>
-        <P class="Information-text">{{ proele }}</P>
-        <P class="Information-text">{{ co2 }}</P>
-        <P class="Information-text">{{ reduceCo2 }}</P>
-        <br/>
-        <RouterLink :to="`/Information/${id}`" style="text-decoration: none;left: 80%;color: #3f3f3f;font-size: 20px;">
-          <font-awesome-icon icon="fa-solid fa-arrow-right" />
-        </RouterLink>
-      </div>
-      <div class="p-sideContent scrollbar" v-else>
-        <div class="p-card" v-for="(item, key) in data" :key="key">
-          <div class="h-d-flex h-mb-3 h-align-items-center">
-            <h2 class="h-flex-1">
-              <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;color: #3f3f3f">{{ item.name }}</RouterLink>
-            </h2>
-          </div>
-          <span class="h5 h-text-dark">{{ item.address }}</span>
+        <div class="InformationT">
+          <RouterLink :to="`/Information/${id}`" class="Information-title">{{ name }}</RouterLink>
+          <p class="Information-text" style="margin-top:20px;">{{ area }}</p>
+          <p class="Information-text">{{ c }}</p>
+          <P class="Information-text">{{ amount }}</P>
+          <P class="Information-text">{{ proele }}</P>
+          <P class="Information-text">{{ co2 }}</P>
+          <P class="Information-text">{{ reduceCo2 }}</P>
           <br />
-          <span class="h5 h-text-dark">{{ item.iphon }}</span>
-          <br />
-          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 90%;color: #3f3f3f" > 
+          <RouterLink :to="`/Information/${id}`" style="text-decoration: none;left: 80%;color: #3f3f3f;font-size: 20px;">
             <font-awesome-icon icon="fa-solid fa-arrow-right" />
           </RouterLink>
-          
+        </div>
+      </div>
+      <div class="p-sideContent scrollbar" v-else>
+        <div class="card" v-for="(item, key) in data" :key="key">
+          <div class="h-d-flex h-mb-3 h-align-items-center">
+            <h2 class="h-flex-1">
+              <RouterLink :to="`/Information/${item.id}`" style=";text-decoration: none;color: #3f3f3f">{{ item.name }}
+              </RouterLink>
+
+            </h2>
+          </div>
+          <p class="h5 h-text-dark">{{ item.address }}</p>
+          <p class="h5 h-text-dark">{{ item.iphon }}</p>
+          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 90%;color: #3f3f3f;">
+            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </RouterLink>
+
         </div>
       </div>
     </div>
@@ -44,7 +43,7 @@
   <div class="footer" id="footer">
     <div class="fo">
       <div class="footer_logo">
-        <span style="font-size: 23px">
+        <span style="font-size: 20px">
           <div class="footer-icon">
             <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
             <a
@@ -56,9 +55,9 @@
               <font-awesome-icon icon="fa-solid fa-envelope" />
             </a>
           </div>
-          <b>亞洲大學-精準健康研究中心</b>
+          <p>亞洲大學-精準健康研究中心</p>
         </span>
-  
+
       </div>
       <div class="footer-text">
         <p class="footer-text-i">聯絡我們</p>
@@ -171,7 +170,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.container {
+.a {
   width: 100%;
 }
 
@@ -194,33 +193,43 @@ onMounted(() => {
   background-color: #ffffff;
 }
 
-.card {
+.cardc {
   background-color: #ffffff;
   width: 100%;
   height: 35vh;
-  margin: 10px;
 }
 
 .Information {
   background-color: #ffffff;
-  width: 95%;
+  width: 100%;
+  margin: 0px auto;
   height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Information-img {
-  max-width: 400px;
+  max-width: 90%;
+  margin: 30px auto;
   height: 300px;
+}
+
+.InformationT {
+  width: 90%;
+  margin: 0px auto;
 }
 
 .Information-title {
   color: #3f3f3f;
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
+
 }
 
 .Information-text {
   color: #3f3f3f;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /*搜尋*/
@@ -245,19 +254,21 @@ onMounted(() => {
   line-height: 32px;
 }
 
-.p-card {
-  padding: 0.3rem 1rem;
+.card {
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid #d9d9d9;
+  margin: 20px 0px;
 }
 
 .h-flex-1 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 900;
   text-decoration: none;
+  margin-bottom: 30px;
 }
 
 .h5 {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /*footer*/
@@ -269,7 +280,6 @@ onMounted(() => {
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  font-size: 20px;
   padding: 30px 0px;
   color: #f7f5ed;
 }
@@ -284,7 +294,6 @@ onMounted(() => {
   width: 250px;
   margin: 10px auto;
   padding: 10px 0px;
-  font-size: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -307,76 +316,45 @@ a {
 
 /*響應式*/
 @media (min-width: 389px) {
-  .card {
+  .cardc {
     height: 30vh;
   }
 
   .Information {
     width: 100%;
   }
-
-  .Information-title {
-    font-size: 30px;
-  }
-
-  .Information-text {
-    font-size: 20px;
-  }
-
   /*搜尋*/
   .p-sideContent {
     height: 60vh;
   }
 
-  .p-card {
+  .card {
     padding: 0.9375rem 0.75rem;
-  }
-
-  .h-flex-1 {
-    font-size: 25px;
-  }
-
-  .h5 {
-    font-size: 15px;
   }
 }
 
 @media (min-width: 539px) {
-  .card {
+  .cardc {
     height: 30vh;
-  }
-
-  .Information-title {
-    font-size: 40px;
   }
 }
 
 @media (min-width: 699px) {
-  .card {
+  .cardc {
     height: 30vh;
   }
 
   .Information {
     width: 100%;
   }
-
-  .Information-title {
-    font-size: 40px;
-  }
-
-  .Information-text {
-    font-size: 20px;
-  }
-
   /*搜尋*/
-
-  .p-card {
+  .card {
     padding: 0.9375rem 0.75rem;
   }
 }
 
 @media (min-width: 819px) {
-  .container {
+  .a {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -384,29 +362,25 @@ a {
   }
 
   .mapContainer {
-    width: 80vw;
+    width: 75vw;
     height: 91vh;
   }
 
-  .card {
-    width: 20vw;
+  .cardc {
+    width: 25vw;
     height: 90vh;
     margin: 0px 10px;
   }
 
   .Information {
-    width: 20vw;
+    width: 25vw;
     height: 100vh;
   }
-
-  .Information-title {
-    font-size: 30px;
-  }
-
-  .Information-text {
-    font-size: 18px;
-  }
-
+  .Information-img {
+  max-width: 100%;
+  margin: 30px auto;
+  height: 300px;
+}
   /*搜尋*/
   .c-shrinkIcon__input {
     width: 100%;
@@ -416,16 +390,8 @@ a {
     height: 90vh;
   }
 
-  .p-card {
+  .card {
     padding: 0.9375rem 0.75rem;
-  }
-
-  .h-flex-1 {
-    font-size: 20px;
-  }
-
-  .h5 {
-    font-size: 15px;
   }
 }
 
@@ -442,20 +408,6 @@ a {
 
   .footer-text {
     width: 40%;
-  }
-}
-
-@media (min-width: 1199px) {
-  .Information-title {
-    font-size: 40px;
-  }
-
-  .Information-text {
-    font-size: 23px;
-  }
-
-  .h-flex-1 {
-    font-size: 25px;
   }
 }
 </style>

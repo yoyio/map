@@ -207,7 +207,7 @@ header {
     grid-auto-flow: column;
     justify-content: end;
     align-items: center;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
   }
 
   .navItem {
