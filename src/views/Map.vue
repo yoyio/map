@@ -224,7 +224,6 @@ onMounted(() => {
   color: #3f3f3f;
   font-size: 20px;
   text-decoration: none;
-
 }
 
 .Information-text {
@@ -323,6 +322,7 @@ a {
   .Information {
     width: 100%;
   }
+
   /*搜尋*/
   .p-sideContent {
     height: 60vh;
@@ -347,6 +347,7 @@ a {
   .Information {
     width: 100%;
   }
+
   /*搜尋*/
   .card {
     padding: 0.9375rem 0.75rem;
@@ -374,13 +375,14 @@ a {
 
   .Information {
     width: 25vw;
-    height: 100vh;
   }
+
   .Information-img {
-  max-width: 100%;
-  margin: 30px auto;
-  height: 300px;
-}
+    max-width: 100%;
+    margin: 30px auto;
+    height: 300px;
+  }
+
   /*搜尋*/
   .c-shrinkIcon__input {
     width: 100%;
