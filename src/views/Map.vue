@@ -131,6 +131,7 @@ onMounted(() => {
     console.log(arguments);
   });
 
+  //客製化Marker
   const customIcon = L.icon({
     iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
     iconSize: [22, 32],
