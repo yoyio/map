@@ -131,10 +131,15 @@ onMounted(() => {
     console.log(arguments);
   });
 
+  const customIcon = L.icon({
+    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    iconSize: [32, 32],
+  });
+
   //Marker for迴圈標記 ,圖標上顯示訊息
   for (let i = 0; data.length > i; i++) {
     markers.addLayer(
-      L.marker([data[i].lat, data[i].lng])
+      L.marker([data[i].lat, data[i].lng],{ icon: customIcon })
         .bindPopup(
           `<div class="InfoWindowOpened-text " style="font-size: 20px;">
         <h1>` +
