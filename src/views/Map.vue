@@ -133,7 +133,7 @@ onMounted(() => {
 
   const customIcon = L.icon({
     iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-    iconSize: [32, 32],
+    iconSize: [22, 32],
   });
 
   //Marker for迴圈標記 ,圖標上顯示訊息
