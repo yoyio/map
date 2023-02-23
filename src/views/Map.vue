@@ -28,7 +28,7 @@
           </div>
           <p class="h5 h-text-dark">{{ item.address }}</p>
           <p class="h5 h-text-dark">{{ item.iphon }}</p>
-          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 60%;color: #3f3f3f;">
+          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 70%;color: #3f3f3f;">
             詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
           </RouterLink>
 
@@ -119,12 +119,16 @@ onMounted(() => {
     console.log(arguments);
   });
 
- 
+ //客製化Marker
+  const customIcon = L.icon({
+    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    iconSize: [22, 32],
+  });
 
   //Marker for迴圈標記 ,圖標上顯示訊息
   for (let i = 0; data.length > i; i++) {
     markers.addLayer(
-      L.marker([data[i].lat, data[i].lng])
+      L.marker([data[i].lat, data[i].lng],{ icon: customIcon })
         .bindPopup(
           `<div class="InfoWindowOpened-text ">
         <h3>` +
