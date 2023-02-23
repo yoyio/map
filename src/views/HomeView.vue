@@ -2,7 +2,7 @@
   <div class="about">
     <div class="about-img">
       <div class="about-t">
-        <p class="about-title">數位地圖</p>
+        <p class="about-title">綠能下的數位地圖</p>
         <p class="about-text">
           歡迎來體驗農電共生數位地圖，這是一款智慧化的應用，結合了農業與能源產業，透過資訊科技，提供全面性、即時性、準確性的數據分析，協助農業、能源業及政府相關單位制定最佳的農電共生模式，以達到節能減碳，提高農業效益等多重效益。
         </p>
@@ -51,18 +51,7 @@
     <div class="fo">
       <div class="footer_logo">
         <span style="font-size: 20px">
-          <div class="footer-icon">
-            <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
-            <a
-              href="https://www.facebook.com/people/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E7%B2%BE%E6%BA%96%E9%86%AB%E7%99%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83/100070729758861/?paipv=0&eav=AfZutOJ0ngB1hbn4LdnZm_O-qmEaeKTv-OYW3tWXudfjGEGgpNvmoMCr3RxLxL_42Ug"><font-awesome-icon
-                icon="fa-brands fa-facebook" /></a>
-            <a href="https://www.youtube.com/channel/UCHXJMNkulLQ4Bud3OxebbJQ"><font-awesome-icon
-                icon="fa-brands fa-youtube" /></a>
-            <a :href="`mailto:taylor@asia.edu.tw`">
-              <font-awesome-icon icon="fa-solid fa-envelope" />
-            </a>
-          </div>
-          <p>亞洲大學-精準健康研究中心</p>
+          <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
         </span>
 
       </div>
@@ -71,17 +60,11 @@
         <hr />
         <p class="footer-text-i">地址:41354台中市霧峰區柳豐路500號</p>
         <p class="footer-text-i">電話: 04-23323456#6502</p>
-        <p class="footer-text-i">信箱:taylor@asia.edu.tw</p>
+        <p class="footer-text-i">信箱:cnwang@aisa.edu.tw</p>
       </div>
     </div>
   </div>
-<!-- <div class="footer" id="footer">
-    <div class="footer_logo">
-      <span style="margin-right: 1rem; font-size: 18px">
-        <b>亞洲大學-精準健康研究中心</b>
-      </span>
-    </div>
-  </div> --></template>
+</template>
 
 <script>
 </script>
@@ -209,24 +192,24 @@ a {
 .footer {
   width: 100%;
   background-color: #038686;
+  line-height: 24px;
 }
 
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  padding: 30px 0px;
+  padding: 1px 0px;
   color: #f7f5ed;
 }
 
 .footer_logo {
-  margin: 30px auto;
+  margin: 20px auto;
   text-align: center;
-  width: 50%;
 }
 
 .footer-icon {
   width: 250px;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 10px 0px;
   display: flex;
   justify-content: space-between;
@@ -235,13 +218,12 @@ a {
 }
 
 .footer-text {
-  margin: 10px auto;
+  margin: 20px auto;
+  margin-top: 50px;
   width: 50%;
+  text-align: center;
 }
 
-.footer-text-i {
-  padding: 10px 0px;
-}
 
 a {
   text-decoration: none;
@@ -319,20 +301,6 @@ a {
   }
   .about-t {
     margin: 40px auto;
-  }
-
-  .fo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer-text-i {
-    margin: 10px auto;
-  }
-
-  .footer-text {
-    width: 40%;
   }
 }
 

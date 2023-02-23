@@ -4,13 +4,111 @@
       <div>
         <p class="name-title">場域名稱</p>
       </div>
-      <div class="nametext">
-        <p class="name-a" >電話:0987564258</p>
-        <p class="name-p">地址:413台中市霧峰區8股路100號</p>
-      </div>
-
     </div>
     <!-- 第一排 -->
+    <div class="row">
+      <!-- 第1個 -->
+      <div class="col-xl-8">
+        <div class="card-box-4">
+          <h4 class="header-title mt-0 mb-3">公司資訊</h4>
+          <div class="table-responsive">
+            <table class="table table-hover mb-0">
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>公司名稱:</td>
+                  <td>XXX有限公司</td>
+                  
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>負責人:</td>
+                  <td>XXX</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>電話:</td>
+                  <td>0987564258</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>地址:</td>
+                  <td>413台中市霧峰區8股路100號</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>聯絡信箱:</td>
+                  <td>abc123@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="name">
+      <div>
+        <p class="name-title">場域資訊</p>
+      </div>
+    </div>
+
+    <!-- 第2排 -->
+    <div class="row">
+      <!-- 第1個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-3 widget-user">
+          <div>
+            <div class="wid-u-info">
+              <h5 class="mt-0">占地面積: </h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">2.55</p>
+              <small class="text-warning"><b>單位</b></small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第2個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-3 widget-user">
+          <div>
+            <div class="wid-u-info">
+              <h5 class="mt-0"> 總裝置容量:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">7.92</p>
+              <small class="text-warning"><b>KW</b></small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第3個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-3 widget-user">
+          <div>
+            <div class="wid-u-info">
+              <h5 class="mt-0">發電設備種類:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate" style="width: 60%;">太陽光電</p>
+              <small class="text-warning"><b>PV</b></small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第4個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-3 widget-user">
+          <div>
+            <div class="wid-u-info">
+              <h5 class="mt-0">農穫: </h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">薑</p>
+              <small class="text-warning"><b></b></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第3排 -->
     <div class="row">
       <!-- 第1個 -->
       <div class="col-xl-3 col-md-6">
@@ -84,224 +182,25 @@
         </div>
       </div>
     </div>
-
-    <!-- 第2排 -->
-    <div class="row">
-      <!-- 第1個 -->
-      <div class="col-xl-4">
-        <div class="card-box-2">
-          <h4 class="header-title mt-0">Daily Sales</h4>
-          <div class="widget-chart text-center">
-            <div id="morris-donut-example" style="height: 245px;" class="morris-chart" dir="ltr"></div>
-            <ul class="list-inline chart-detail-list mb-0">
-              <li class="list-inline-item">
-                <h5 style="color: #ff8acc;"><i class="fa fa-circle mr-1"></i>Series A</h5>
-              </li>
-              <li class="list-inline-item">
-                <h5 style="color: #5b69bc;"><i class="fa fa-circle mr-1"></i>Series B</h5>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第2個 -->
-      <div class="col-xl-4">
-        <div class="card-box-2">
-          <h4 class="header-title mt-0">Statistics</h4>
-          <div id="morris-bar-example" style="height: 280px;" class="morris-chart" dir="ltr"></div>
-        </div>
-      </div>
-
-      <!-- 第3個 -->
-      <div class="col-xl-4">
-        <div class="card-box-2">
-          <h4 class="header-title mt-0">Total Revenue</h4>
-          <div id="morris-line-example" style="height: 280px;" class="morris-chart" dir="ltr">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 第3排 -->
-    <div class="row">
-      <!-- 第1個 -->
-      <div class="col-xl-3 col-md-6">
-        <div class="card-box-3 widget-user">
-          <div>
-            <div class="wid-u-info">
-              <h5 class="mt-0">占地面積: </h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">2.55</p>
-              <small class="text-warning"><b>單位</b></small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第2個 -->
-      <div class="col-xl-3 col-md-6">
-        <div class="card-box-3 widget-user">
-          <div>
-            <div class="wid-u-info">
-              <h5 class="mt-0"> 總裝置容量:</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">7.92</p>
-              <small class="text-warning"><b>KW</b></small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第3個 -->
-      <div class="col-xl-3 col-md-6">
-        <div class="card-box-3 widget-user">
-          <div>
-            <div class="wid-u-info">
-              <h5 class="mt-0">發電設備種類:</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate" style="width: 60%;">太陽光電</p>
-              <small class="text-warning"><b>PV</b></small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第4個 -->
-      <div class="col-xl-3 col-md-6">
-        <div class="card-box-3 widget-user">
-          <div>
-            <div class="wid-u-info">
-              <h5 class="mt-0">農穫: </h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">薑</p>
-              <small class="text-warning"><b></b></small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 第4排 -->
-    <div class="row">
-      <!-- 第1個 -->
-      <div class="col-xl-4">
-        <div class="card-box-4">
-          <h4 class="header-title mb-3">Inbox</h4>
-          <div class="inbox-widget">
-            <div class="inbox-item" style="margin-top: 30px;">
-              <div>
-                <h5 class="inbox-item-author mt-0 mb-1">Chadengle</h5>
-                <p class="inbox-item-text">Hey! there I'm available...</p>
-              </div>
-              <p class="inbox-item-date">13:40 PM</p>
-            </div>
-            <div class="inbox-item" style="margin-top: 30px;">
-              <div>
-                <h5 class="inbox-item-author mt-0 mb-1">Chadengle</h5>
-                <p class="inbox-item-text">Hey! there I'm available...</p>
-              </div>
-              <p class="inbox-item-date">13:40 PM</p>
-            </div>
-            <div class="inbox-item" style="margin-top: 30px;">
-              <div>
-                <h5 class="inbox-item-author mt-0 mb-1">Chadengle</h5>
-                <p class="inbox-item-text">Hey! there I'm available...</p>
-              </div>
-              <p class="inbox-item-date">13:40 PM</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 第2個 -->
-      <div class="col-xl-8">
-        <div class="card-box-4">
-          <h4 class="header-title mt-0 mb-3">其他資訊</h4>
-          <div class="table-responsive">
-            <table class="table table-hover mb-0">
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Adminto Admin v1</td>
-                  <td>01/01/2017</td>
-                  <td>26/04/2017</td>
-                  <td><span class="badge badge-danger">Released</span></td>
-                  <td>Coderthemes</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Adminto Frontend v1</td>
-                  <td>01/01/2017</td>
-                  <td>26/04/2017</td>
-                  <td><span class="badge badge-success">Released</span></td>
-                  <td>Adminto admin</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Adminto Admin v1.1</td>
-                  <td>01/05/2017</td>
-                  <td>10/05/2017</td>
-                  <td><span class="badge badge-pink">Pending</span></td>
-                  <td>Coderthemes</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Adminto Frontend v1.1</td>
-                  <td>01/01/2017</td>
-                  <td>31/05/2017</td>
-                  <td><span class="badge badge-purple">Work in Progress</span>
-                  </td>
-                  <td>Adminto admin</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Adminto Admin v1.3</td>
-                  <td>01/01/2017</td>
-                  <td>31/05/2017</td>
-                  <td><span class="badge badge-warning">Coming soon</span></td>
-                  <td>Coderthemes</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Adminto Admin v1.3</td>
-                  <td>01/01/2017</td>
-                  <td>31/05/2017</td>
-                  <td><span class="badge badge-primary">Coming soon</span></td>
-                  <td>Adminto admin</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <!-- footer -->
   <div class="footer" id="footer">
-      <div class="fo">
-        <div class="footer_logo">
-          <span style="font-size: 20px">
-            <div class="footer-icon">
-              <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
-              <a
-                href="https://www.facebook.com/people/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E7%B2%BE%E6%BA%96%E9%86%AB%E7%99%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83/100070729758861/?paipv=0&eav=AfZutOJ0ngB1hbn4LdnZm_O-qmEaeKTv-OYW3tWXudfjGEGgpNvmoMCr3RxLxL_42Ug"><font-awesome-icon
-                  icon="fa-brands fa-facebook" /></a>
-              <a href="https://www.youtube.com/channel/UCHXJMNkulLQ4Bud3OxebbJQ"><font-awesome-icon
-                  icon="fa-brands fa-youtube" /></a>
-              <a :href="`mailto:taylor@asia.edu.tw`">
-                <font-awesome-icon icon="fa-solid fa-envelope" />
-              </a>
-            </div>
-            <p>亞洲大學-精準健康研究中心</p>
-          </span>
+    <div class="fo">
+      <div class="footer_logo">
+        <span style="font-size: 20px">
+          <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
+        </span>
 
-        </div>
-        <div class="footer-text">
-          <p class="footer-text-i">聯絡我們</p>
-          <hr />
-          <p class="footer-text-i">地址:41354台中市霧峰區柳豐路500號</p>
-          <p class="footer-text-i">電話: 04-23323456#6502</p>
-          <p class="footer-text-i">信箱:taylor@asia.edu.tw</p>
-        </div>
+      </div>
+      <div class="footer-text">
+        <p class="footer-text-i">聯絡我們</p>
+        <hr />
+        <p class="footer-text-i">地址:41354台中市霧峰區柳豐路500號</p>
+        <p class="footer-text-i">電話: 04-23323456#6502</p>
+        <p class="footer-text-i">信箱:cnwang@aisa.edu.tw</p>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -324,22 +223,16 @@ export default {
 
 .name {
   width: 100%;
-  margin: 10px 0px;
+  margin: 0px 0px;
   text-align: center;
 }
 
 .name-title {
-  font-size: 40px;
-  margin-top: 10px;
+  font-size: 35px;
+  margin: 50px 0px;
 }
 
-.nametext {
-  font-size: 20px;
-  width:80% ;
-  margin: 0px auto;
-}
-
-/*1排*/
+/*3排*/
 .widget-chart-1 {
   display: inline-flex;
   justify-content: space-around;
@@ -477,7 +370,7 @@ export default {
   color: #fff;
 }
 
-/*3排*/
+/*1排*/
 .text-warning {
   left: 80%;
   font-size: 15px;
@@ -508,24 +401,25 @@ export default {
 .footer {
   width: 100%;
   background-color: #038686;
+  line-height: 24px;
+  margin-top: 100px;
 }
 
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  padding: 30px 0px;
+  padding: 1px 0px;
   color: #f7f5ed;
 }
 
 .footer_logo {
-  margin: 30px auto;
+  margin: 20px auto;
   text-align: center;
-  width: 50%;
 }
 
 .footer-icon {
   width: 250px;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 10px 0px;
   display: flex;
   justify-content: space-between;
@@ -534,12 +428,10 @@ export default {
 }
 
 .footer-text {
-  margin: 10px auto;
+  margin: 20px auto;
+  margin-top: 50px;
   width: 50%;
-}
-
-.footer-text-i {
-  padding: 10px 0px;
+  text-align: center;
 }
 a {
   text-decoration: none;
@@ -553,22 +445,6 @@ a {
     justify-content: space-around;
     align-self: flex-end;
     font-size: 18px;
-  }
-}
-
-@media (min-width: 919px) {
-  .fo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer-text-i {
-    margin: 10px auto;
-  }
-
-  .footer-text {
-    width: 40%;
   }
 }
 
@@ -604,8 +480,6 @@ a {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Roboto", sans-serif;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
 h1,
@@ -750,12 +624,6 @@ small {
     max-width: 33.33333%
   }
 
-  .col-xl-8 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 66.66667%;
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%
-  }
 }
 
 .table {
@@ -766,7 +634,7 @@ small {
 
 .table td,
 .table th {
-  padding: .85rem;
+  padding: .55rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6
 }
@@ -1100,7 +968,7 @@ a.text-pink:hover {
 
 .card-box-4 .card-drop {
   color: #98a6ad;
-  font-size: 20px;
+  font-size: 16px;
   display: inline-block;
   line-height: 1px
 }

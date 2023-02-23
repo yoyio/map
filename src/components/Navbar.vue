@@ -1,6 +1,6 @@
 <template>
   <header>
-      <a href="#" class="navbarBrand">數位地圖</a>
+      <RouterLink to="/" class="navbarBrand">綠能下的數位地圖</RouterLink>
       <input type="checkbox" class="navbarToggle" id="navbarToggle" />
       <nav class="nav navbar-light" >
         <ul class="navList">
@@ -8,10 +8,10 @@
             <RouterLink to="/" class="nav-link">首頁</RouterLink>
           </li>
           <li class="navItem">
-            <RouterLink to="/Map" class="nav-link active" aria-current="page">地圖</RouterLink>
+            <!-- <RouterLink to="/about" class="nav-link">關於</RouterLink> -->
           </li>
           <li class="navItem">
-            <RouterLink to="/about" class="nav-link">關於</RouterLink>
+            <RouterLink to="/Map" class="nav-link active" aria-current="page">地圖</RouterLink>
           </li>
         </ul>
       </nav>

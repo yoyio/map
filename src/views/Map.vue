@@ -1,7 +1,6 @@
 <template>
   <div class="a">
     <div class="cardc scrollbar">
-      <input v-if="!area" class="c-shrinkIcon__input" id="searchText" type="text" name="search" placeholder="搜尋..." />
       <div class="Information " v-if="area">
         <img :src="img" class="Information-img" />
         <div class="InformationT">
@@ -13,8 +12,8 @@
           <P class="Information-text">{{ co2 }}</P>
           <P class="Information-text">{{ reduceCo2 }}</P>
           <br />
-          <RouterLink :to="`/Information/${id}`" style="text-decoration: none;left: 80%;color: #3f3f3f;font-size: 20px;">
-            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          <RouterLink :to="`/Information/${id}`" style="text-decoration: none;left: 50%;color: #3f3f3f;font-size: 20px;">
+            詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
           </RouterLink>
         </div>
       </div>
@@ -29,8 +28,8 @@
           </div>
           <p class="h5 h-text-dark">{{ item.address }}</p>
           <p class="h5 h-text-dark">{{ item.iphon }}</p>
-          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 90%;color: #3f3f3f;">
-            <font-awesome-icon icon="fa-solid fa-arrow-right" />
+          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 60%;color: #3f3f3f;">
+            詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
           </RouterLink>
 
         </div>
@@ -44,18 +43,7 @@
     <div class="fo">
       <div class="footer_logo">
         <span style="font-size: 20px">
-          <div class="footer-icon">
-            <a href="https://aupm.asia.edu.tw/zh-tw/"><font-awesome-icon icon="fa-solid fa-house" /></a>
-            <a
-              href="https://www.facebook.com/people/%E4%BA%9E%E6%B4%B2%E5%A4%A7%E5%AD%B8%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E7%B2%BE%E6%BA%96%E9%86%AB%E7%99%82%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83/100070729758861/?paipv=0&eav=AfZutOJ0ngB1hbn4LdnZm_O-qmEaeKTv-OYW3tWXudfjGEGgpNvmoMCr3RxLxL_42Ug"><font-awesome-icon
-                icon="fa-brands fa-facebook" /></a>
-            <a href="https://www.youtube.com/channel/UCHXJMNkulLQ4Bud3OxebbJQ"><font-awesome-icon
-                icon="fa-brands fa-youtube" /></a>
-            <a :href="`mailto:taylor@asia.edu.tw`">
-              <font-awesome-icon icon="fa-solid fa-envelope" />
-            </a>
-          </div>
-          <p>亞洲大學-精準健康研究中心</p>
+          <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
         </span>
 
       </div>
@@ -64,7 +52,7 @@
         <hr />
         <p class="footer-text-i">地址:41354台中市霧峰區柳豐路500號</p>
         <p class="footer-text-i">電話: 04-23323456#6502</p>
-        <p class="footer-text-i">信箱:taylor@asia.edu.tw</p>
+        <p class="footer-text-i">信箱:cnwang@aisa.edu.tw</p>
       </div>
     </div>
   </div>
@@ -131,31 +119,21 @@ onMounted(() => {
     console.log(arguments);
   });
 
-  //客製化Marker
-  const customIcon = L.icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-    iconSize: [22, 32],
-  });
+ 
 
   //Marker for迴圈標記 ,圖標上顯示訊息
   for (let i = 0; data.length > i; i++) {
     markers.addLayer(
-      L.marker([data[i].lat, data[i].lng],{ icon: customIcon })
+      L.marker([data[i].lat, data[i].lng])
         .bindPopup(
-          `<div class="InfoWindowOpened-text " style="font-size: 20px;">
-        <h1>` +
+          `<div class="InfoWindowOpened-text ">
+        <h3>` +
           data[i].name +
-          `</h1><p style="font-size: 15px;">地址:` +
+          `</h3><p style="font-size: 12px;">地址:` +
           data[i].address +
           `<br>電話` +
           data[i].iphon +
-          `<br>發電設備種類:` +
-          data[i].electricity +
-          `(PV)<br>設置位置:` +
-          data[i].location +
-          `<br>總裝置容量:` +
-          data[i].capacity +
-          `kW</p> `
+          `</p> `
         )
         .on("click", () => {
           img.value = data[i].img;
@@ -280,24 +258,24 @@ onMounted(() => {
 .footer {
   width: 100%;
   background-color: #038686;
+  line-height: 24px;
 }
 
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  padding: 30px 0px;
+  padding: 1px 0px;
   color: #f7f5ed;
 }
 
 .footer_logo {
-  margin: 30px auto;
+  margin: 20px auto;
   text-align: center;
-  width: 50%;
 }
 
 .footer-icon {
   width: 250px;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 10px 0px;
   display: flex;
   justify-content: space-between;
@@ -306,12 +284,10 @@ onMounted(() => {
 }
 
 .footer-text {
-  margin: 10px auto;
+  margin: 20px auto;
+  margin-top: 50px;
   width: 50%;
-}
-
-.footer-text-i {
-  padding: 10px 0px;
+  text-align: center;
 }
 
 a {
@@ -400,22 +376,6 @@ a {
 
   .card {
     padding: 0.9375rem 0.75rem;
-  }
-}
-
-@media (min-width: 919px) {
-  .fo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .footer-text-i {
-    margin: 10px auto;
-  }
-
-  .footer-text {
-    width: 40%;
   }
 }
 </style>
