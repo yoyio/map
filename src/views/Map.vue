@@ -5,6 +5,7 @@
         <img :src="img" class="Information-img" />
         <div class="InformationT">
           <RouterLink :to="`/Information/${id}`" class="Information-title">{{ name }}</RouterLink>
+          <hr style="margin-top:20px;"/>
           <p class="Information-text" style="margin-top:20px;">{{ area }}</p>
           <p class="Information-text">{{ c }}</p>
           <P class="Information-text">{{ amount }}</P>
@@ -143,9 +144,9 @@ onMounted(() => {
           img.value = data[i].img;
           id.value = data[i].id;
           name.value = data[i].name;
-          area.value = "占地面積: " + data[i].area + "公頃";
-          c.value = "農穫: " + data[i].c;
-          amount.value = "產量: " + data[i].amount + "公斤";
+          area.value = "場域面積: " + data[i].area + "公頃";
+          c.value = "農作物型態: " + data[i].c;
+          amount.value = "農作產量: " + data[i].amount + "公斤";
           proele.value = "發電量: " + data[i].proele + "KW";
           co2.value = "碳排量: " + data[i].co2 + "公斤";
           reduceCo2.value =
@@ -212,6 +213,9 @@ onMounted(() => {
   color: #3f3f3f;
   font-size: 20px;
   text-decoration: none;
+}
+.Information-title:hover{
+  color: #038686;
 }
 
 .Information-text {

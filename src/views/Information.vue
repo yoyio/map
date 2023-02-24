@@ -2,7 +2,7 @@
   <div class="dashboard">
     <div class="name">
       <div>
-        <p class="name-title">場域名稱</p>
+        <p class="name-title">{{name}}</p>
       </div>
     </div>
     <!-- 第一排 -->
@@ -17,28 +17,27 @@
                 <tr>
                   <td>1</td>
                   <td>公司名稱:</td>
-                  <td>XXX有限公司</td>
-                  
+                  <td>{{who}}</td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>負責人:</td>
-                  <td>XXX</td>
+                  <td>{{leader}}</td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>電話:</td>
-                  <td>0987564258</td>
+                  <td>{{iphon}}</td>
                 </tr>
                 <tr>
                   <td>4</td>
                   <td>地址:</td>
-                  <td>413台中市霧峰區8股路100號</td>
+                  <td>{{address}}</td>
                 </tr>
                 <tr>
                   <td>5</td>
                   <td>聯絡信箱:</td>
-                  <td>abc123@gmail.com</td>
+                  <td>{{email}}</td>
                 </tr>
               </tbody>
             </table>
@@ -60,9 +59,9 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">占地面積: </h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">2.55</p>
-              <small class="text-warning"><b>單位</b></small>
+              <h5 class="mt-0">場域面積:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">{{area}}</p>
+              <small class="text-warning"><b>公傾</b></small>
             </div>
           </div>
         </div>
@@ -73,9 +72,9 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0"> 總裝置容量:</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">7.92</p>
-              <small class="text-warning"><b>KW</b></small>
+              <h5 class="mt-0">農作物型態:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">{{c}}</p>
+              <small class="text-warning"><b></b></small>
             </div>
           </div>
         </div>
@@ -86,25 +85,18 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">發電設備種類:</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate" style="width: 60%;">太陽光電</p>
-              <small class="text-warning"><b>PV</b></small>
+              <h5 class="mt-0">農作產量:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">{{amount}}</p>
+              <small class="text-warning"><b>公斤</b></small>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- 第4個 -->
-      <div class="col-xl-3 col-md-6">
-        <div class="card-box-3 widget-user">
-          <div>
-            <div class="wid-u-info">
-              <h5 class="mt-0">農穫: </h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">薑</p>
-              <small class="text-warning"><b></b></small>
-            </div>
-          </div>
-        </div>
+    <div class="name">
+      <div>
+        <p class="name-title">能源與溫室氣體</p>
       </div>
     </div>
 
@@ -113,69 +105,80 @@
       <!-- 第1個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">發電量</h4>
+          <h4 class="header-title mt-0 mb-4">發電設備類型:</h4>
           <div class="widget-chart-1">
-            <div class="circle">
-              <div class="circle-inside">
-                60%
-              </div>
-            </div>
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1"> 256 </h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{category}}</h2>
+              <p class="text-muted mb-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第2個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-1">
+          <h4 class="header-title mt-0 mb-4">再生能源類型:</h4>
+          <div class="widget-chart-1">
+            <div class="widget-detail-1 text-right">
+              <h2 class="font-weight-normal pt-2 mb-1">{{electricity}}</h2>
+              <p class="text-muted mb-1">PV</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第3個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-1">
+          <h4 class="header-title mt-0 mb-4">裝置設置位置:</h4>
+          <div class="widget-chart-1">
+            <div class="widget-detail-1 text-right">
+              <h2 class="font-weight-normal pt-2 mb-1">{{location}}</h2>
+              <p class="text-muted mb-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第4個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-1">
+          <h4 class="header-title mt-0 mb-4">總裝置容量:</h4>
+          <div class="widget-chart-1">
+            <div class="widget-detail-1 text-right">
+              <h2 class="font-weight-normal pt-2 mb-1">{{capacity}}</h2>
               <p class="text-muted mb-1">KW</p>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- 第2個 -->
+      <!-- 第5個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">碳排量</h4>
+          <h4 class="header-title mt-0 mb-4">發電量:</h4>
           <div class="widget-chart-1">
-            <div class="circle-3">
-              <div class="circle-inside-3">
-                30%
+            <!-- <div class="circle">
+              <div class="circle-inside">
+                60%
               </div>
-            </div>
+            </div> -->
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1"> 1000 </h2>
-              <p class="text-muted mb-1">KG</p>
+              <h2 class="font-weight-normal pt-2 mb-1">{{proele}}</h2>
+              <p class="text-muted mb-1">KW</p>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- 第3個 -->
-      <div class="col-xl-3 col-md-6">
-        <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">減少碳排量</h4>
-          <div class="widget-chart-1">
-            <div class="circle-2">
-              <div class="circle-inside-2">
-                80%
-              </div>
-            </div>
-            <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1"> 569 </h2>
-              <p class="text-muted mb-1">KG</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- 第4個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">產量</h4>
+          <h4 class="header-title mt-0 mb-4">溫室碳排放量:</h4>
           <div class="widget-chart-1">
-            <div class="circle-4">
-              <div class="circle-inside-4">
-                5%
+            <!-- <div class="circle-3">
+              <div class="circle-inside-3">
+                30%
               </div>
-            </div>
+            </div> -->
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1"> 256 </h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{co2}}</h2>
               <p class="text-muted mb-1">KG</p>
             </div>
           </div>
@@ -190,7 +193,6 @@
         <span style="font-size: 20px">
           <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
         </span>
-
       </div>
       <div class="footer-text">
         <p class="footer-text-i">聯絡我們</p>
@@ -204,15 +206,143 @@
 </template>
 
 <script>
+const data = {
+  1: [
+    {
+      id: 1,
+      lat: 23.701141,
+      lng: 120.565259,
+      name: "晁陽溫室1",
+      img: "https://8.share.photo.xuite.net/kmm550312/1818685/11639320/547895149_m.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader:"王曉明",
+      email:"abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "0.25",
+      c: "過貓",
+      amount: "300",
+      co2: "118",
+      proele: "1000",
+      reduceCo2: "500",
+    },
+  ],
+  2: [
+    {
+      id: 2,
+      lat: 23.690351,
+      lng: 120.580423,
+      name: "晁陽溫室2",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader:"王小明",
+      email:"abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "200",
+      co2: "12",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  3: [
+    {
+      id: 3,
+      lat: 23.671755,
+      lng: 120.518156,
+      color: "green",
+      name: "晁陽溫室3",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader:"王筱明",
+      email:"abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+};
+
 export default {
+  data() {
+    return {
+      id: "",
+      lat: "",
+      lng: "",
+      name: "",
+      img: "",
+      address: "",
+      iphon: "",
+      whoCategory: "",
+      who: "",
+      leader:"",
+      email:"",
+      category: "",
+      electricity: "",
+      location: "",
+      capacity: "",
+      area: "",
+      c: "",
+      amount: "",
+      co2: "",
+      proele: "",
+      reduceCo2: "",
+      idData:[]
+    };
+  },
   mounted() {
-    console.log("route", this.$route.params.id)
-    const id = this.$route.params.id
-    console.log("id", id)
-    console.log("route", this.$route)
-    console.log("router", this.$router)
-  }
-}
+    const id = this.$route.params.id;
+    this.fetchRestaurant(id);
+  },
+  methods: {
+    fetchRestaurant(restaurantId) {
+      this.idData={...data[restaurantId][0]}
+      this.id=this.idData.id;
+      this.lat=this.idData.lat;
+      this.lng=this.idData.lng;
+      this.name=this.idData.name;
+      this.img=this.idData.img;
+      this.address=this.idData.address;
+      this.iphon=this.idData.iphon;
+      this.whoCategory=this.idData.whoCategory;
+      this.who=this.idData.who;
+      this.leader=this.idData.leader,
+      this.email=this.idData.email,
+      this.category=this.idData.category;
+      this.electricity=this.idData.electricity;
+      this.location=this.idData.location;
+      this.capacity=this.idData.capacity;
+      this.area=this.idData.area;
+      this.c=this.idData.c;
+      this.amount=this.idData.amount;
+      this.co2=this.idData.co2;
+      this.proele=this.idData.proele;
+      this.reduceCo2=this.idData.reduceCo2;
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -229,7 +359,12 @@ export default {
 
 .name-title {
   font-size: 35px;
-  margin: 50px 0px;
+  margin: 70px 0px;
+}
+.hrname {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*3排*/
@@ -277,7 +412,10 @@ export default {
   height: var(--width);
   border-radius: 50%;
   margin: 0px auto;
-  background-image: conic-gradient(rgb(255, 149, 0) var(--deg), #ccc var(--deg));
+  background-image: conic-gradient(
+    rgb(255, 149, 0) var(--deg),
+    #ccc var(--deg)
+  );
   position: relative;
 }
 
@@ -323,34 +461,6 @@ export default {
   justify-content: center;
   font-size: 22px;
 }
-
-.circle-4 {
-  --width: 100px;
-  --percent: 6;
-  --deg: calc(360deg * calc(var(--percent) / 100));
-  width: var(--width);
-  height: var(--width);
-  border-radius: 50%;
-  margin: 0px auto;
-  background-image: conic-gradient(rgb(3, 14, 142) var(--deg), #ccc var(--deg));
-  position: relative;
-}
-
-.circle-inside-4 {
-  --bar-width: 15px;
-  position: absolute;
-  display: flex;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: #eee;
-  width: calc(var(--width) - var(--bar-width));
-  height: calc(var(--width) - var(--bar-width));
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-}
 .widget-box-2 {
   width: 100%;
   margin: 20px auto;
@@ -359,29 +469,37 @@ export default {
 .badge-1 {
   top: 50px;
   display: inline-block;
-  padding: .25em .4em;
+  padding: 0.25em 0.4em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: #fff;
 }
 
-/*1排*/
+.card-box-1:hover {
+  background-color: #cfcfcf;
+}
+
+/*2排*/
 .text-warning {
   left: 80%;
   font-size: 15px;
 }
 
 .text-muted-3 {
-  width: 40%;
+  width: 50%;
   margin: 0px auto;
   margin-top: 10px;
   font-size: 30px;
-  color: #98a6ad
+  color: #000;
+  margin-top: 30px;
+}
+.card-box-3:hover {
+  background-color: #cfcfcf;
 }
 
 /*4*/
@@ -448,7 +566,6 @@ a {
   }
 }
 
-
 /*分隔線*/
 :root {
   --blue: #71b6f9;
@@ -489,35 +606,34 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 1.5rem
+  margin-bottom: 1.5rem;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 ul {
   margin-top: 0;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 small {
-  font-size: 80%
+  font-size: 80%;
 }
-
 
 img {
   vertical-align: middle;
-  border-style: none
+  border-style: none;
 }
 
 table {
-  border-collapse: collapse
+  border-collapse: collapse;
 }
 
 th {
-  text-align: inherit
+  text-align: inherit;
 }
 
 input {
@@ -526,7 +642,7 @@ input {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  overflow: visible
+  overflow: visible;
 }
 
 .h2,
@@ -537,46 +653,46 @@ h4,
 h5 {
   margin-bottom: 1.5rem;
   font-weight: 400;
-  line-height: 1.1
+  line-height: 1.1;
 }
 
 .h2,
 h2 {
-  font-size: 1.875rem
+  font-size: 1.875rem;
 }
 
 .h4,
 h4 {
-  font-size: 1.125rem
+  font-size: 1.125rem;
 }
 
 .h5,
 h5 {
-  font-size: .9375rem
+  font-size: 0.9375rem;
 }
 
 .small,
 small {
-  font-size: .75rem;
-  font-weight: 400
+  font-size: 0.75rem;
+  font-weight: 400;
 }
 
 .list-inline {
   padding-left: 0;
-  list-style: none
+  list-style: none;
 }
 
 .list-inline-item {
-  display: inline-block
+  display: inline-block;
 }
 
 .list-inline-item:not(:last-child) {
-  margin-right: 6px
+  margin-right: 6px;
 }
 
 .img-fluid {
   max-width: 100%;
-  height: auto
+  height: auto;
 }
 
 .row {
@@ -586,7 +702,7 @@ small {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -12px;
-  margin-left: -12px
+  margin-left: -12px;
 }
 
 .col-md-6,
@@ -596,217 +712,220 @@ small {
   position: relative;
   width: 100%;
   padding-right: 12px;
-  padding-left: 12px
+  padding-left: 12px;
 }
 
-@media (min-width:768px) {
-
+@media (min-width: 768px) {
   .col-md-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
-    max-width: 50%
+    max-width: 50%;
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .col-xl-3 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    max-width: 25%
+    max-width: 25%;
   }
 
   .col-xl-4 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.33333%;
     flex: 0 0 33.33333%;
-    max-width: 33.33333%
+    max-width: 33.33333%;
   }
-
 }
 
 .table {
   width: 100%;
   margin-bottom: 1.5rem;
-  color: #6c757d
+  color: #6c757d;
 }
 
 .table td,
 .table th {
-  padding: .55rem;
+  padding: 0.55rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6
+  border-top: 1px solid #dee2e6;
 }
 
 .table-hover tbody tr:hover {
   color: #6c757d;
-  background-color: #f1f5f7
+  background-color: #f1f5f7;
 }
 
 .table-responsive {
   display: block;
   width: 100%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
 }
 
 .badge {
   display: inline-block;
-  padding: .25em .4em;
+  padding: 0.25em 0.4em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25rem;
-  -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   .badge {
     -webkit-transition: none;
-    transition: none
+    transition: none;
   }
 }
 
 a.badge:focus,
 a.badge:hover {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .badge:empty {
-  display: none
+  display: none;
 }
 
 .badge-pill {
-  padding-right: .6em;
-  padding-left: .6em;
-  border-radius: 10rem
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
 }
 
 .badge-primary {
   color: #fff;
-  background-color: #71b6f9
+  background-color: #71b6f9;
 }
 
 a.badge-primary:focus,
 a.badge-primary:hover {
   color: #fff;
-  background-color: #409df7
+  background-color: #409df7;
 }
 
 a.badge-primary.focus,
 a.badge-primary:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 .2rem rgba(113, 182, 249, .5);
-  box-shadow: 0 0 0 .2rem rgba(113, 182, 249, .5)
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(113, 182, 249, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(113, 182, 249, 0.5);
 }
-
 
 .badge-success {
   color: #fff;
-  background-color: #10c469
+  background-color: #10c469;
 }
 
 a.badge-success:focus,
 a.badge-success:hover {
   color: #fff;
-  background-color: #0c9550
+  background-color: #0c9550;
 }
 
 a.badge-success.focus,
 a.badge-success:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 .2rem rgba(16, 196, 105, .5);
-  box-shadow: 0 0 0 .2rem rgba(16, 196, 105, .5)
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(16, 196, 105, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(16, 196, 105, 0.5);
 }
 
 .badge-warning {
   color: #343a40;
-  background-color: #f9c851
+  background-color: #f9c851;
 }
 
 a.badge-warning:focus,
 a.badge-warning:hover {
   color: #343a40;
-  background-color: #f7b820
+  background-color: #f7b820;
 }
 
 a.badge-warning.focus,
 a.badge-warning:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 .2rem rgba(249, 200, 81, .5);
-  box-shadow: 0 0 0 .2rem rgba(249, 200, 81, .5)
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(249, 200, 81, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(249, 200, 81, 0.5);
 }
 
 .badge-danger {
   color: #fff;
-  background-color: #ff5b5b
+  background-color: #ff5b5b;
 }
 
 a.badge-danger:focus,
 a.badge-danger:hover {
   color: #fff;
-  background-color: #ff2828
+  background-color: #ff2828;
 }
 
 a.badge-danger.focus,
 a.badge-danger:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 .2rem rgba(255, 91, 91, .5);
-  box-shadow: 0 0 0 .2rem rgba(255, 91, 91, .5)
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 91, 91, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(255, 91, 91, 0.5);
 }
 
 .badge-pink {
   color: #fff;
-  background-color: #ff8acc
+  background-color: #ff8acc;
 }
 
 a.badge-pink:focus,
 a.badge-pink:hover {
   color: #343a40;
-  background-color: #ff57b6
+  background-color: #ff57b6;
 }
 
 a.badge-pink.focus,
 a.badge-pink:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 .2rem rgba(255, 138, 204, .5);
-  box-shadow: 0 0 0 .2rem rgba(255, 138, 204, .5)
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 138, 204, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(255, 138, 204, 0.5);
 }
 
 .badge-purple {
   color: #fff;
-  background-color: #5b69bc
+  background-color: #5b69bc;
 }
 
 a.badge-purple:focus,
 a.badge-purple:hover {
   color: #fff;
-  background-color: #4250a2
+  background-color: #4250a2;
 }
 
 a.badge-purple.focus,
 a.badge-purple:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 .2rem rgba(91, 105, 188, .5);
-  box-shadow: 0 0 0 .2rem rgba(91, 105, 188, .5)
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(91, 105, 188, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(91, 105, 188, 0.5);
 }
 
 .progress {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: .625rem;
+  height: 0.625rem;
   overflow: hidden;
-  font-size: .75rem;
+  font-size: 0.75rem;
   background-color: #e9ecef;
-  border-radius: .25rem
+  border-radius: 0.25rem;
 }
 
 .progress-bar {
@@ -824,19 +943,19 @@ a.badge-purple:focus {
   text-align: center;
   white-space: nowrap;
   background-color: #71b6f9;
-  -webkit-transition: width .6s ease;
-  transition: width .6s ease
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   .progress-bar {
     -webkit-transition: none;
-    transition: none
+    transition: none;
   }
 }
 
 .float-left {
-  float: left !important
+  float: left !important;
 }
 
 .sr-only {
@@ -847,139 +966,139 @@ a.badge-purple:focus {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border: 0
+  border: 0;
 }
 
 .text-right {
-  text-align: right !important
+  text-align: right !important;
 }
 
 .text-center {
-  text-align: center !important
+  text-align: center !important;
 }
 
 .font-weight-normal {
-  font-weight: 400 !important
+  font-weight: 400 !important;
 }
 
 .text-success {
-  color: #10c469 !important
+  color: #10c469 !important;
 }
 
 a.text-success:focus,
 a.text-success:hover {
-  color: #0a7d43 !important
+  color: #0a7d43 !important;
 }
 
 .text-info {
-  color: #35b8e0 !important
+  color: #35b8e0 !important;
 }
 
 a.text-info:focus,
 a.text-info:hover {
-  color: #1b8bae !important
+  color: #1b8bae !important;
 }
 
 .text-warning {
-  color: #f9c851 !important
+  color: #98a6ad !important;
 }
 
 a.text-warning:focus,
 a.text-warning:hover {
-  color: #f5b008 !important
+  color: #f5b008 !important;
 }
 
 .text-pink {
-  color: #ff8acc !important
+  color: #ff8acc !important;
 }
 
 a.text-pink:focus,
 a.text-pink:hover {
-  color: #ff3eab !important
+  color: #ff3eab !important;
 }
 
 .text-muted {
-  color: #98a6ad !important
+  color: #98a6ad !important;
 }
 
 .badge {
-  color: #fff
+  color: #fff;
 }
 
 .card-box-1 {
   height: 200px;
   background-color: #faf6f6;
   padding: 1.5rem;
-  -webkit-box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
-  box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
+  -webkit-box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
+  box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
   margin-bottom: 24px;
-  border-radius: .25rem
+  border-radius: 0.25rem;
 }
 
 .card-box-1 .card-drop {
   color: #98a6ad;
   font-size: 20px;
   display: inline-block;
-  line-height: 1px
+  line-height: 1px;
 }
 
 .card-box-2 {
   height: 350px;
   background-color: #faf6f6;
   padding: 1.5rem;
-  -webkit-box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
-  box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
+  -webkit-box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
+  box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
   margin-bottom: 24px;
-  border-radius: .25rem
+  border-radius: 0.25rem;
 }
 
 .card-box-2 .card-drop {
   color: #98a6ad;
   font-size: 20px;
   display: inline-block;
-  line-height: 1px
+  line-height: 1px;
 }
 
 .card-box-3 {
   height: 150px;
   background-color: #faf6f6;
   padding: 1.5rem;
-  -webkit-box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
-  box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
+  -webkit-box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
+  box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
   margin-bottom: 24px;
-  border-radius: .25rem
+  border-radius: 0.25rem;
 }
 
 .card-box-3 .card-drop {
   color: #98a6ad;
   font-size: 20px;
   display: inline-block;
-  line-height: 1px
+  line-height: 1px;
 }
 
 .card-box-4 {
   background-color: #faf6f6;
   padding: 1.5rem;
-  -webkit-box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
-  box-shadow: 0 .75rem 6rem rgba(56, 65, 74, .03);
+  -webkit-box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
+  box-shadow: 0 0.75rem 6rem rgba(56, 65, 74, 0.03);
   margin-bottom: 24px;
-  border-radius: .25rem
+  border-radius: 0.25rem;
 }
 
 .card-box-4 .card-drop {
   color: #98a6ad;
   font-size: 16px;
   display: inline-block;
-  line-height: 1px
+  line-height: 1px;
 }
 
 .header-title {
   font-size: 1rem;
-  margin: 0 0 7px 0
+  margin: 0 0 7px 0;
 }
 
 .progress {
-  margin-top: 18px
+  margin-top: 18px;
 }
 
 .h2,
@@ -991,6 +1110,6 @@ h5 {
   margin: 10px 0;
   font-weight: 600;
   font-family: Karla, sans-serif;
-  color: #343a40
+  color: #343a40;
 }
 </style>
