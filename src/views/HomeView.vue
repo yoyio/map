@@ -17,7 +17,6 @@
         <button type="button" class="btn btn-outline-success">
           開始使用<font-awesome-icon icon="arrow-right" />
         </button>
-
       </RouterLink>
     </div>
   </div>

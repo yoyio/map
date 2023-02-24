@@ -4,6 +4,7 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -22,4 +23,4 @@ app.use(router)
 app.mount('#app')
 
 app.component('font-awesome-icon', FontAwesomeIcon)
-library.add(faEnvelope, faArrowRight, faFacebook, faTwitter, faYoutube, faHouse)
+library.add(faEnvelope, faArrowRight, faFacebook, faTwitter, faYoutube, faHouse, faArrowLeft)

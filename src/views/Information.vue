@@ -186,6 +186,14 @@
       </div>
     </div>
   </div>
+
+  <!-- contact -->
+  <div class="contact">
+    <RouterLink to="/Map" class="about-button">
+      <font-awesome-icon icon="arrow-left" />
+    </RouterLink>
+  </div>
+
   <!-- footer -->
   <div class="footer" id="footer">
     <div class="fo">
@@ -365,6 +373,27 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.contact {
+  position: fixed;
+  bottom:50px;
+  right:50px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 0px #666;
+  cursor: pointer;
+  z-index: 5;
+}
+.contact:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.3s;
 }
 
 /*3排*/
