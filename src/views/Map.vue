@@ -43,17 +43,10 @@
   <div class="footer" id="footer">
     <div class="fo">
       <div class="footer_logo">
-        <span style="font-size: 20px">
+        <span style="font-size: 16px">
           <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
         </span>
 
-      </div>
-      <div class="footer-text">
-        <p class="footer-text-i">聯絡我們</p>
-        <hr />
-        <p class="footer-text-i">地址:41354台中市霧峰區柳豐路500號</p>
-        <p class="footer-text-i">電話: 04-23323456#6502</p>
-        <p class="footer-text-i">信箱:cnwang@aisa.edu.tw</p>
       </div>
     </div>
   </div>
@@ -266,37 +259,21 @@ onMounted(() => {
 .footer {
   width: 100%;
   background-color: #038686;
-  line-height: 24px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  padding: 1px 0px;
   color: #f7f5ed;
 }
 
 .footer_logo {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.footer-icon {
-  width: 250px;
   margin: 0px auto;
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-}
-
-.footer-text {
-  margin: 20px auto;
-  margin-top: 50px;
-  width: 50%;
   text-align: center;
 }
+
 
 a {
   text-decoration: none;

@@ -1,5 +1,31 @@
 <template>
   <div class="about">
+    <swiper
+      :spaceBetween="30"
+      :centeredSlides="true"
+      :autoplay="{
+        delay: 3500,
+        disableOnInteraction: false,
+      }"
+      :pagination="{
+        clickable: true,
+      }"
+      :modules="modules"
+      @autoplayTimeLeft="onAutoplayTimeLeft"
+      class="mySwiper"
+    >
+      <swiper-slide class="swiperSlide1"></swiper-slide>
+      <swiper-slide class="swiperSlide2"></swiper-slide>
+      <swiper-slide class="swiperSlide3"></swiper-slide>
+      <template #container-end>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48" ref="progressCircle">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref="progressContent"></span>
+        </div>
+      </template>
+    </swiper>
     <div class="about-img">
       <div class="about-t">
         <p class="about-title">綠能下的數位地圖</p>
@@ -46,13 +72,15 @@
   </div>
 
   <!-- footer -->
-  <div class="footer" id="footer">
+  <div class="wrapper">
+    <div class="wave"></div>
+    <div class="wave two"></div>
+    <div class="wave three"></div>
     <div class="fo">
       <div class="footer_logo">
         <span style="font-size: 20px">
           <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
         </span>
-
       </div>
       <div class="footer-text">
         <p class="footer-text-i">聯絡我們</p>
@@ -66,6 +94,35 @@
 </template>
 
 <script>
+// Import Swiper Vue.js components
+import { ref } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import { Autoplay, Pagination } from "swiper";
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const progressCircle = ref(null);
+    const progressContent = ref(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+      progressCircle.value.style.setProperty("--progress", 1 - progress);
+      progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
+    };
+    return {
+      onAutoplayTimeLeft,
+      progressCircle,
+      progressContent,
+      modules: [Autoplay, Pagination],
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -73,16 +130,32 @@
   width: 100%;
   margin: 0 auto;
 }
-
+/*swiper*/
+.mySwiper {
+  width: 100%;
+  height: 700px;
+}
+.swiperSlide1 {
+  background-image: url("https://images.unsplash.com/photo-1491677533189-49af044391ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80");
+  background-position: center;
+  background-size: cover;
+}
+.swiperSlide2 {
+  background-image: url("https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80");
+  background-position: center;
+  background-size: cover;
+}
+.swiperSlide3 {
+  background-image: url("https://images.unsplash.com/photo-1630672607721-48e0a0187a92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1202&q=80");
+  background-position: center;
+  background-size: cover;
+}
 .about-img {
   width: 100%;
   margin: 0 auto;
-  height: 85vh;
-  padding: 100% 0px 0px 0px;
-  background-image: url('../assets/4.jpg');
-  /*3 9*/
-  background-position: center;
-  background-size: cover;
+  z-index: 1;
+  position:absolute;
+  top: 0px;
 }
 
 .about-t {
@@ -96,8 +169,6 @@
   padding: 1rem 0rem;
   font-weight: bold;
 }
-
-
 .about-i {
   max-width: 70%;
   margin: 60px auto;
@@ -188,38 +259,61 @@ a {
 }
 
 /*footer*/
-.footer {
+.wrapper {
   width: 100%;
-  background-color: #038686;
-  line-height: 24px;
+  height: 350px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
 }
-
+.wave {
+  background: #038686;
+  width: 1800px;
+  height: 1800px;
+  border-radius: 40%;
+  opacity: 0.4;
+  position: absolute;
+  top: 95%;
+  left: -100%;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: center;
+  animation: drift 7s infinite linear;
+}
+.wave.two {
+  animation: drift 9s infinite linear;
+}
+.wave.three {
+  animation: drift 11s infinite linear;
+  opacity: 0.1;
+}
+@keyframes drift {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  padding: 1px 0px;
   color: #f7f5ed;
+  top: 110px;
+  line-height: 24px;
 }
 
 .footer_logo {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.footer-icon {
-  width: 250px;
   margin: 0px auto;
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
 }
-
 .footer-text {
-  margin: 20px auto;
-  margin-top: 50px;
-  width: 50%;
+  margin: 0px auto;
+  width: 70%;
   text-align: center;
 }
 
@@ -242,6 +336,9 @@ a {
   .about-button {
     left: 55%;
   }
+  .wave {
+  left: -80%;
+  }
 }
 
 @media (min-width: 524px) {
@@ -253,6 +350,9 @@ a {
   }
   .about-button {
     left: 65%;
+  }
+  .wave {
+  left: -50%;
   }
 }
 
@@ -283,6 +383,9 @@ a {
   .introduce-text-a {
     width: 50%;
   }
+  .wave {
+  left: -30%;
+  }
 }
 
 @media (min-width: 809px) {
@@ -301,6 +404,9 @@ a {
   .about-t {
     margin: 40px auto;
   }
+  .wave {
+  left: -10%;
+  }
 }
 
 @media (min-width: 1109px) {
@@ -311,4 +417,13 @@ a {
   .about-button {
     left: 90%;
   }
-}</style>
+  .wave {
+  left: 0%;
+  }
+}
+@media (min-width: 1499px) {
+  .wave {
+  left: 10%;
+  }
+}
+</style>
