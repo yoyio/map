@@ -29,10 +29,11 @@
           </div>
           <p class="h5 h-text-dark">{{ item.address }}</p>
           <p class="h5 h-text-dark">{{ item.iphon }}</p>
-          <RouterLink :to="`/Information/${item.id}`" style="text-decoration: none;left: 70%;color: #3f3f3f;">
+          <div class="k">
+            <RouterLink :to="`/Information/${item.id}`"   style="text-decoration: none;;color: #3f3f3f;">
             詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
-          </RouterLink>
-
+            </RouterLink>
+          </div>
         </div>
       </div>
     </div>
@@ -194,7 +195,7 @@ onMounted(() => {
 .Information-img {
   max-width: 90%;
   margin: 30px auto;
-  height: 300px;
+  height: 230px;
 }
 
 .InformationT {
@@ -242,6 +243,14 @@ onMounted(() => {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #d9d9d9;
   margin: 20px 0px;
+  -webkit-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+}
+.k{
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
 }
 
 .h-flex-1 {

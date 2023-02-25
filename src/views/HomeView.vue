@@ -49,9 +49,7 @@
   <div class="introduce-a">
     <div class="introduce-img-a"></div>
     <div class="introduce-text-a">
-      <p class="introduce-ti-a">
-        農業為本 綠能加值
-      </p>
+      <p class="introduce-ti-a">農業為本 綠能加值</p>
       <p class="introduce-te-a">
         農電共生數位地圖能夠協助您實現能源與農業的共生，實現環境保護、節能減碳、提高農業效益的目標。此外，它還可以幫助您進一步降低能源成本，提高能源利用效率，並且為您提供更多的商業價值。
       </p>
@@ -62,9 +60,7 @@
   </div>
   <div class="introduce-b">
     <div class="introduce-text-b">
-      <p class="introduce-ti-b">
-        農業綠能
-      </p>
+      <p class="introduce-ti-b">農業綠能</p>
       <p class="introduce-te-b">
         農電共生數位地圖具有即時性、全面性及準確性，能夠協助各界了解農業、能源資源的利用現況及未來潛力，協助決策者進行區域性的能源整合與協調，促進區域經濟發展及社會永續。
       </p>
@@ -154,7 +150,7 @@ export default {
   width: 100%;
   margin: 0 auto;
   z-index: 1;
-  position:absolute;
+  position: absolute;
   top: 0px;
 }
 
@@ -199,7 +195,7 @@ export default {
   width: 100%;
   height: 400px;
   background-color: #cccccc;
-  background-image: url('../assets/10.jpg');
+  background-image: url("../assets/10.jpg");
   /*17*/
   background-position: center;
   background-size: cover;
@@ -228,7 +224,8 @@ export default {
   padding: 2rem;
   background-color: #cccccc;
   background-color: #cccccc;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../assets/6.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("../assets/6.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -251,7 +248,6 @@ export default {
   margin: 0px auto;
   padding: 2rem;
 }
-
 
 a {
   text-decoration: none;
@@ -317,7 +313,6 @@ a {
   text-align: center;
 }
 
-
 a {
   text-decoration: none;
   color: #fff;
@@ -337,7 +332,7 @@ a {
     left: 55%;
   }
   .wave {
-  left: -80%;
+    left: -80%;
   }
 }
 
@@ -352,7 +347,7 @@ a {
     left: 65%;
   }
   .wave {
-  left: -50%;
+    left: -50%;
   }
 }
 
@@ -371,7 +366,7 @@ a {
 
   .introduce-a {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -384,7 +379,7 @@ a {
     width: 50%;
   }
   .wave {
-  left: -30%;
+    left: -30%;
   }
 }
 
@@ -405,7 +400,7 @@ a {
     margin: 40px auto;
   }
   .wave {
-  left: -10%;
+    left: -10%;
   }
 }
 
@@ -418,12 +413,12 @@ a {
     left: 90%;
   }
   .wave {
-  left: 0%;
+    left: 0%;
   }
 }
 @media (min-width: 1499px) {
   .wave {
-  left: 10%;
+    left: 10%;
   }
 }
 </style>
