@@ -39,11 +39,13 @@
         透過數位地圖，瞭解農地的能源潛力、太陽能、風能、水力等能源的利用現況及未來潛力，依據數據分析，推算出最佳的農電共生模式及配電規劃，以達到區域性的能源整合與協調，促進區域經濟發展及社會永續。
       </p>
       <br />
-      <RouterLink to="/Map" class="about-button">
-        <button type="button" class="btn btn-outline-success">
-          開始使用<font-awesome-icon icon="arrow-right" />
-        </button>
-      </RouterLink>
+      <div class="o">
+        <RouterLink to="/Map" class="about-button">
+          <button type="button" class="btn btn-outline-success">
+            開始使用<font-awesome-icon icon="arrow-right" />
+          </button>
+        </RouterLink>
+      </div>
     </div>
   </div>
   <div class="introduce-a">
@@ -153,10 +155,15 @@ export default {
   position: absolute;
   top: 0px;
 }
-
+.about-img{
+  height: 700px;
+  margin: -20px auto;
+  display: flex;
+  align-items:flex-end;
+}
 .about-t {
   max-width: 70%;
-  margin: -70px auto;
+  margin: 0px auto;
   color: #fff;
 }
 
@@ -174,14 +181,16 @@ export default {
   color: #141b18;
   width: 100%;
 }
-
+.o{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
 .about-button {
   color: #141b18;
   font-weight: bold;
   font-size: 20px;
-  width: 200px;
   height: 40px;
-  left: 35%;
   text-decoration: none;
 }
 
@@ -320,50 +329,18 @@ a {
 
 /*響應式*/
 @media (min-width: 359px) {
-  .about-img {
-    padding: 70% 0px 0px 0px;
-  }
-
-  .about-t {
-    margin: 0px auto;
-  }
-
-  .about-button {
-    left: 55%;
-  }
   .wave {
     left: -80%;
   }
 }
 
 @media (min-width: 524px) {
-  .about-img {
-    padding: 60% 0px 0px 0px;
-  }
-  .about-t {
-    margin: -10px auto;
-  }
-  .about-button {
-    left: 65%;
-  }
   .wave {
     left: -50%;
   }
 }
 
 @media (min-width: 739px) {
-  .about-img {
-    padding: 50% 0px 0px 0px;
-  }
-
-  .about-t {
-    margin: 10px auto;
-  }
-
-  .about-button {
-    left: 75%;
-  }
-
   .introduce-a {
     display: flex;
     justify-content: space-between;
@@ -382,36 +359,13 @@ a {
     left: -30%;
   }
 }
-
-@media (min-width: 809px) {
-  .about-img {
-    padding: 40% 0px 0px 0px;
-  }
-  .about-t {
-    margin: 80px auto;
-  }
-}
-
 @media (min-width: 919px) {
-  .about-button {
-    left: 80%;
-  }
-  .about-t {
-    margin: 40px auto;
-  }
   .wave {
     left: -10%;
   }
 }
 
 @media (min-width: 1109px) {
-  .about-img {
-    padding: 30% 0px 0px 0px;
-  }
-
-  .about-button {
-    left: 90%;
-  }
   .wave {
     left: 0%;
   }

@@ -85,13 +85,15 @@
     </div>
   </div>
   <!-- footer -->
-  <div class="footer" id="footer">
+  <div class="wrapper">
+    <div class="wave"></div>
+    <div class="wave two"></div>
+    <div class="wave three"></div>
     <div class="fo">
       <div class="footer_logo">
         <span style="font-size: 20px">
           <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
         </span>
-
       </div>
       <div class="footer-text">
         <p class="footer-text-i">聯絡我們</p>
@@ -210,41 +212,63 @@ hr {
 
 
 /*footer*/
-.footer {
+.wrapper {
   width: 100%;
-  background-color: #038686;
-  line-height: 24px;
+  height: 350px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
 }
-
+.wave {
+  background: #038686;
+  width: 1800px;
+  height: 1800px;
+  border-radius: 40%;
+  opacity: 0.4;
+  position: absolute;
+  top: 95%;
+  left: -100%;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: center;
+  animation: drift 7s infinite linear;
+}
+.wave.two {
+  animation: drift 9s infinite linear;
+}
+.wave.three {
+  animation: drift 11s infinite linear;
+  opacity: 0.1;
+}
+@keyframes drift {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .fo {
   max-width: 95%;
   margin: 0px auto;
-  padding: 1px 0px;
   color: #f7f5ed;
+  top: 110px;
+  line-height: 24px;
 }
 
 .footer_logo {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.footer-icon {
-  width: 250px;
   margin: 0px auto;
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
 }
-
 .footer-text {
-  margin: 20px auto;
-  margin-top: 50px;
-  width: 50%;
+  margin: 0px auto;
+  width: 70%;
   text-align: center;
 }
-
 a {
   text-decoration: none;
   color: #fff;
@@ -252,6 +276,23 @@ a {
 
 
 /*響應式*/
+@media (min-width: 359px) {
+  .wave {
+    left: -80%;
+  }
+}
+
+@media (min-width: 524px) {
+  .wave {
+    left: -50%;
+  }
+}
+
+@media (min-width: 739px) {
+  .wave {
+    left: -30%;
+  }
+}
 @media (min-width: 919px) {
   .aboutA {
     display: inline-flex;
@@ -262,19 +303,19 @@ a {
     display: inline-flex;
     justify-content: space-around;
   }
-
-  .fo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  .wave {
+    left: -10%;
   }
+}
 
-  .footer-text-i {
-    margin: 10px auto;
+@media (min-width: 1109px) {
+  .wave {
+    left: 0%;
   }
-
-  .footer-text {
-    width: 40%;
+}
+@media (min-width: 1499px) {
+  .wave {
+    left: 10%;
   }
 }
 </style>

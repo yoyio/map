@@ -1,37 +1,51 @@
 <template>
   <div class="a">
     <div class="cardc scrollbar">
-      <div class="Information " v-if="area">
+      <div class="card" style="width: 100% margin: 0px 0px;padding: 0rem 1rem;" v-if="area">
         <img :src="img" class="Information-img" />
         <div class="InformationT">
-          <RouterLink :to="`/Information/${id}`" class="Information-title">{{ name }}</RouterLink>
-          <hr style="margin-top:20px;"/>
-          <p class="Information-text" style="margin-top:20px;">{{ area }}</p>
-          <p class="Information-text">{{ c }}</p>
-          <P class="Information-text">{{ amount }}</P>
-          <P class="Information-text">{{ proele }}</P>
-          <P class="Information-text">{{ co2 }}</P>
-          <P class="Information-text">{{ reduceCo2 }}</P>
-          <br />
-          <RouterLink :to="`/Information/${id}`" style="text-decoration: none;left: 50%;color: #3f3f3f;font-size: 20px;">
-            詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
-          </RouterLink>
+            <RouterLink :to="`/Information/${id}`" class="Information-title">{{
+            name
+          }}</RouterLink>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <p class="Information-text">{{ area }}</p>
+            <p class="Information-text">{{ c }}</p>
+            <P class="Information-text">{{ amount }}</P>
+          </li>
+          <li class="list-group-item">
+            <P class="Information-text">{{ proele }}</P>
+            <P class="Information-text">{{ co2 }}</P>
+            <P class="Information-text">{{ reduceCo2 }}</P>
+          </li>
+        </ul>
+        <div class="card-body">
+            <RouterLink
+              :to="`/Information/${id}`" class="card-body-t"
+            >
+              詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
+            </RouterLink>
         </div>
       </div>
       <div class="p-sideContent scrollbar" v-else>
         <div class="card" v-for="(item, key) in data" :key="key">
           <div class="h-d-flex h-mb-3 h-align-items-center">
             <h2 class="h-flex-1">
-              <RouterLink :to="`/Information/${item.id}`" style=";text-decoration: none;color: #3f3f3f">{{ item.name }}
+              <RouterLink
+                :to="`/Information/${item.id}`"
+                style="text-decoration: none; color: #3f3f3f"
+                >{{ item.name }}
               </RouterLink>
-
             </h2>
           </div>
           <p class="h5 h-text-dark">{{ item.address }}</p>
           <p class="h5 h-text-dark">{{ item.iphon }}</p>
           <div class="k">
-            <RouterLink :to="`/Information/${item.id}`"   style="text-decoration: none;;color: #3f3f3f;">
-            詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
+            <RouterLink
+              :to="`/Information/${item.id}`" class="card-body-t"
+            >
+              詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
             </RouterLink>
           </div>
         </div>
@@ -47,7 +61,6 @@
         <span style="font-size: 16px">
           <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
         </span>
-
       </div>
     </div>
   </div>
@@ -81,7 +94,7 @@ const data = allData.restaurants;
 onMounted(() => {
   //建立地圖物件
   const map = L.map(mapContainer.value, {
-    center: [23.710100, 120.602125],
+    center: [23.7101, 120.602125],
     zoom: 10,
   });
 
@@ -114,25 +127,26 @@ onMounted(() => {
     console.log(arguments);
   });
 
- //客製化Marker
+  //客製化Marker
   const customIcon = L.icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    iconUrl:
+      "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
     iconSize: [22, 32],
   });
 
   //Marker for迴圈標記 ,圖標上顯示訊息
   for (let i = 0; data.length > i; i++) {
     markers.addLayer(
-      L.marker([data[i].lat, data[i].lng],{ icon: customIcon })
+      L.marker([data[i].lat, data[i].lng], { icon: customIcon })
         .bindPopup(
           `<div class="InfoWindowOpened-text ">
         <h3>` +
-          data[i].name +
-          `</h3><p style="font-size: 12px;">地址:` +
-          data[i].address +
-          `<br>電話` +
-          data[i].iphon +
-          `</p> `
+            data[i].name +
+            `</h3><p style="font-size: 12px;">地址:` +
+            data[i].address +
+            `<br>電話` +
+            data[i].iphon +
+            `</p> `
         )
         .on("click", () => {
           img.value = data[i].img;
@@ -143,8 +157,7 @@ onMounted(() => {
           amount.value = "農作產量: " + data[i].amount + "公斤";
           proele.value = "發電量: " + data[i].proele + "KW";
           co2.value = "碳排量: " + data[i].co2 + "公斤";
-          reduceCo2.value =
-            "減少碳排量: " + data[i].reduceCo2 + "公斤";
+          reduceCo2.value = "減少碳排量: " + data[i].reduceCo2 + "公斤";
         })
     );
   }
@@ -179,7 +192,7 @@ onMounted(() => {
 .cardc {
   background-color: #ffffff;
   width: 100%;
-  height: 35vh;
+  height: 30vh;
 }
 
 .Information {
@@ -193,28 +206,40 @@ onMounted(() => {
 }
 
 .Information-img {
-  max-width: 90%;
-  margin: 30px auto;
-  height: 230px;
+  max-width: 100%;
+  margin: 10px auto;
 }
 
 .InformationT {
-  width: 90%;
-  margin: 0px auto;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .Information-title {
   color: #3f3f3f;
-  font-size: 20px;
+  font-size: 25px;
   text-decoration: none;
 }
-.Information-title:hover{
+.Information-title:hover {
   color: #038686;
 }
-
 .Information-text {
   color: #3f3f3f;
   font-size: 16px;
+  margin: 10px 0px;
+}
+.card-body{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.card-body-t{
+  text-decoration: none;
+  color: #3f3f3f
+}
+.card-body-t:hover{
+  color: #038686
 }
 
 /*搜尋*/
@@ -247,10 +272,10 @@ onMounted(() => {
   -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
 }
-.k{
+.k {
   width: 100%;
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .h-flex-1 {
@@ -282,7 +307,6 @@ onMounted(() => {
   margin: 0px auto;
   text-align: center;
 }
-
 
 a {
   text-decoration: none;
@@ -323,11 +347,6 @@ a {
   .Information {
     width: 100%;
   }
-
-  /*搜尋*/
-  .card {
-    padding: 0.9375rem 0.75rem;
-  }
 }
 
 @media (min-width: 819px) {
@@ -355,8 +374,8 @@ a {
 
   .Information-img {
     max-width: 100%;
-    margin: 30px auto;
-    height: 300px;
+    margin: 10px auto;
+    height: 250px;
   }
 
   /*搜尋*/
@@ -366,10 +385,6 @@ a {
 
   .p-sideContent {
     height: 90vh;
-  }
-
-  .card {
-    padding: 0.9375rem 0.75rem;
   }
 }
 </style>
