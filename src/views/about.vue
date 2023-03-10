@@ -2,85 +2,37 @@
   <div class="about">
     <div class="img"></div>
     <div class="aboutO">
-      <p class="aboutOTitle" style="font-size: 35px;text-align: center;">亞洲大學-精準健康研究中心</p>
-      <p style=" padding: 15px 0px;">本中心以精準營養健康為主要產業發展核心，透過智慧健康產業技術研發與人才培育及軟體
+      <p class="aboutOTitle" style="font-size: 24px; text-align: center">
+        亞洲大學-精準健康研究中心
+      </p>
+      <p style="padding: 15px 0px">
+        本中心以精準營養健康為主要產業發展核心，透過智慧健康產業技術研發與人才培育及軟體
         平台開發為導向；應用人工智慧、生物資訊、自然語言處理和霎端運算於健康營養產業；整合與分析精準營養大數據、建立混合式雲端健康平台、協助資訊安全等，引領台灣智薏精準營養健康產業及永續城市1社區之發展。
       </p>
-      <p style=" padding: 15px 0px;">
+      <p style="padding: 15px 0px">
         整合醫療大數據與人工智慧，達成精準醫療之目的。精準醫療是未來新的醫療模式，透過醫療大數據之整合基因檢測、疾病治療、日常活動、癒後追蹤等數據，結合人工智慧能協助臨床醫生準確地選擇出適合病人的標靶藥物及相關治療方案，如此一來，不但能降低罹病風險，更可達到預防疾病發生的機會，更有機會提高病人存活率。
-        本研究中心研究主題包括：應用人工智慧與大數據於• 大數據於基因體分析、表觀基因體分析、微生物體體群分析及抗癌藥物的開發，以及開發精準醫療智慧報告系統。
+        本研究中心研究主題包括：應用人工智慧與大數據於•
+        大數據於基因體分析、表觀基因體分析、微生物體體群分析及抗癌藥物的開發，以及開發精準醫療智慧報告系統。
       </p>
     </div>
+    <!-- 晁陽 -->
     <div class="aboutA">
-      <div class="aboutAA">
-        <p class="aboutATitle">三大領域</p>
-        <p style="font-size: 15px;text-align: center;color: #9c9a9a;">透過 精準醫療、智慧醫療、精準營養三大領域，實現對未來AI領域的人才培養與教育水平的提升。</p>
-        <div class="aboutA-item">
-          <hr />
-          <p class="aboutTT">精準醫療</p>
-          <p>Precision Medicine，又稱個性化醫療，簡稱PM，為全球醫療發展趨勢，隨著大數據及AI的快速發展，各國紛紛聚焦於精準醫療發展。</p>
-        </div>
-        <div class="aboutA-item">
-          <hr />
-          <p class="aboutTT">智慧醫療</p>
-          <p>
-            資通訊科技(ICT) 在醫療及健康領域的應用，包括醫療照護、疾病管理、公共衛生監測、教育和研究。
-          </p>
-        </div>
-        <div class="aboutA-item">
-          <hr />
-          <p class="aboutTT">精準營養</p>
-          <p>
-            個性化的營養建議，通過合理飲食和科學的補充營養補劑，實現對疾病的預防、達到健康的目的。
-          </p>
-        </div>
-      </div>
-      <div class="aboutAA">
-        <p class="aboutATitle">本中心四大研究項目</p>
-        <div class="aboutA-item">
-          <hr />
-          <p class="aboutTT">透過大數據加值整合</p>
-          <p>建立國內第一個精準營養體學及健康大數據。以精準營養為主軸，透過基因體、微生物體、飲食營養、臨床數據以及社經環境因素之分析探勘，使能區分預測個人化之易感性體質，
-            進一步運用於健康促進與疾病防治，以自動化系統評估個人飲食營養，開立飲食處方，並開發各種健康食材與食物。</p>
-        </div>
-        <div class="aboutA-item">
-          <hr />
-          <p class="aboutTT">發展永續循環生態系統流程</p>
-          <p>
-            改善糧食提供模式。目前全球健康永續飲食的主要精神是以植物及綠色水產食物為主，限制紅肉之攝取。過去西方學界之紅肉研究以牛肉為主，因探討不足粗略地將豬肉之風險比照牛肉。然而，豬肉在亞洲人飲食營養中扮演重要角色，且豬肉致慢性病風險及排碳效應均低於牛肉。因此，深入研究以確立豬肉之風險定位。
-          </p>
-        </div>
-        <div class="aboutA-item">
-          <hr />
-          <p class="aboutTT">以分析健康數據為主軸</p>
-          <p>
-            建構基於開源軟體的雲原生運算平台與服務架構，以利進行高靈活、高彈性及高可靠的大規模健康資料分析與預測。應用雲端技術建立精準營養健康資料湖、資料倉儲以及數據交換機制。透過亞洲大學智慧物聯網平台（AUtalk）整合開發工具，提供敏捷的儲存與運算資源，打造高再生的服務架構，幫助開發人員縮短雲端服務開發生命週期，並滿足用戶的需求，進行產業服務。
-          </p>
-        </div>
-        <div class="aboutA-item">
-          <hr />
-          <p class="aboutTT">促進智慧健康產業之升級。</p>
-          <p>
-            以人工智慧與生物資訊技術，提出多體學及循環經濟分析模型、開發建立飲食營養相關之疾病風險評估工具及營養諮詢與健康議題之對話系統，以促進智慧健康產業之升級。
-          </p>
+      <div class="aboutATitle">晁陽農產科技股份有限公司</div>
+      <div class="aboutAInf">
+        <div class="aboutAImg1"></div>
+        <div class="aboutAtext">
+          晁陽成立於2012年9月，是台灣最早將太陽能發電與農業結合的公司，藉著太陽能的穩定收入，投入安心無毒的六級化農業，發展休閒農場、推廣環境教育並推出具有因應全球淨零碳排的解決方案--【農電共榮】。藉著綠色農業的佈局，帶動太陽能的建置，期待能為台灣2050年達成淨零碳排的目標貢獻一份心力；也藉著綠色教育的推動，實踐低碳生活、全人健康的永續發展目標。
         </div>
       </div>
     </div>
-    <div class="aboutB">
-      <p class="aboutATitle">專業核心</p>
-      <div class="aboutBB">
-        <div class="aboutBB-item">
-          <p class="aboutBB-img1"></p>
-          <p class="aboutBB-text">提高研發能力</p>
+    <!-- 雲林縣政府 -->
+    <div class="aboutA">
+      <div class="aboutATitle">雲林縣政府</div>
+      <div class="aboutAInf">
+        <div class="aboutAtext">
+          這裡會放文字
         </div>
-        <div class="aboutBB-item">
-          <p class="aboutBB-img2"></p>
-          <p>建立永續發展體系</p>
-        </div>
-        <div class="aboutBB-item">
-          <p class="aboutBB-img3"></p>
-          <p>保持創新思想</p>
-        </div>
+        <div class="aboutAImg2"></div>
       </div>
     </div>
   </div>
@@ -91,8 +43,8 @@
     <div class="wave three"></div>
     <div class="fo">
       <div class="footer_logo">
-        <span style="font-size: 20px">
-          <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
+        <span style="font-size: 24px">
+          <p>亞洲大學</p>
         </span>
       </div>
       <div class="footer-text">
@@ -113,7 +65,7 @@
 }
 
 .img {
-  background-image: url('../assets/5.jpg');
+  background-image: url("../assets/5.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -131,86 +83,44 @@
 /*A*/
 .aboutA {
   max-width: 100%;
-  margin: 50px auto;
-  padding: 60px 0px 0px 0px;
+  margin: 60px auto;
 }
-
 .aboutATitle {
-  padding-bottom: 20px;
-  font-size: 35px;
+  max-width: 100%;
+  font-size: 24px;
   text-align: center;
+  margin: 30px auto;
+  color: #000;
 }
-
-.aboutAA {
-  margin: 0px auto;
-  padding: 20px;
-  font-size: 18px;
+.aboutAImg1 {
+  background-image: url("../assets/22.jpg");
+  background-position: center;
+  background-size: cover;
   width: 100%;
+  height: 50vh;
+  margin: 20px auto;
 }
-
-.aboutA-item {
-  margin: 40px 0px;
+.aboutAtext {
+  max-width: 100%;
+  margin: 30px auto;
 }
-
-.aboutTT {
-  font-size: 25px;
-  margin-bottom: 10px;
+.aboutAImg2 {
+  background-image: url("../assets/21.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  margin: 20px auto;
 }
 
 hr {
   width: 15%;
   margin-bottom: 10px;
 }
-
-/*B*/
-.aboutB {
-  max-width: 100%;
-  margin: 50px auto;
-  padding: 10px;
+a {
+  text-decoration: none;
+  color: #000;
 }
-
-.aboutBB {
-  margin: 0px auto;
-  padding: 20px;
-  font-size: 18px;
-  width: 100%;
-}
-
-.aboutBB-item {
-  margin: 10px auto;
-  padding: 20px;
-  text-align: center;
-  color: #038686;
-}
-
-.aboutBB-text {
-  font-size: 20px;
-  padding: 20px 0px 10px 0px;
-  width: 100%;
-}
-
-.aboutBB-img1 {
-  width: 130px;
-  height: 130px;
-  margin: 0px auto;
-  background-image: url("../assets/11.png");
-}
-
-.aboutBB-img2 {
-  width: 130px;
-  height: 130px;
-  margin: 0px auto;
-  background-image: url("../assets/12.png");
-}
-
-.aboutBB-img3 {
-  width: 130px;
-  height: 130px;
-  margin: 0px auto;
-  background-image: url("../assets/13.png");
-}
-
-
 /*footer*/
 .wrapper {
   width: 100%;
@@ -274,7 +184,6 @@ a {
   color: #fff;
 }
 
-
 /*響應式*/
 @media (min-width: 359px) {
   .wave {
@@ -294,14 +203,18 @@ a {
   }
 }
 @media (min-width: 919px) {
-  .aboutA {
-    display: inline-flex;
-    justify-content: space-around;
+  .aboutAInf {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-
-  .aboutBB {
-    display: inline-flex;
-    justify-content: space-around;
+  .aboutAImg1,.aboutAImg2 {
+    width: 40%;
+  }
+  .aboutAtext {
+    max-width: 55%;
+    margin: 30px auto;
   }
   .wave {
     left: -10%;

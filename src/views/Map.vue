@@ -10,14 +10,21 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
+            <h6 class="list-group-item-h6">農作物資訊</h6>
             <p class="Information-text">{{ area }}</p>
             <p class="Information-text">{{ c }}</p>
             <P class="Information-text">{{ amount }}</P>
           </li>
           <li class="list-group-item">
-            <P class="Information-text">{{ proele }}</P>
+            <h6 class="list-group-item-h6">能源資訊</h6>
+            <P class="Information-text">{{ category }}</P>
+            <P class="Information-text">{{ electricity }}</P>
+            <P class="Information-text">{{ location }}</P>
+            <P class="Information-text">{{ capacity }}</P>
+          </li>
+          <li class="list-group-item">
+            <h6 class="list-group-item-h6">溫室氣體盤查資訊</h6>
             <P class="Information-text">{{ co2 }}</P>
-            <P class="Information-text">{{ reduceCo2 }}</P>
           </li>
         </ul>
         <div class="card-body">
@@ -58,8 +65,8 @@
   <div class="footer" id="footer">
     <div class="fo">
       <div class="footer_logo">
-        <span style="font-size: 16px">
-          <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
+        <span style="font-size: 20px">
+          <p>亞洲大學</p>
         </span>
       </div>
     </div>
@@ -88,6 +95,10 @@ const amount = ref(null);
 const proele = ref(null);
 const co2 = ref(null);
 const reduceCo2 = ref(null);
+const category = ref(null);
+const electricity = ref(null);
+const location = ref(null);
+const capacity = ref(null);
 const markers = L.markerClusterGroup();
 const data = allData.restaurants;
 
@@ -145,8 +156,7 @@ onMounted(() => {
             `</h3><p style="font-size: 12px;">地址:` +
             data[i].address +
             `<br>電話` +
-            data[i].iphon +
-            `</p> `
+            data[i].iphon +`</p>`
         )
         .on("click", () => {
           img.value = data[i].img;
@@ -154,10 +164,12 @@ onMounted(() => {
           name.value = data[i].name;
           area.value = "場域面積: " + data[i].area + "公頃";
           c.value = "農作物型態: " + data[i].c;
-          amount.value = "農作產量: " + data[i].amount + "公斤";
-          proele.value = "發電量: " + data[i].proele + "KW";
-          co2.value = "碳排量: " + data[i].co2 + "公斤";
-          reduceCo2.value = "減少碳排量: " + data[i].reduceCo2 + "公斤";
+          amount.value = "預估農作產量: " + data[i].amount + "公斤";
+          category.value = "發電設備類型: " + data[i].category;
+          electricity.value = "再生能源類型: " + data[i].electricity;
+          location.value = "裝置設置位置: " + data[i].location;
+          capacity.value = "總裝置容量: " + data[i].capacity;
+          co2.value = "溫室氣體排放量: " + data[i].co2 + "公斤";
         })
     );
   }
@@ -240,6 +252,12 @@ onMounted(() => {
 }
 .card-body-t:hover{
   color: #038686
+}
+
+.list-group-item-h6{
+  color: #7d848b;
+  margin: 10px 0px;
+  text-align: center;
 }
 
 /*搜尋*/

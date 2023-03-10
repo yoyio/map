@@ -2,7 +2,7 @@
   <div class="dashboard">
     <div class="name">
       <div>
-        <p class="name-title">{{name}}</p>
+        <p class="name-title">{{ name }}</p>
       </div>
     </div>
     <!-- 第一排 -->
@@ -17,27 +17,27 @@
                 <tr>
                   <td>1</td>
                   <td>公司名稱:</td>
-                  <td>{{who}}</td>
+                  <td>{{ who }}</td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>負責人:</td>
-                  <td>{{leader}}</td>
+                  <td>{{ leader }}</td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>電話:</td>
-                  <td>{{iphon}}</td>
+                  <td>{{ iphon }}</td>
                 </tr>
                 <tr>
                   <td>4</td>
                   <td>地址:</td>
-                  <td>{{address}}</td>
+                  <td>{{ address }}</td>
                 </tr>
                 <tr>
                   <td>5</td>
                   <td>聯絡信箱:</td>
-                  <td>{{email}}</td>
+                  <td>{{ email }}</td>
                 </tr>
               </tbody>
             </table>
@@ -48,7 +48,7 @@
 
     <div class="name">
       <div>
-        <p class="name-title">場域資訊</p>
+        <p class="name-title">農作物資訊</p>
       </div>
     </div>
 
@@ -60,7 +60,7 @@
           <div>
             <div class="wid-u-info">
               <h5 class="mt-0">場域面積:</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">{{area}}</p>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">{{ area }}</p>
               <small class="text-warning"><b>公傾</b></small>
             </div>
           </div>
@@ -73,7 +73,7 @@
           <div>
             <div class="wid-u-info">
               <h5 class="mt-0">農作物型態:</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">{{c}}</p>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">{{ c }}</p>
               <small class="text-warning"><b></b></small>
             </div>
           </div>
@@ -85,8 +85,10 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">農作產量:</h5>
-              <p class="text-muted-3 mb-1 font-13 text-truncate">{{amount}}</p>
+              <h5 class="mt-0">預估農作產量:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">
+                {{ amount }}
+              </p>
               <small class="text-warning"><b>公斤</b></small>
             </div>
           </div>
@@ -96,19 +98,19 @@
 
     <div class="name">
       <div>
-        <p class="name-title">能源與溫室氣體</p>
+        <p class="name-title">能源資訊</p>
       </div>
     </div>
 
     <!-- 第3排 -->
-    <div class="row" style="margin-bottom: 100px;">
+    <div class="row" style="margin-bottom: 100px">
       <!-- 第1個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-1">
           <h4 class="header-title mt-0 mb-4">發電設備類型:</h4>
           <div class="widget-chart-1">
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1">{{category}}</h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{ category }}</h2>
               <p class="text-muted mb-1"></p>
             </div>
           </div>
@@ -120,7 +122,7 @@
           <h4 class="header-title mt-0 mb-4">再生能源類型:</h4>
           <div class="widget-chart-1">
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1">{{electricity}}</h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{ electricity }}</h2>
               <p class="text-muted mb-1">PV</p>
             </div>
           </div>
@@ -132,7 +134,7 @@
           <h4 class="header-title mt-0 mb-4">裝置設置位置:</h4>
           <div class="widget-chart-1">
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1">{{location}}</h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{ location }}</h2>
               <p class="text-muted mb-1"></p>
             </div>
           </div>
@@ -144,41 +146,29 @@
           <h4 class="header-title mt-0 mb-4">總裝置容量:</h4>
           <div class="widget-chart-1">
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1">{{capacity}}</h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{ capacity }}</h2>
               <p class="text-muted mb-1">KW</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- 第5個 -->
-      <div class="col-xl-3 col-md-6">
-        <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">發電量:</h4>
-          <div class="widget-chart-1">
-            <!-- <div class="circle">
-              <div class="circle-inside">
-                60%
-              </div>
-            </div> -->
-            <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1">{{proele}}</h2>
-              <p class="text-muted mb-1">KW</p>
-            </div>
-          </div>
-        </div>
+    </div>
+
+    <div class="name">
+      <div>
+        <p class="name-title">溫室氣體盤查資訊</p>
       </div>
-      <!-- 第4個 -->
-      <div class="col-xl-3 col-md-6">
+    </div>
+
+    <!-- 第4排 -->
+    <div class="row" style="margin-bottom: 100px">
+      <!-- 第1個 -->
+      <div class="col-xl-2 col-md-6">
         <div class="card-box-1">
-          <h4 class="header-title mt-0 mb-4">溫室碳排放量:</h4>
+          <h4 class="header-title mt-0 mb-4">溫室氣體排放量( ISO 14064):</h4>
           <div class="widget-chart-1">
-            <!-- <div class="circle-3">
-              <div class="circle-inside-3">
-                30%
-              </div>
-            </div> -->
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1">{{co2}}</h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{ co2 }}</h2>
               <p class="text-muted mb-1">KG</p>
             </div>
           </div>
@@ -201,8 +191,8 @@
     <div class="wave three"></div>
     <div class="fo">
       <div class="footer_logo">
-        <span style="font-size: 20px">
-          <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
+        <span style="font-size: 24px">
+          <p>亞洲大學</p>
         </span>
       </div>
       <div class="footer-text">
@@ -221,16 +211,14 @@ const data = {
   1: [
     {
       id: 1,
-      lat: 23.701141,
-      lng: 120.565259,
       name: "晁陽溫室1",
       img: "https://8.share.photo.xuite.net/kmm550312/1818685/11639320/547895149_m.jpg",
       address: "雲林縣麥寮鄉興華村興華32號",
       iphon: "056938238",
       whoCategory: "公司",
       who: "晁陽綠能園區",
-      leader:"王曉明",
-      email:"abc123@gmail.com",
+      leader: "王曉明",
+      email: "abc123@gmail.com",
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
@@ -246,16 +234,14 @@ const data = {
   2: [
     {
       id: 2,
-      lat: 23.690351,
-      lng: 120.580423,
       name: "晁陽溫室2",
       img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
       address: "雲林縣麥寮鄉興華村興華32號",
       iphon: "056938238",
       whoCategory: "公司",
       who: "晁陽綠能園區",
-      leader:"王小明",
-      email:"abc123@gmail.com",
+      leader: "王小明",
+      email: "abc123@gmail.com",
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
@@ -271,8 +257,6 @@ const data = {
   3: [
     {
       id: 3,
-      lat: 23.671755,
-      lng: 120.518156,
       color: "green",
       name: "晁陽溫室3",
       img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
@@ -280,8 +264,407 @@ const data = {
       iphon: "056938238",
       whoCategory: "公司",
       who: "晁陽綠能園區",
-      leader:"王筱明",
-      email:"abc123@gmail.com",
+      leader: "王筱明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+  4: [
+    {
+      id: 4,
+      name: "晁陽溫室4",
+      img: "https://8.share.photo.xuite.net/kmm550312/1818685/11639320/547895149_m.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王名明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "0.25",
+      c: "過貓",
+      amount: "30",
+      co2: "118",
+      proele: "100",
+      reduceCo2: "500",
+    },
+  ],
+  5: [
+    {
+      id: 5,
+      name: "晁陽溫室5",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王1明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  6: [
+    {
+      id: 6,
+      color: "green",
+      name: "晁陽溫室6",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王3明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+  7: [
+    {
+      id: 7,
+      name: "晁陽溫室7",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王喜明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  8: [
+    {
+      id: 8,
+      color: "green",
+      name: "晁陽溫室8",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王暁明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+  9: [
+    {
+      id: 9,
+      name: "晁陽溫室9",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王校明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  10: [
+    {
+      id: 10,
+      color: "green",
+      name: "晁陽溫室10",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王蕭明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+  11: [
+    {
+      id: 11,
+      name: "晁陽溫室11",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "10",
+      reduceCo2: "5",
+    },
+  ],
+  12: [
+    {
+      id: 12,
+      color: "green",
+      name: "晁陽溫室12",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王交明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "10",
+      co2: "208",
+      proele: "80",
+      reduceCo2: "30",
+    },
+  ],
+  13: [
+    {
+      id: 13,
+      name: "晁陽溫室13",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王自明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  14: [
+    {
+      id: 14,
+      color: "green",
+      name: "晁陽溫室14",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王明小",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+  15: [
+    {
+      id: 15,
+      name: "晁陽溫室15",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王王明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  16: [
+    {
+      id: 16,
+      color: "green",
+      name: "晁陽溫室16",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王明蕭",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+  17: [
+    {
+      id: 17,
+      name: "晁陽溫室17",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王自明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  18: [
+    {
+      id: 18,
+      color: "green",
+      name: "晁陽溫室18",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王明小",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "過貓",
+      amount: "100",
+      co2: "208",
+      proele: "800",
+      reduceCo2: "300",
+    },
+  ],
+  19: [
+    {
+      id: 19,
+      name: "晁陽溫室19",
+      img: "https://en.pimg.jp/019/005/502/1/19005502.jpg",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王自明",
+      email: "abc123@gmail.com",
+      category: "第三型",
+      electricity: "太陽光電",
+      location: "屋頂",
+      capacity: "7.92",
+      area: "2",
+      c: "薑",
+      amount: "20",
+      co2: "208",
+      proele: "100",
+      reduceCo2: "50",
+    },
+  ],
+  20: [
+    {
+      id: 20,
+      color: "green",
+      name: "晁陽溫室20",
+      img: "https://kids.coa.gov.tw/upload/images/kids_school/456/01.JPG",
+      address: "雲林縣麥寮鄉興華村興華32號",
+      iphon: "056938238",
+      whoCategory: "公司",
+      who: "晁陽綠能園區",
+      leader: "王明小",
+      email: "abc123@gmail.com",
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
@@ -308,8 +691,8 @@ export default {
       iphon: "",
       whoCategory: "",
       who: "",
-      leader:"",
-      email:"",
+      leader: "",
+      email: "",
       category: "",
       electricity: "",
       location: "",
@@ -320,7 +703,7 @@ export default {
       co2: "",
       proele: "",
       reduceCo2: "",
-      idData:[]
+      idData: [],
     };
   },
   mounted() {
@@ -329,28 +712,28 @@ export default {
   },
   methods: {
     fetchRestaurant(restaurantId) {
-      this.idData={...data[restaurantId][0]}
-      this.id=this.idData.id;
-      this.lat=this.idData.lat;
-      this.lng=this.idData.lng;
-      this.name=this.idData.name;
-      this.img=this.idData.img;
-      this.address=this.idData.address;
-      this.iphon=this.idData.iphon;
-      this.whoCategory=this.idData.whoCategory;
-      this.who=this.idData.who;
-      this.leader=this.idData.leader,
-      this.email=this.idData.email,
-      this.category=this.idData.category;
-      this.electricity=this.idData.electricity;
-      this.location=this.idData.location;
-      this.capacity=this.idData.capacity;
-      this.area=this.idData.area;
-      this.c=this.idData.c;
-      this.amount=this.idData.amount;
-      this.co2=this.idData.co2;
-      this.proele=this.idData.proele;
-      this.reduceCo2=this.idData.reduceCo2;
+      this.idData = { ...data[restaurantId][0] };
+      this.id = this.idData.id;
+      this.lat = this.idData.lat;
+      this.lng = this.idData.lng;
+      this.name = this.idData.name;
+      this.img = this.idData.img;
+      this.address = this.idData.address;
+      this.iphon = this.idData.iphon;
+      this.whoCategory = this.idData.whoCategory;
+      this.who = this.idData.who;
+      (this.leader = this.idData.leader),
+        (this.email = this.idData.email),
+        (this.category = this.idData.category);
+      this.electricity = this.idData.electricity;
+      this.location = this.idData.location;
+      this.capacity = this.idData.capacity;
+      this.area = this.idData.area;
+      this.c = this.idData.c;
+      this.amount = this.idData.amount;
+      this.co2 = this.idData.co2;
+      this.proele = this.idData.proele;
+      this.reduceCo2 = this.idData.reduceCo2;
     },
   },
 };
@@ -380,8 +763,8 @@ export default {
 
 .contact {
   position: fixed;
-  bottom:50px;
-  right:50px;
+  bottom: 50px;
+  right: 50px;
   margin-left: -25px;
   width: 50px;
   height: 50px;
@@ -613,13 +996,13 @@ a {
 /*響應式*/
 @media (min-width: 359px) {
   .wave {
-  left: -80%;
+    left: -80%;
   }
 }
 
 @media (min-width: 524px) {
   .wave {
-  left: -50%;
+    left: -50%;
   }
 }
 @media (min-width: 779px) {
@@ -630,23 +1013,23 @@ a {
     font-size: 18px;
   }
   .wave {
-  left: -30%;
+    left: -30%;
   }
 }
 @media (min-width: 919px) {
   .wave {
-  left: -10%;
+    left: -10%;
   }
 }
 
 @media (min-width: 1109px) {
   .wave {
-  left: 5%;
+    left: 5%;
   }
 }
 @media (min-width: 1499px) {
   .wave {
-  left: 10%;
+    left: 10%;
   }
 }
 

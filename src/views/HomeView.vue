@@ -76,8 +76,8 @@
     <div class="wave three"></div>
     <div class="fo">
       <div class="footer_logo">
-        <span style="font-size: 20px">
-          <p>亞洲大學-綠色產業下的永續經濟創生研究</p>
+        <span style="font-size: 24px">
+          <p>亞洲大學</p>
         </span>
       </div>
       <div class="footer-text">
@@ -253,9 +253,9 @@ export default {
 }
 
 .introduce-te-b {
-  max-width: 50%;
+  max-width: 100%;
   margin: 0px auto;
-  padding: 2rem;
+  padding: 2rem 0rem;
 }
 
 a {
