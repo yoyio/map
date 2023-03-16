@@ -1,10 +1,14 @@
 <template>
   <div class="a">
     <div class="cardc scrollbar">
-      <div class="card" style="width: 100% margin: 0px 0px;padding: 0rem 1rem;" v-if="area">
+      <div
+        class="card"
+        style="width: 100% margin: 0px 0px;padding: 0rem 1rem;"
+        v-if="area"
+      >
         <img :src="img" class="Information-img" />
         <div class="InformationT">
-            <RouterLink :to="`/Information/${id}`" class="Information-title">{{
+          <RouterLink :to="`/Information/${id}`" class="Information-title">{{
             name
           }}</RouterLink>
         </div>
@@ -28,11 +32,9 @@
           </li>
         </ul>
         <div class="card-body">
-            <RouterLink
-              :to="`/Information/${id}`" class="card-body-t"
-            >
-              詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
-            </RouterLink>
+          <RouterLink :to="`/Information/${id}`" class="card-body-t">
+            詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
+          </RouterLink>
         </div>
       </div>
       <div class="p-sideContent scrollbar" v-else>
@@ -49,9 +51,7 @@
           <p class="h5 h-text-dark">{{ item.address }}</p>
           <p class="h5 h-text-dark">{{ item.iphon }}</p>
           <div class="k">
-            <RouterLink
-              :to="`/Information/${item.id}`" class="card-body-t"
-            >
+            <RouterLink :to="`/Information/${item.id}`" class="card-body-t">
               詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
             </RouterLink>
           </div>
@@ -77,7 +77,7 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/leaflet.markercluster";
-import "leaflet.markercluster/dist/markercluster.css";
+import "../assets/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import "leaflet-draw/dist/leaflet.draw";
 import "leaflet-draw/dist/leaflet.draw.css";
@@ -156,7 +156,8 @@ onMounted(() => {
             `</h3><p style="font-size: 12px;">地址:` +
             data[i].address +
             `<br>電話` +
-            data[i].iphon +`</p>`
+            data[i].iphon +
+            `</p>`
         )
         .on("click", () => {
           img.value = data[i].img;
@@ -241,20 +242,20 @@ onMounted(() => {
   font-size: 16px;
   margin: 10px 0px;
 }
-.card-body{
+.card-body {
   width: 100%;
   display: flex;
   justify-content: end;
 }
-.card-body-t{
+.card-body-t {
   text-decoration: none;
-  color: #3f3f3f
+  color: #3f3f3f;
 }
-.card-body-t:hover{
-  color: #038686
+.card-body-t:hover {
+  color: #038686;
 }
 
-.list-group-item-h6{
+.list-group-item-h6 {
   color: #7d848b;
   margin: 10px 0px;
   text-align: center;
