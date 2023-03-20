@@ -23,7 +23,7 @@ git commit -m 'deploy'
 # if you are deploying to https://zhi901210.github.io
 # git push -f git@github.com:zhi901210/zhi901210.github.io.git main
 
-# if you are deploying to https://zhi901210.github.io/vue3router-Leaflet
-git push -f https://github.com/zhi901210/vue3router-Leaflet.git main:gh-pages
+# if you are deploying to https://zhi901210.github.io/digitalmap
+git push -f https://github.com/zhi901210/digitalmap.git main:gh-pages
 
 cd -
