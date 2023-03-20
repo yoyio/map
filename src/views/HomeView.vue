@@ -294,7 +294,7 @@ a {
   opacity: 0.1;
 }
 @keyframes drift {
-  0 {
+  0% {
     transform: rotate(0deg);
   }
   100% {
