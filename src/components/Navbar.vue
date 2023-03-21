@@ -8,10 +8,10 @@
             <RouterLink to="/" class="nav-link">首頁</RouterLink>
           </li>
           <li class="navItem">
-            <RouterLink to="/about" class="nav-link">合作單位</RouterLink>
+            <RouterLink to="/Map" class="nav-link active" aria-current="page">地圖</RouterLink>
           </li>
           <li class="navItem">
-            <RouterLink to="/Map" class="nav-link active" aria-current="page">地圖</RouterLink>
+            <RouterLink to="/about" class="nav-link">合作單位</RouterLink>
           </li>
         </ul>
       </nav>

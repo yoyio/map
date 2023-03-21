@@ -15,6 +15,29 @@
         大數據於基因體分析、表觀基因體分析、微生物體體群分析及抗癌藥物的開發，以及開發精準醫療智慧報告系統。
       </p>
     </div>
+    <hr/>
+    <!-- 國科會 -->
+    <div class="aboutA">
+      <div class="aboutATitle">國家科學及技術委員會</div>
+      <div class="aboutAInf">
+        <div class="aboutAImg3"></div>
+        <div class="aboutAtext">
+          科技部於本111年7月27日改制為國家科學及技術委員會，未來透過集中科技發展事務權責，妥善配置科技資源，通盤掌握、整合政府科技發展能量，聚焦推動國家重點科技政策；強化行政院科技幕僚規劃及統合協調等功能角色，攜手各部會，以臺灣長遠前瞻的宏觀視野，對內打造高效的行政運作體系，對外則整合跨部會科研能量，共同開創未來科技新局。
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <!-- 雲林縣政府 -->
+    <div class="aboutA">
+      <div class="aboutATitle">雲林縣政府</div>
+      <div class="aboutAInf">
+        <div class="aboutAtext">
+          雲林縣有二十個鄉鎮市，以農業立縣、橫跨20個鄉鎮的雲林，自然純樸的農村風光與得天獨厚的農產物品，一直以來都是雲林人最引以為傲的資源。倚山傍海的地理優勢，也因此孕育出各式農特產美食。
+        </div>
+        <div class="aboutAImg2"></div>
+      </div>
+    </div>
+    <hr/>
     <!-- 晁陽 -->
     <div class="aboutA">
       <div class="aboutATitle">晁陽農產科技股份有限公司</div>
@@ -23,16 +46,6 @@
         <div class="aboutAtext">
           晁陽成立於2012年9月，是台灣最早將太陽能發電與農業結合的公司，藉著太陽能的穩定收入，投入安心無毒的六級化農業，發展休閒農場、推廣環境教育並推出具有因應全球淨零碳排的解決方案--【農電共榮】。藉著綠色農業的佈局，帶動太陽能的建置，期待能為台灣2050年達成淨零碳排的目標貢獻一份心力；也藉著綠色教育的推動，實踐低碳生活、全人健康的永續發展目標。
         </div>
-      </div>
-    </div>
-    <!-- 雲林縣政府 -->
-    <div class="aboutA">
-      <div class="aboutATitle">雲林縣政府</div>
-      <div class="aboutAInf">
-        <div class="aboutAtext">
-          這裡會放文字
-        </div>
-        <div class="aboutAImg2"></div>
       </div>
     </div>
   </div>
@@ -65,7 +78,7 @@
 }
 
 .img {
-  background-image: url("../assets/5.jpg");
+  background-image: url("https://www.asia.edu.tw/uploads/asset/data/61c1e6878199fbf80ea9e204/yard0.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -89,7 +102,7 @@
   max-width: 100%;
   font-size: 24px;
   text-align: center;
-  margin: 30px auto;
+  margin: 10px auto;
   color: #000;
 }
 .aboutAImg1 {
@@ -112,10 +125,19 @@
   height: 50vh;
   margin: 20px auto;
 }
+.aboutAImg3 {
+  background-image: url("https://scontent.frmq1-1.fna.fbcdn.net/v/t39.30808-6/294878522_413721780792236_8314290769907484202_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=p9ukgmYj0psAX_7S94A&_nc_oc=AQl8nqFifIdn_w1f38tAYkxqOWeGGRvYTxl56KZU0xS2vjzAnRfxKkC3n0dXRl4eLZA&_nc_ht=scontent.frmq1-1.fna&oh=00_AfDOxjxuy5Obhkf5mmimVXR29PsCVWRUa0mKGOukHVb0uA&oe=641FABFA");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  margin: 20px auto;
+}
 
 hr {
-  width: 15%;
-  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+  color: #038686;
 }
 a {
   text-decoration: none;

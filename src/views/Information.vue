@@ -59,9 +59,9 @@
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">場域面積:</h5>
+              <h5 class="mt-0">種植面積:</h5>
               <p class="text-muted-3 mb-1 font-13 text-truncate">{{ area }}</p>
-              <small class="text-warning"><b>公傾</b></small>
+              <small class="text-warning" style=""><b>分地</b></small>
             </div>
           </div>
         </div>
@@ -79,17 +79,30 @@
           </div>
         </div>
       </div>
-
       <!-- 第3個 -->
       <div class="col-xl-3 col-md-6">
         <div class="card-box-3 widget-user">
           <div>
             <div class="wid-u-info">
-              <h5 class="mt-0">預估農作產量:</h5>
+              <h5 class="mt-0">預估每株農作產量:</h5>
               <p class="text-muted-3 mb-1 font-13 text-truncate">
                 {{ amount }}
               </p>
               <small class="text-warning"><b>公斤</b></small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第4個 -->
+      <div class="col-xl-3 col-md-6">
+        <div class="card-box-3 widget-user">
+          <div>
+            <div class="wid-u-info">
+              <h5 class="mt-0">預估總農作產量:</h5>
+              <p class="text-muted-3 mb-1 font-13 text-truncate">
+                {{ amounts }}
+              </p>
+              <small class="text-warning"><b>噸</b></small>
             </div>
           </div>
         </div>
@@ -174,6 +187,18 @@
           </div>
         </div>
       </div>
+      <!-- 第2個 -->
+      <div class="col-xl-2 col-md-6">
+        <div class="card-box-1">
+          <h4 class="header-title mt-0 mb-4">減碳量( 每年發電量(kWh) *0.509/1000):</h4>
+          <div class="widget-chart-1">
+            <div class="widget-detail-1 text-right">
+              <h2 class="font-weight-normal pt-2 mb-1">0.0428</h2>
+              <p class="text-muted mb-1">KG</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -222,10 +247,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "0.25",
-      c: "過貓",
-      amount: "300",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "118",
       proele: "1000",
       reduceCo2: "500",
@@ -245,10 +271,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "200",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "12",
       proele: "100",
       reduceCo2: "50",
@@ -269,10 +296,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -292,10 +320,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "0.25",
-      c: "過貓",
-      amount: "30",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "118",
       proele: "100",
       reduceCo2: "500",
@@ -315,10 +344,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "100",
       reduceCo2: "50",
@@ -339,10 +369,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -362,10 +393,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "100",
       reduceCo2: "50",
@@ -386,10 +418,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -409,10 +442,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "100",
       reduceCo2: "50",
@@ -433,10 +467,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -456,10 +491,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "10",
       reduceCo2: "5",
@@ -480,10 +516,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "10",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "80",
       reduceCo2: "30",
@@ -503,10 +540,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "100",
       reduceCo2: "50",
@@ -527,10 +565,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -550,10 +589,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "100",
       reduceCo2: "50",
@@ -574,10 +614,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -597,10 +638,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "100",
       reduceCo2: "50",
@@ -621,10 +663,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -644,10 +687,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "薑",
-      amount: "20",
+      c: "嫩薑",
+      amount: "0.6",
+      amounts: "12",
       co2: "208",
       proele: "100",
       reduceCo2: "50",
@@ -668,10 +712,11 @@ const data = {
       category: "第三型",
       electricity: "太陽光電",
       location: "屋頂",
-      capacity: "7.92",
+      capacity: "84.24",
       area: "2",
-      c: "過貓",
-      amount: "100",
+      c: "老薑",
+      amount: "1.5",
+      amounts: "15",
       co2: "208",
       proele: "800",
       reduceCo2: "300",
@@ -699,7 +744,8 @@ export default {
       capacity: "",
       area: "",
       c: "",
-      amount: "",
+      amount:"",
+      amounts: "",
       co2: "",
       proele: "",
       reduceCo2: "",
@@ -731,6 +777,7 @@ export default {
       this.area = this.idData.area;
       this.c = this.idData.c;
       this.amount = this.idData.amount;
+      this.amounts = this.idData.amounts;
       this.co2 = this.idData.co2;
       this.proele = this.idData.proele;
       this.reduceCo2 = this.idData.reduceCo2;
