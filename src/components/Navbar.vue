@@ -13,6 +13,9 @@
           <li class="navItem">
             <RouterLink to="/about" class="nav-link">合作單位</RouterLink>
           </li>
+          <li class="navItem">
+            <RouterLink to="/aboutme" class="nav-link">關於我們</RouterLink>
+          </li>
         </ul>
       </nav>
       <label class="navbarToggle-label" for="navbarToggle">
