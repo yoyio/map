@@ -126,7 +126,7 @@
   margin: 20px auto;
 }
 .aboutAImg3 {
-  background-image: url("https://scontent.frmq1-1.fna.fbcdn.net/v/t39.30808-6/294878522_413721780792236_8314290769907484202_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=p9ukgmYj0psAX_7S94A&_nc_oc=AQl8nqFifIdn_w1f38tAYkxqOWeGGRvYTxl56KZU0xS2vjzAnRfxKkC3n0dXRl4eLZA&_nc_ht=scontent.frmq1-1.fna&oh=00_AfDOxjxuy5Obhkf5mmimVXR29PsCVWRUa0mKGOukHVb0uA&oe=641FABFA");
+  background-image: url("https://cdn.discordapp.com/attachments/965299322046537822/1093566385684238366/unnamed.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;
