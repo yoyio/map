@@ -49,7 +49,7 @@
             </h2>
           </div>
           <p class="h5 h-text-dark">{{ item.address }}</p>
-          <p class="h5 h-text-dark">{{ item.iphon }}</p>
+          <!-- <p class="h5 h-text-dark">{{ item.iphon }}</p> -->
           <div class="k">
             <RouterLink :to="`/Information/${item.id}`" class="card-body-t">
               詳細資料<font-awesome-icon icon="fa-solid fa-arrow-right" />
@@ -84,6 +84,8 @@ import "leaflet-draw/dist/leaflet.draw.css";
 import allData from "../data/xinyi.json";
 import cityName from "../data/cityName.json";
 import { onMounted, ref } from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
 
 const mapContainer = ref(null);
 const img = ref(null);
@@ -100,9 +102,63 @@ const electricity = ref(null);
 const location = ref(null);
 const capacity = ref(null);
 const markers = L.markerClusterGroup();
-const data = allData.restaurants;
+const data =ref(null);
+const length = ref(null);
 
 onMounted(() => {
+  axios
+    .get("http://13.115.131.45:3001/admin/sites")
+    .then((response) => {
+      console.log("2222", response);
+      data.value = response.data.sites;
+      console.log("211", data.value);
+      length.value = data.value.length;
+      
+      for (let i = 0; length.value > i; i++) {
+        console.log("data.length55", length.value);
+        markers.addLayer(
+          L.marker([data.value[i].latitude, data.value[i].longitude], { icon: customIcon })
+            .bindPopup(
+              `<div class="InfoWindowOpened-text ">
+        <h3>` +
+                data.value[i].name +
+                `</h3><p style="font-size: 12px;">地址:` +
+                data.value[i].address +
+                `</p>`
+            )
+            .on("click", () => {
+              console.log("id", data.value[i].id);
+              axios.get(`http://13.115.131.45:3001/admin/sites/${data.value[i].id}`)
+                .then((response) => {
+                  console.log("33", response.data.site);
+                  area.value = "種植面積: " + response.data.site.Crops.area + "分地";
+                  c.value = "農作物型態: " + response.data.site.Crops.cropType;
+                  amount.value = "預估總農作產量: " + response.data.site.Crops.totalOutput + "噸";
+                  category.value = "發電設備類型: " + response.data.site.Energies.equipment;
+                  electricity.value = "再生能源類型: " + response.data.site.Energies.energyType;
+                  location.value = "裝置設置位置: " + response.data.site.Energies.location;
+                  capacity.value = "總裝置容量: " + response.data.site.Energies.capacity;
+                  co2.value = "溫室氣體排放量: " + response.data.site.Gas.emissions + "公斤";
+                })
+              img.value = data.value[i].image;
+              id.value = data.value[i].id;
+              name.value = data.value[i].name;
+              // area.value = "種植面積: " + data.value[i].Crops.area + "分地";
+              // c.value = "農作物型態: " + data.value[i].c;
+              // amount.value = "預估總農作產量: " + data[i].amount + "噸";
+              // category.value = "發電設備類型: " + data[i].category;
+              // electricity.value = "再生能源類型: " + data[i].electricity;
+              // location.value = "裝置設置位置: " + data[i].location;
+              // capacity.value = "總裝置容量: " + data[i].capacity;
+              // co2.value = "溫室氣體排放量: " + data[i].co2 + "公斤";
+
+            })
+        );
+      }
+    })
+    .catch((response) => {
+      console.log(response);
+    });
   //建立地圖物件
   const map = L.map(mapContainer.value, {
     center: [23.7101, 120.602125],
@@ -146,34 +202,34 @@ onMounted(() => {
   });
 
   //Marker for迴圈標記 ,圖標上顯示訊息
-  for (let i = 0; data.length > i; i++) {
-    markers.addLayer(
-      L.marker([data[i].lat, data[i].lng], { icon: customIcon })
-        .bindPopup(
-          `<div class="InfoWindowOpened-text ">
-        <h3>` +
-            data[i].name +
-            `</h3><p style="font-size: 12px;">地址:` +
-            data[i].address +
-            `<br>電話` +
-            data[i].iphon +
-            `</p>`
-        )
-        .on("click", () => {
-          img.value = data[i].img;
-          id.value = data[i].id;
-          name.value = data[i].name;
-          area.value = "種植面積: " + data[i].area + "分地";
-          c.value = "農作物型態: " + data[i].c;
-          amount.value = "預估總農作產量: " + data[i].amount + "噸";
-          category.value = "發電設備類型: " + data[i].category;
-          electricity.value = "再生能源類型: " + data[i].electricity;
-          location.value = "裝置設置位置: " + data[i].location;
-          capacity.value = "總裝置容量: " + data[i].capacity;
-          co2.value = "溫室氣體排放量: " + data[i].co2 + "公斤";
-        })
-    );
-  }
+  // for (let i = 0; data.length > i; i++) {
+  //   markers.addLayer(
+  //     L.marker([data[i].lat, data[i].lng], { icon: customIcon })
+  //       .bindPopup(
+  //         `<div class="InfoWindowOpened-text ">
+  //       <h3>` +
+  //           data[i].name +
+  //           `</h3><p style="font-size: 12px;">地址:` +
+  //           data[i].address +
+  //           `<br>電話` +
+  //           data[i].iphon +
+  //           `</p>`
+  //       )
+  //       .on("click", () => {
+  //         img.value = data[i].img;
+  //         id.value = data[i].id;
+  //         name.value = data[i].name;
+  //         area.value = "種植面積: " + data[i].area + "分地";
+  //         c.value = "農作物型態: " + data[i].c;
+  //         amount.value = "預估總農作產量: " + data[i].amount + "噸";
+  //         category.value = "發電設備類型: " + data[i].category;
+  //         electricity.value = "再生能源類型: " + data[i].electricity;
+  //         location.value = "裝置設置位置: " + data[i].location;
+  //         capacity.value = "總裝置容量: " + data[i].capacity;
+  //         co2.value = "溫室氣體排放量: " + data[i].co2 + "公斤";
+  //       })
+  //   );
+  // }
   map.addLayer(markers);
 });
 </script>

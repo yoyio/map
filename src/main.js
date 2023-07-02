@@ -14,11 +14,15 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import './assets/main.css'
 import './assets/all.scss'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 const app = createApp(App)
 
 app.component( FontAwesomeIcon)
 
 app.use(router)
+app.use(VueAxios, axios)
 
 app.mount('#app')
 
