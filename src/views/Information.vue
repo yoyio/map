@@ -10,34 +10,24 @@
       <!-- 第1個 -->
       <div class="col-xl-8">
         <div class="card-box-4">
-          <h4 class="header-title mt-0 mb-3">公司資訊</h4>
+          <h4 class="header-title mt-0 mb-3">場域資訊</h4>
           <div class="table-responsive">
             <table class="table table-hover mb-0">
               <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>公司名稱:</td>
-                  <td>{{ who }}</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>負責人:</td>
-                  <td>{{ leader }}</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>電話:</td>
-                  <td>{{ iphon }}</td>
-                </tr>
-                <tr>
                   <td>4</td>
-                  <td>地址:</td>
+                  <td>場域地址:</td>
                   <td>{{ address }}</td>
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td>聯絡信箱:</td>
-                  <td>{{ email }}</td>
+                  <td>場域經度座標:</td>
+                  <td>{{ longitude }}</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>場域緯度座標:</td>
+                  <td>{{ latitude }}</td>
                 </tr>
               </tbody>
             </table>
@@ -193,7 +183,7 @@
           <h4 class="header-title mt-0 mb-4">減碳量( 每年發電量(kWh) *0.509/1000):</h4>
           <div class="widget-chart-1">
             <div class="widget-detail-1 text-right">
-              <h2 class="font-weight-normal pt-2 mb-1">0.0428</h2>
+              <h2 class="font-weight-normal pt-2 mb-1">{{reduceCo2}}</h2>
               <p class="text-muted mb-1">KG</p>
             </div>
           </div>
@@ -723,21 +713,18 @@ const data = {
     },
   ],
 };
+import axios from "axios";
+import VueAxios from "vue-axios";
 
 export default {
   data() {
     return {
       id: "",
-      lat: "",
-      lng: "",
+      longitude:{},//經度座標
+      latitude:{},//緯度座標
       name: "",
       img: "",
       address: "",
-      iphon: "",
-      whoCategory: "",
-      who: "",
-      leader: "",
-      email: "",
       category: "",
       electricity: "",
       location: "",
@@ -749,40 +736,40 @@ export default {
       co2: "",
       proele: "",
       reduceCo2: "",
-      idData: [],
     };
   },
   mounted() {
     const id = this.$route.params.id;
-    this.fetchRestaurant(id);
-  },
-  methods: {
-    fetchRestaurant(restaurantId) {
-      this.idData = { ...data[restaurantId][0] };
-      this.id = this.idData.id;
-      this.lat = this.idData.lat;
-      this.lng = this.idData.lng;
-      this.name = this.idData.name;
-      this.img = this.idData.img;
-      this.address = this.idData.address;
-      this.iphon = this.idData.iphon;
-      this.whoCategory = this.idData.whoCategory;
-      this.who = this.idData.who;
-      (this.leader = this.idData.leader),
-        (this.email = this.idData.email),
-        (this.category = this.idData.category);
-      this.electricity = this.idData.electricity;
-      this.location = this.idData.location;
-      this.capacity = this.idData.capacity;
-      this.area = this.idData.area;
-      this.c = this.idData.c;
-      this.amount = this.idData.amount;
-      this.amounts = this.idData.amounts;
-      this.co2 = this.idData.co2;
-      this.proele = this.idData.proele;
-      this.reduceCo2 = this.idData.reduceCo2;
-    },
-  },
+    console.log('id',id);
+    this.$http.get(`http://13.115.131.45:3001/admin/sites/${id}`)
+        .then((res) => {
+          console.log(res)
+          //場域資訊
+          this.name=res.data.site.name
+          this.longitude=res.data.site.longitude
+          this.latitude=res.data.site.latitude
+          this.address=res.data.site.address
+
+          //能源資訊
+          this.capacity=res.data.site.Energies.capacity//總裝置容量
+          this.electricity=res.data.site.Energies.energyType //再生能源類型
+          this.category=res.data.site.Energies.equipment //發電設備類型
+          this.location=res.data.site.Energies.location //發電設位置
+
+          //農作物資訊
+          this.area=res.data.site.Crops.area//種植面積
+          this.c=res.data.site.Crops.cropType//農作物類型
+          this.amount=res.data.site.Crops.perOutput//預估每株農作產量
+          this.amounts=res.data.site.Crops.totalOutput//預估總農作產量
+
+          //溫室氣體盤查資訊
+          this.co2=res.data.site.Gas.emissions//溫室氣體排放量
+          this.reduceCo2=res.data.site.Gas.reduction//減碳量
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+  }
 };
 </script>
 

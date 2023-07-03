@@ -111,7 +111,6 @@ onMounted(() => {
     .then((response) => {
       console.log("2222", response);
       data.value = response.data.sites;
-      console.log("211", data.value);
       length.value = data.value.length;
       
       for (let i = 0; length.value > i; i++) {
@@ -130,7 +129,6 @@ onMounted(() => {
               console.log("id", data.value[i].id);
               axios.get(`http://13.115.131.45:3001/admin/sites/${data.value[i].id}`)
                 .then((response) => {
-                  console.log("33", response.data.site);
                   area.value = "種植面積: " + response.data.site.Crops.area + "分地";
                   c.value = "農作物型態: " + response.data.site.Crops.cropType;
                   amount.value = "預估總農作產量: " + response.data.site.Crops.totalOutput + "噸";
@@ -143,14 +141,6 @@ onMounted(() => {
               img.value = data.value[i].image;
               id.value = data.value[i].id;
               name.value = data.value[i].name;
-              // area.value = "種植面積: " + data.value[i].Crops.area + "分地";
-              // c.value = "農作物型態: " + data.value[i].c;
-              // amount.value = "預估總農作產量: " + data[i].amount + "噸";
-              // category.value = "發電設備類型: " + data[i].category;
-              // electricity.value = "再生能源類型: " + data[i].electricity;
-              // location.value = "裝置設置位置: " + data[i].location;
-              // capacity.value = "總裝置容量: " + data[i].capacity;
-              // co2.value = "溫室氣體排放量: " + data[i].co2 + "公斤";
 
             })
         );
