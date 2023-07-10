@@ -107,7 +107,7 @@ const length = ref(null);
 
 onMounted(() => {
   axios
-    .get("http://13.115.131.45:3001/admin/sites")
+    .get("https://ec2-13-113-112-38.ap-northeast-1.compute.amazonaws.com:3001/admin/sites")
     .then((response) => {
       console.log("2222", response);
       data.value = response.data.sites;
